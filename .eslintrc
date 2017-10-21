@@ -1,0 +1,73 @@
+{
+  "env": {
+    "browser": true,
+    "jest/globals": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:flowtype/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["flowtype", "import", "jest", "jsx-a11y", "react", "prettier"],
+  "rules": {
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+//    "import/no-extraneous-dependencies": ["error", {"packageDir": "./src", "devDependencies": true, "peerDependencies": true}],
+    "import/no-extraneous-dependencies": ["off"],
+    "flowtype/generic-spacing": 0,
+    "flowtype/space-after-type-colon": 0,
+    "flowtype/require-valid-file-annotation": [2, "always"],
+    "sort-imports": [0,
+      {
+        "ignoreCase": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ]
+      }
+    ],
+    "prettier/prettier": ["error", { "singleQuote": false }],
+//    "no-multiple-empty-lines": [2, { "max": 1 }],
+//    "consistent-return": 0,
+//    "comma-dangle": 0,
+//    "curly": [2, "multi"],
+//    "func-names": 2,
+//    "func-style": [2, "expression", { "allowArrowFunctions": true }],
+//    "global-require": 0,
+//    "indent": [2, 4, { "SwitchCase": 1 }],
+//    "max-len": [2, { "code": 120, "tabWidth": 4 }],
+//    "new-cap": 0,
+//    "no-implicit-coercion": 2,
+//    "no-confusing-arrow": 0,
+//    "no-console": 2,
+//    "no-underscore-dangle": 0,
+//    "padded-blocks": 0,
+//    "semi": [2, "always"],
+//    "react/jsx-indent": [2, 4],
+//    "react/jsx-indent-props": [2, 4],
+
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/styled-components/.*
+.*/node_modules/stylelint/lib/.*
+
+
+[include]
+
+[libs]
+
+[options]
+module.name_mapper='^@src\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+
+[version]

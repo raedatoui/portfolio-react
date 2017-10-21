@@ -1,0 +1,20 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "syntax": "scss",
+  "rules": {
+    declaration-block-semicolon-newline-after: null,
+    selector-type-no-unknown: [true, { ignoreTypes: ['$dummyValue'] }],
+    selector-type-case: null,
+    block-opening-brace-space-after: null,
+    rule-empty-line-before: null,
+    at-rule-empty-line-before: null,
+    block-no-empty: null,
+    block-closing-brace-space-before: null,
+    declaration-colon-newline-after: null,
+    declaration-empty-line-before: null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "env"
+  ],
+  "plugins": [
+    "styled-components",
+    "transform-flow-strip-types",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-react-jsx",
+    "syntax-dynamic-import",
+    ["transform-react-jsx", {"pragma": "React.createElement"}],
+    ["module-resolver", { "alias": { "@src": "./src" } }]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "dynamic-import-node"
+      ]
+    }
+  }
+
+}
