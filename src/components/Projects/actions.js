@@ -3,12 +3,12 @@ import { ActionCreator, setState } from "@src/store";
 import * as service from "@src/services/content";
 import * as Types from "@src/types";
 
-export const getProjects: ActionCreator<
-  void,
+const getProjects: ActionCreator<
+  string,
   Promise<void>
-> = new ActionCreator(() => async ops => {
+> = new ActionCreator(contentPath => async ops => {
+  const projectsData: Types.ProjectMap = await service.getProjects(contentPath);
   const state = ops.getState();
-  const projectsData: Array<Types.Project> = await service.getProjects();
   const projects = { ...state.projects };
 
   if (projectsData)
@@ -22,3 +22,5 @@ export const getProjects: ActionCreator<
     })
   );
 });
+
+export default getProjects;

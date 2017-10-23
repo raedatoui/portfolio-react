@@ -1,12 +1,13 @@
 // @flow
 
 export type Section = {|
-  header: string,
-  content: string
+  name: string,
+  view: string,
+  contentPath: string
 |};
 
-export type Carousel = {|
-  assets: { [string]: string }
+export type SectionMap = {|
+  +[sectionId: string]: Section
 |};
 
 export type Project = {
@@ -19,12 +20,22 @@ export type Project = {
   duties: string
 };
 
+export type ProjectMap = {|
+  +[projectId: string]: Project
+|};
+
+export type Carousel = {|
+  assets: { [string]: string }
+|};
+
+export type List = Array<{|
+  name: string,
+  link?: string
+|}>;
+
 export type State = {|
-  sections: ?{
-    [sectionId: string]: Section
-  },
-  projects: ?{
-    [projectId: string]: Project
-  },
+  sections: SectionMap,
+  projects: ProjectMap,
+  headerLinks: List,
   selectedProject: ?string
 |};

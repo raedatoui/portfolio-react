@@ -1,5 +1,6 @@
 // @flow
-import { applyMiddleware, createStore } from "redux";
+
+import { applyMiddleware, createStore, compose } from "redux";
 
 import * as Types from "@src/types";
 
@@ -51,10 +52,15 @@ const safeThunk = store => next => action => {
 };
 
 const defaultState: Types.State = {
-  projects: null,
-  sections: null,
+  projects: {},
+  sections: {},
+  headerLinks: [],
   selectedProject: null
 };
 
-export const makeStore = () =>
-  createStore(reducer, defaultState, applyMiddleware(safeThunk));
+const enhancer = compose(
+  applyMiddleware(safeThunk),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
+export const makeStore = () => createStore(reducer, defaultState, enhancer);
