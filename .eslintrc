@@ -44,6 +44,7 @@
       }
     ],
     "prettier/prettier": ["error", { "singleQuote": false }],
+    "jsx-a11y/media-has-caption": [0],
 //    "no-multiple-empty-lines": [2, { "max": 1 }],
 //    "consistent-return": 0,
 //    "comma-dangle": 0,

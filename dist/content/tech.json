@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Linux"
+  },
+  {
+    "name": "Google Cloud"
+  },
+  {
+    "name": "Docker"
+  },
+  {
+    "name": "kubernetes"
+  },
+  {
+    "name": "Jenkins"
+  },
+  {
+    "name": "Terraform"
+  },
+  {
+    "name": "Node.js"
+  },
+  {
+    "name": "Angular.js"
+  },
+  {
+    "name": "React"
+  },
+  {
+    "name": "OpenGL"
+  },
+  {
+    "name": "WebGL"
+  },
+  {
+    "name": "Three.js"
+  },
+  {
+    "name": "Ruby on Rails"
+  },
+  {
+    "name": "Flask"
+  },
+  {
+    "name": "Django"
+  },
+  {
+    "name": "MySQL"
+  },
+  {
+    "name": "Postgres"
+  },
+  {
+    "name": "MongoDB"
+  },
+  {
+    "name": "Wordpress"
+  },
+  {
+    "name": "ImageMagic"
+  },
+  {
+    "name": "FFMPEG"
+  },
+  {
+    "name": "Arduino"
+  },
+  {
+    "name": "Microcontrollers"
+  },
+  {
+    "name": "FPGA"
+  },
+  {
+    "name": "Cinder"
+  },
+  {
+    "name": "Processing"
+  },
+  {
+    "name": "Max/MSP Jitter"
+  }
+]

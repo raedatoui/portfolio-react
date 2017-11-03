@@ -38,10 +38,11 @@ export class AppInner extends React.Component<WithDispatch<Props>> {
       return <View key={sectionId} contentPath={section.contentPath} />;
     return (
       <Section key={sectionId} section={section}>
-        <View contentPath={section.contentPath} />
+        <View contentPath={section.contentPath} listId={section.listId} />
       </Section>
     );
   };
+
   render() {
     const sections = Object.keys(this.props.sections || {});
     return (
@@ -57,4 +58,10 @@ export class AppInner extends React.Component<WithDispatch<Props>> {
 
 export const App = connect(mapStateToProps)(AppInner);
 
-const AppWrapper = styled.div`background: white;`;
+const AppWrapper = styled.div`
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+`;

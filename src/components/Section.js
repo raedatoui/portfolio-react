@@ -2,9 +2,6 @@
 
 import React from "react";
 import styled from "styled-components";
-// import { Projects } from "./Projects";
-// import Bio from "./Bio";
-// import Header from "./Header";
 import * as Types from "@src/types";
 
 type Props = {|
@@ -21,6 +18,6 @@ const Section = (props: Props) => (
 
 export default Section;
 
-const SectionWrapper = styled.div``;
+const SectionWrapper = styled.section`padding: 1em;`;
 
-const SectionHeader = styled.h1``;
+const SectionHeader = styled.h2``;

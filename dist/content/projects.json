@@ -1,16 +1,165 @@
 {
-  "orchestra-of-st-luke-wii" : {
-    "title": "Orchestra of St Luke - Wii",
+  "orchard" : {
+    "title": "The Orchard",
+    "thumb": "/assets/images/thumbs/orchard.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "prh" : {
+    "title": "Physicians for Reproductive Health",
+    "thumb": "/assets/images/thumbs/prh.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+
+  "livecase" : {
+    "title": "LiveCase by Google",
+    "thumb": "/assets/images/thumbs/livecase.jpg",
     "agency": "The Map Office",
     "description": "This collaboration between Orchestra of St. Luke's / Map utilized the Nintendo Wii Remote as an interactive tool. Using the infrared sensor and detecting application, students were transformed into visual conductors using the Wii Remote to create real-time collages. Controlling; Size, Tint, and Frequency. The installation was performed live alongside the Orchestra, with the graphics projected above. With the theme of &quot;Home is Everything: New York City,&quot; selected students ranging from grades 3-5 were asked to photograph &quot;their&quot; New York City. These images were then translated by Map and placed into an image bank for the application. Students were asked to orchestrate and compose collages using these image banks, determining size, color, and frequency. The installation was performed alongside the orchestra in front of a live audience at the Brooklyn High School of Performing Arts and the Apollo Theatre in New York City.",
-    "year": 2009,
-    "thumb": "images/orchestra-of-st-luke-wii/osl.jpg"
+    "year": 2009
+
   },
-  "testee" : {
-    "title": "Orchestra of St Luke - Wii",
+  "twg" : {
+    "title": "Think with Google",
+    "thumb": "/assets/images/thumbs/twg.png",
     "agency": "The Map Office",
     "description": "This collaboration between Orchestra of St. Luke&#39;s / Map utilized the Nintendo Wii Remote as an interactive tool. Using the infrared sensor and detecting application, students were transformed into visual conductors using the Wii Remote to create real-time collages. Controlling; Size, Tint, and Frequency. The installation was performed live alongside the Orchestra, with the graphics projected above. With the theme of &quot;Home is Everything: New York City,&quot; selected students ranging from grades 3-5 were asked to photograph &quot;their&quot; New York City. These images were then translated by Map and placed into an image bank for the application. Students were asked to orchestrate and compose collages using these image banks, determining size, color, and frequency. The installation was performed alongside the orchestra in front of a live audience at the Brooklyn High School of Performing Arts and the Apollo Theatre in New York City.",
-    "year": 2009,
-    "thumb": "images/orchestra-of-st-luke-wii/osl.jpg"
+    "year": 2009
+  },
+  "ica" : {
+    "title": "The Institute of Contemporary Art - UPenn",
+    "thumb": "/assets/images/thumbs/ica.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "sal" : {
+    "title": "Better Call Sal",
+    "thumb": "/assets/images/thumbs/sal.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "playstation" : {
+    "title": "First To Greatness - PS4",
+    "thumb": "/assets/images/thumbs/first-to-greatness.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "rangerover" : {
+    "title": "Race The Sun",
+    "thumb": "/assets/images/thumbs/race-the-sun.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "nvtv" : {
+    "title": "Nature Valley Trail View",
+    "thumb": "/assets/images/thumbs/nvtv.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "pierre" : {
+    "title": "Pierre Emmanuel Fillet",
+    "thumb": "/assets/images/thumbs/pierre.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "bespoken" : {
+    "title": "Bespoken Clothiers",
+    "thumb": "/assets/images/thumbs/bespoken.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "view" : {
+    "title": "  JWT View",
+    "thumb": "/assets/images/thumbs/view.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "nokia" : {
+    "title": "Shot by Fans",
+    "thumb": "/assets/images/thumbs/nokia.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "fractals" : {
+    "title": "Museum Tower Wall Covering",
+    "thumb": "/assets/images/thumbs/fractal.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "newdeal" : {
+    "title": " New Deal Design",
+    "thumb": "/assets/images/thumbs/ndd.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "osl" : {
+    "title": "Orchestra of St Luke",
+    "thumb": "/assets/images/thumbs/osl.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "aro" : {
+    "title": " Architecture Research Office",
+    "thumb": "/assets/images/thumbs/aro.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "kitchen" : {
+    "title": "The Kitchen",
+    "thumb": "/assets/images/thumbs/kitchen.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "typem" : {
+    "title": "Type M",
+    "thumb": "/assets/images/thumbs/typem.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "jazz" : {
+    "title": " Ertegun Jazz Hall of Fame",
+    "thumb": "/assets/images/thumbs/jazz.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "ucla" : {
+    "title": " UCLA Architecture & Urban Design",
+    "thumb": "/assets/images/thumbs/ucla.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "mig" : {
+    "title": "The MiG CMS",
+    "thumb": "/assets/images/thumbs/mig.png",
+    "agency": "",
+    "description": "",
+    "year": 2009
+  },
+  "christa" : {
+    "title": "Mnemonic Devices",
+    "thumb": "/assets/images/thumbs/mnemonic.jpg",
+    "agency": "",
+    "description": "",
+    "year": 2009
   }
 }

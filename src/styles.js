@@ -8,11 +8,9 @@ export const Card = (h: number = 1) => css`
   `;
 
 export const colors = {
-  lightGrey: "#f5f6f7",
-  grey: "#aaaaaa",
-  blue: "#0288d1",
-  white: "#ffffff",
-  black: "#000000"
+  grey: "#444444",
+  red: "#EE4938",
+  white: "#ffffff"
 };
 
 injectGlobal`
@@ -21,9 +19,49 @@ injectGlobal`
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
     background-color: ${colors.white};
-    font-size: 1rem;
-    font-family: 'Work Sans', sans-serif;
+    color:  ${colors.grey};
+    font-weight: 500;
+    font: normal 100%/1.4 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
+  p {
+    font-size: 2em;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: inherit;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 3.998em;
+  }
+  
+  h2 {font-size: 2.827em;}
+  
+  h3 {font-size: 1.999em;}
+  
+  h4 {font-size: 1.414em;}
+  
+  small, .font_small {font-size: 0.707em;}
+
+  a {
+    text-decoration: none;
+    &:visited {
+      color: ${colors.grey};
+    }
+    &:hover {
+      color: ${colors.red};
+      text-decoration: underline;
+    }
+  }
+   
+  #root {
+    padding: 0em;
+  }
+  
+  ::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
 `;

@@ -54,8 +54,9 @@ const safeThunk = store => next => action => {
 const defaultState: Types.State = {
   projects: {},
   sections: {},
-  headerLinks: [],
-  selectedProject: null
+  selectedProject: null,
+  bio: null,
+  lists: {}
 };
 
 const enhancer = compose(

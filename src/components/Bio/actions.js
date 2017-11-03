@@ -3,19 +3,19 @@ import { ActionCreator, setState } from "@src/store";
 import * as service from "@src/services/content";
 import * as Types from "@src/types";
 
-const getList: ActionCreator<
+const getBio: ActionCreator<
   string,
   Promise<void>
 > = new ActionCreator(contentPath => async ops => {
-  const headerLinks: Types.List = await service.getList(contentPath);
+  const bio: Types.Bio = await service.getBio(contentPath);
   const state = ops.getState();
 
   ops.dispatch(
     setState({
       ...state,
-      headerLinks
+      bio
     })
   );
 });
 
-export default getList;
+export default getBio;

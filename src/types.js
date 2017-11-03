@@ -3,7 +3,8 @@
 export type Section = {|
   name: string,
   view: string,
-  contentPath: string
+  contentPath: string,
+  listId: ?string
 |};
 
 export type SectionMap = {|
@@ -33,9 +34,17 @@ export type List = Array<{|
   link?: string
 |}>;
 
+export type Bio = {|
+  content: string,
+  link: string
+|};
+
 export type State = {|
   sections: SectionMap,
   projects: ProjectMap,
-  headerLinks: List,
-  selectedProject: ?string
+  selectedProject: ?string,
+  bio: ?Bio,
+  lists: {
+    [listId: string]: List
+  }
 |};

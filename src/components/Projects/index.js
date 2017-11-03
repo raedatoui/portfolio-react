@@ -28,27 +28,55 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
     const list = Object.keys(this.props.projects || {});
 
     return (
-      <Article>
+      <ProjectsWrapper>
         {list.map(projectId => {
           const project: Types.Project = this.props.projects[projectId];
           return (
             <Project key={projectId}>
-              <Header>{project.title}</Header>
-              <Description>{project.description}</Description>
+              <Header>
+                <img src={project.thumb} alt={project.title} />
+                <span>{project.title}</span>
+              </Header>
+              {/*<Description>{project.description}</Description>*/}
+              <hr />
             </Project>
           );
         })}
-      </Article>
+      </ProjectsWrapper>
     );
   }
 }
 
 export default connect(mapStateToProps)(ProjectsInner);
 
-const Article = styled.article``;
+const ProjectsWrapper = styled.div`padding: 0 2em;`;
 
-const Project = styled.div``;
+const Project = styled.div`
+  hr {
+    height: 1px;
+    border: none;
+    background-color: #ddd;
+    margin: 0.61em 0;
+  }
+`;
 
-const Header = styled.h5``;
+const Header = styled.h3`
+  min-height: 140px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.5em 0;
+  img {
+    width: 20%;
+    max-width: 140px;
+    margin: 0 1em 0 0;
+  }
+  span {
+    cursor: pointer;
+  }
+`;
 
 const Description = styled.p``;
