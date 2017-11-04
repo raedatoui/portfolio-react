@@ -8,7 +8,7 @@ import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 
 type Props = {|
-  bio: ?Types.Bio
+  bio: Types.Bio
 |};
 
 type OwnProps = {|
@@ -26,12 +26,10 @@ class BioInner extends React.Component<WithDispatch<OwnProps>> {
   }
 
   render() {
-    const bio = this.props.bio ? this.props.bio.content : "";
-    const link = this.props.bio ? this.props.bio.link : "";
-
+    const { content, link } = this.props.bio;
     return (
       <BioText>
-        {bio}
+        {content}
         <a href={link}>view full resume</a>
       </BioText>
     );

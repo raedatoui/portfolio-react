@@ -31,6 +31,7 @@ class StuffListInner extends React.Component<WithDispatch<OwnProps>> {
       })
     );
   }
+
   renderItem(item: { name: string, link?: string }) {
     if (item.link)
       return (
@@ -40,6 +41,7 @@ class StuffListInner extends React.Component<WithDispatch<OwnProps>> {
       );
     return item.name;
   }
+
   render() {
     return (
       <ListWrapper>

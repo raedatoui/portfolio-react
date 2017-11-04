@@ -43,7 +43,8 @@ export type State = {|
   sections: SectionMap,
   projects: ProjectMap,
   selectedProject: ?string,
-  bio: ?Bio,
+  bio: Bio,
+  viewsource: string,
   lists: {
     [listId: string]: List
   }

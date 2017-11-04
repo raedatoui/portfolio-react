@@ -6,11 +6,12 @@ import * as Types from "@src/types";
 
 type Props = {|
   section: Types.Section,
+  index: number,
   children?: React$Node
 |};
 
 const Section = (props: Props) => (
-  <SectionWrapper>
+  <SectionWrapper index={props.index}>
     <SectionHeader>{props.section.name}</SectionHeader>
     {props.children}
   </SectionWrapper>
@@ -18,6 +19,10 @@ const Section = (props: Props) => (
 
 export default Section;
 
-const SectionWrapper = styled.section`padding: 1em;`;
+const SectionWrapper = styled.section`
+  padding: 1em;
+  padding-top: ${props => (props.index == 1 ? "0" : "1em")};
+  margin-top: ${props => (props.index == 1 ? "-2.5em" : "0")};
+`;
 
 const SectionHeader = styled.h2``;

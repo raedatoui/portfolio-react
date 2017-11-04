@@ -32,12 +32,12 @@ export class AppInner extends React.Component<WithDispatch<Props>> {
     this.props.dispatch(Actions.getSections());
   }
 
-  renderSection = (sectionId: string, section: Types.Section) => {
+  renderSection = (sectionId: string, section: Types.Section, index: number) => {
     const View = componentMap[section.view];
     if (section.view === "Header")
       return <View key={sectionId} contentPath={section.contentPath} />;
     return (
-      <Section key={sectionId} section={section}>
+      <Section key={sectionId} section={section} index={index}>
         <View contentPath={section.contentPath} listId={section.listId} />
       </Section>
     );
@@ -47,9 +47,9 @@ export class AppInner extends React.Component<WithDispatch<Props>> {
     const sections = Object.keys(this.props.sections || {});
     return (
       <AppWrapper>
-        {sections.map(sectionId => {
+        {sections.map((sectionId, index) => {
           const section: Types.Section = this.props.sections[sectionId];
-          return this.renderSection(sectionId, section);
+          return this.renderSection(sectionId, section, index);
         })}
       </AppWrapper>
     );
@@ -60,8 +60,7 @@ export const App = connect(mapStateToProps)(AppInner);
 
 const AppWrapper = styled.div`
   box-sizing: border-box;
-  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  background: white;
+  max-width: 1440px;
 `;

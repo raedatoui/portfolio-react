@@ -1,4 +1,5 @@
-[
+{
+  "nets":[
   {
     "name": "email",
     "link": "mailto:raedsubscribes@gmail.com"
@@ -26,5 +27,6 @@
   {
     "name": "spotify",
     "link": "https://open.spotify.com/user/122701377"
-  }
-]
+  }],
+  "viewsource": "https://github.com/raedatoui/portfolio-react"
+}

@@ -55,8 +55,9 @@ const defaultState: Types.State = {
   projects: {},
   sections: {},
   selectedProject: null,
-  bio: null,
-  lists: {}
+  bio: { link: "", content: "" },
+  lists: {},
+  viewsource: ""
 };
 
 const enhancer = compose(

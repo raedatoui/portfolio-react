@@ -24,6 +24,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
   componentDidMount() {
     this.props.dispatch(getProjects(this.props.contentPath));
   }
+
   render() {
     const list = Object.keys(this.props.projects || {});
 
