@@ -1,0 +1,188 @@
+{
+  "typedef": {
+    "label": "Typedef",
+    "description": "Freelance projects and collaborations.",
+    "work": {
+      "sal" : {
+        "title": "Better Call Sal",
+        "thumb": "/assets/images/thumbs/sal.png",
+        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a class=\"no-dec\" href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a>",
+        "year": 2016,
+        "tech": "ES6, Web Audio, WebGL, GLSL"
+      },
+      "pierre" : {
+        "title": "Pierre Emmanuel Fillet",
+        "thumb": "/assets/images/thumbs/pierre.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "ica" : {
+        "title": "The Institute of Contemporary Art - UPenn",
+        "thumb": "/assets/images/thumbs/ica.png",
+        "agency": "",
+        "description": "Website for The Institute of Contemporary Art at the University of Pennsylvania.<br>Conceived and build at <a href='http://www.othermeans.us/'>Other Means</a>, in collaboration with&nbsp;<a href='http://ja.ckjennin.gs/'>Jack Jennings</a>",
+        "year": "nov 2012 - aug 2015"
+      },
+      "christa" : {
+        "title": "Mnemonic Devices",
+        "thumb": "/assets/images/thumbs/mnemonic.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      }
+    }
+  },
+  "product": {
+    "label": "Product",
+    "description": "one thing, one love.",
+    "work": {
+      "orchard" : {
+        "title": "The Orchard",
+        "thumb": "/assets/images/thumbs/orchard.png",
+        "agency": "",
+        "description": "",
+        "year": "sept 2017 - present"
+      }
+    }
+  },
+  "agency": {
+    "label": "Agency",
+    "description": "projects at various marketing agencies and production shops.",
+    "work": {
+      "prh" : {
+        "title": "Physicians for Reproductive Health",
+        "thumb": "/assets/images/thumbs/prh.png",
+        "agency": "Huge",
+        "description": "Website re-plaform and redesign for non-profit organization, Physicians for Reproductive Health",
+        "role": "Technical Architect",
+        "year": "april - june 2017",
+        "tech": "wordpress, Twilio auth API"
+      },
+      "livecase" : {
+        "title": "LiveCase by Google",
+        "thumb": "/assets/images/thumbs/livecase.jpg",
+        "agency": "Huge",
+        "role": "Lead full stack engineer",
+        "description": "Did it , worked on site, setup CI pipeline, loading testing and profiling, 3rd party API integrations for content moderation and companion app, 3d rendeting pipeline optimizations, custom shaders",
+        "year": "july 2015 - oct 2016",
+        "tech": "backend: Python, Golang, Google Cloud(AppEngine, Services, Task Queues, Storage, BigQuery, Datastore)<br />frontend: Angular.js, Three.js, GLSL"
+      },
+      "twg" : {
+        "title": "Think with Google",
+        "thumb": "/assets/images/thumbs/twg.png",
+        "agency": "The Map Office",
+        "description": "Think with Google is Google's unique editorial and data insights destination for marketing professionals. Worked as a backend lead developing custom publishing solutions on a propietary content platform, continous integration and delivery practices for the tech team and a scalable localisation platform. Worked closely with content strategists on information architecture and translating that to efficient database designs. Mentored and helped on board new developers.",
+        "year": "May 2014- June 2015",
+        "agency": "Huge",
+        "role": "Lead backend engineer",
+        "tech": "Python, Google Cloud(AppEngine, Services, Task Queues, Datastore)"
+      },
+      "playstation" : {
+        "title": "First To Greatness - PS4",
+        "thumb": "/assets/images/thumbs/first-to-greatness.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "rangerover" : {
+        "title": "Race The Sun",
+        "thumb": "/assets/images/thumbs/race-the-sun.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "nvtv" : {
+        "title": "Nature Valley Trail View",
+        "thumb": "/assets/images/thumbs/nvtv.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "bespoken" : {
+        "title": "Bespoken Clothiers",
+        "thumb": "/assets/images/thumbs/bespoken.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "view" : {
+        "title": "  JWT View",
+        "thumb": "/assets/images/thumbs/view.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "nokia" : {
+        "title": "Shot by Fans",
+        "thumb": "/assets/images/thumbs/nokia.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "fractals" : {
+        "title": "Museum Tower Wall Covering",
+        "thumb": "/assets/images/thumbs/fractal.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "newdeal" : {
+        "title": " New Deal Design",
+        "thumb": "/assets/images/thumbs/ndd.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "osl" : {
+        "title": "Orchestra of St Luke",
+        "thumb": "/assets/images/thumbs/osl.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "aro" : {
+        "title": " Architecture Research Office",
+        "thumb": "/assets/images/thumbs/aro.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "kitchen" : {
+        "title": "The Kitchen",
+        "thumb": "/assets/images/thumbs/kitchen.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "typem" : {
+        "title": "Type M",
+        "thumb": "/assets/images/thumbs/typem.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "jazz" : {
+        "title": " Ertegun Jazz Hall of Fame",
+        "thumb": "/assets/images/thumbs/jazz.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "ucla" : {
+        "title": " UCLA Architecture & Urban Design",
+        "thumb": "/assets/images/thumbs/ucla.jpg",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "mig" : {
+        "title": "The MiG CMS",
+        "thumb": "/assets/images/thumbs/mig.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      }
+    }
+  }
+}

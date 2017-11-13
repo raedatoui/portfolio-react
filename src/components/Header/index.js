@@ -8,6 +8,7 @@ import * as Types from "@src/types";
 import getHeader from "./actions";
 import HeaderListItem from "./ListItem";
 import { colors } from "@src/styles";
+import { Master } from "tone";
 
 type Props = {|
   nets: Types.List,
@@ -19,12 +20,23 @@ type OwnProps = {|
   contentPath: string
 |};
 
+type State = {|
+  muted: boolean
+|};
+
 const mapStateToProps = (state: Types.State): Props => ({
   nets: state.lists.header,
   viewsource: state.viewsource
 });
 
-class HeaderInner extends React.Component<WithDispatch<OwnProps>> {
+class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
+  constructor(props: WithDispatch<OwnProps>) {
+    super(props);
+    this.state = {
+      muted: false
+    };
+  }
+
   componentDidMount() {
     this.props.dispatch(
       getHeader({
@@ -34,7 +46,16 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>> {
     );
   }
 
+  mute() {
+    this.setState({
+      muted: !this.state.muted
+    });
+  }
+
   render() {
+    const { muted } = this.state;
+    Master.mute = muted;
+    const muteLabel = muted ? "unmute" : "mute";
     const { nets, viewsource } = this.props;
 
     return (
@@ -50,13 +71,18 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>> {
                     index={i}
                     name={link.name}
                     link={link.link}
+                    muted={muted}
                   />
                 ))}
             </HeaderList>
           </HeaderLinks>
         </HeaderWrapper>
-        <SourceLink target="_blank" href={viewsource}>
-          ( source )
+        <SourceLink>
+          <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+          <a target="_blank" href={viewsource}>
+            ( source )
+          </a>
         </SourceLink>
       </HeaderOuterWrapper>
     );
@@ -71,6 +97,7 @@ const HeaderOuterWrapper = styled.header`
   right: 0;
   margin: 0 auto;
   position: sticky;
+  z-index: 1;
 `;
 
 const HeaderWrapper = styled.div`
@@ -94,13 +121,21 @@ const HeaderList = styled.u`
   perspective: 2000px;
 `;
 
-const SourceLink = styled.a`
+const SourceLink = styled.div`
   margin: 0.75em -1em 0 -1em;
   display: inline-block;
   width: 100%;
   text-align: right;
-  color: ${colors.red};
   &:visited {
     color: ${colors.red};
+  }
+`;
+
+const MuteButton = styled.span`
+  cursor: pointer;
+  color: ${colors.black};
+  &:hover {
+    color: ${colors.red};
+    text-decoration: underline;
   }
 `;

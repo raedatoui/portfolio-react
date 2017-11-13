@@ -38,4 +38,7 @@ class BioInner extends React.Component<WithDispatch<OwnProps>> {
 
 export default connect(mapStateToProps)(BioInner);
 
-const BioText = styled.p`margin: 0 1em;`;
+const BioText = styled.p`
+  font-size: 2em;
+  margin: 0 1em;
+`;

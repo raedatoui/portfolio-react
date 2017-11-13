@@ -16,9 +16,10 @@ export type Project = {
   thumb: string,
   description: string,
   carousel?: Carousel,
-  agency?: string,
+  agency: string,
   description: string,
-  duties: string
+  role: string,
+  tech: string
 };
 
 export type ProjectMap = {|
@@ -39,9 +40,17 @@ export type Bio = {|
   link: string
 |};
 
+export type Work = {|
+  +[workType: string]: {
+    label: string,
+    description: string,
+    work: { +[projectId: string]: Project }
+  }
+|};
+
 export type State = {|
   sections: SectionMap,
-  projects: ProjectMap,
+  work: Work,
   selectedProject: ?string,
   bio: Bio,
   viewsource: string,

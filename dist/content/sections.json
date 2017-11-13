@@ -29,8 +29,8 @@
     "listId": "employers"
   },
   "projects": {
-    "name": "Select Projects",
-    "contentPath": "content/projects.json",
-    "view": "Projects"
+    "name": "Work",
+    "contentPath": "content/work.json",
+    "view": "Work"
   }
 }

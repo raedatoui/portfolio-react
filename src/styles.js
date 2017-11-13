@@ -1,5 +1,5 @@
 // @flow
-import { css, injectGlobal } from "styled-components";
+import styled, { css, injectGlobal } from "styled-components";
 
 export const Card = (h: number = 1) => css`
     box-shadow: 0 ${h}px ${h * 3}px rgba(0,0,0,${h * 0.12}), 0 ${h}px ${2 *
@@ -10,8 +10,14 @@ export const Card = (h: number = 1) => css`
 export const colors = {
   grey: "#444444",
   red: "#EE4938",
-  white: "#ffffff"
+  white: "#ffffff",
+  reda: "rgba(238, 73, 56, 0.25)"
 };
+
+export const copy = styled.div`
+  font-size: 1.414em;
+  line-height: 1.6968em;
+`;
 
 injectGlobal`
   html,
@@ -21,13 +27,10 @@ injectGlobal`
     margin: 0;
     background-color: ${colors.white};
     color:  ${colors.grey};
-    font-weight: 500;
-    font: normal 100%/1.4 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font: normal 100%/1.4 'Work Sans', sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-  }
-  p {
-    font-size: 2em;
   }
   
   h1, h2, h3, h4 {
@@ -38,14 +41,26 @@ injectGlobal`
   h1 {
     margin-top: 0;
     font-size: 3.998em;
+    font-weight: 600;
   }
   
-  h2 {font-size: 2.827em;}
+  h2 {
+    font-size: 2.827em;
+    font-weight: 600;
+  }
   
-  h3 {font-size: 1.999em;}
+  h3 {
+    font-size: 1.999em;
+    font-weight: 500;
+  }
   
   h4 {font-size: 1.414em;}
-  
+
+  p {
+    font-size: 1.414em;
+    line-height: 1.6968em;
+  }
+    
   small, .font_small {font-size: 0.707em;}
 
   a {
@@ -56,6 +71,9 @@ injectGlobal`
     &:hover {
       color: ${colors.red};
       text-decoration: underline;
+    }
+    &:focus {
+      outline: 1px dotted ${colors.red};
     }
   }
    

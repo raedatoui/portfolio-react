@@ -52,7 +52,7 @@ const safeThunk = store => next => action => {
 };
 
 const defaultState: Types.State = {
-  projects: {},
+  work: {},
   sections: {},
   selectedProject: null,
   bio: { link: "", content: "" },

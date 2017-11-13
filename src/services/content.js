@@ -2,9 +2,7 @@
 
 import * as Types from "@src/types";
 
-export async function getProjects(
-  contentPath: string
-): Promise<Types.ProjectMap> {
+export async function getWork(contentPath: string): Promise<Types.Work> {
   const resp = await fetch(contentPath);
   return await resp.json();
 }

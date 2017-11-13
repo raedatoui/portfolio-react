@@ -5,7 +5,7 @@ import { mount } from "enzyme";
 import "jest-enzyme";
 import "jest-styled-components";
 import { Provider } from "react-redux";
-import { App } from "./App";
+import { App, AppWrapper } from "./App";
 import { makeStore } from "@src/store";
 
 const mountElement = element =>
@@ -14,6 +14,6 @@ const mountElement = element =>
 describe("App", () => {
   it("renders an app", () => {
     const wrapper = mountElement(<App />);
-    expect(wrapper.find(<div />)).toHaveLength(1);
+    expect(wrapper.find(AppWrapper)).toHaveLength(1);
   });
 });
