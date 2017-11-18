@@ -48,6 +48,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   nervous: Nervous;
   blip: number;
   slider: Flickity;
+  then: Date;
+  fpsInterval: number;
 
   constructor(props: WithDispatch<OwnProps>) {
     super(props);
@@ -59,6 +61,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.state = {
       showPixels: false
     };
+    this.then = new Date();
+    this.fpsInterval = 1000.0 / 750.0;
   }
 
   componentDidMount() {
@@ -124,7 +128,9 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     if (this.counter === 0 || this.counter === this.nervous.notes.length - 1) {
       this.step = -this.step;
     }
+  }
 
+  animate() {
     // loop
     if (this.play) {
       if (this.props.selectedProject === this.props.projectId) {
@@ -135,8 +141,17 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
           this.nervous.stop();
           return;
         }
+        this.nervousPlay();
+      } else {
+        this.raf = window.requestAnimationFrame(this.animate.bind(this));
+        this.nervousPlay();
+        // const now = Date.now();
+        // const elapsed = now - this.then;
+        // if (elapsed > this.fpsInterval) {
+        //   this.then = now - elapsed % this.fpsInterval;
+        //   this.nervousPlay();
+        // }
       }
-      this.raf = window.requestAnimationFrame(this.nervousPlay.bind(this));
     } else {
       this.nervous.stop();
       window.cancelAnimationFrame(this.raf);
@@ -157,7 +172,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.setState({ showPixels: true });
     if (!this.play) {
       this.play = true;
-      this.nervousPlay();
+      this.animate();
     }
   };
 

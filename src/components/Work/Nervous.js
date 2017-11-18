@@ -1,5 +1,5 @@
 // @flow
-import { PolySynth, Synth, Frequency, FeedbackDelay } from "tone";
+import { PolySynth, Synth, Frequency, FeedbackDelay, Master } from "tone";
 
 export type NervousPoint = {|
   midi: string,
@@ -7,6 +7,7 @@ export type NervousPoint = {|
 |};
 
 type RandFunc = () => number;
+// type Gen = () => RandFunc;
 
 class Nervous {
   notes: Array<NervousPoint>;
@@ -24,12 +25,16 @@ class Nervous {
         partials: [0, 2, 3, 4]
       }
     }).connect(this.delay);
+    Master.set("volume", -6);
+    // this.panVol = new PanVol();
+    // this.synth.chain(this.delay, this.panVol, Master);
+
     this.currentNote = "";
     this.synth.set("detune", -100 * detune);
     this.midiMax = 100;
     this.midiMin = 36;
     this.notes = this.randomWalk();
-    // Master.mute = true;
+    this.then = new Date();
   }
 
   boxMullerRandom(): RandFunc {
@@ -123,9 +128,9 @@ class Nervous {
   }
 
   play(note: string): void {
-    this.synth.triggerRelease(this.currentNote);
-    this.currentNote = note;
-    this.synth.triggerAttack(this.currentNote);
+    // this.synth.triggerRelease(this.currentNote);
+    // this.currentNote = note;
+    this.synth.triggerAttackRelease(note, "5n", undefined, 0.1);
   }
 
   stop(): void {

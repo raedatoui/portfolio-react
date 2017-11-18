@@ -61,7 +61,7 @@
       },
       "livecase" : {
         "title": "LiveCase by Google",
-        "thumb": "/assets/images/thumbs/livecase.jpg",
+        "thumb": "/assets/images/thumbs/livecase.png",
         "agency": "Huge",
         "role": "Lead full stack engineer",
         "description": "Did it , worked on site, setup CI pipeline, loading testing and profiling, 3rd party API integrations for content moderation and companion app, 3d rendeting pipeline optimizations, custom shaders",
@@ -80,14 +80,21 @@
       },
       "playstation" : {
         "title": "First To Greatness - PS4",
-        "thumb": "/assets/images/thumbs/first-to-greatness.jpg",
+        "thumb": "/assets/images/thumbs/first-to-greatness.png",
         "agency": "",
         "description": "",
         "year": 2009
       },
       "rangerover" : {
         "title": "Race The Sun",
-        "thumb": "/assets/images/thumbs/race-the-sun.jpg",
+        "thumb": "/assets/images/thumbs/race-the-sun.png",
+        "agency": "",
+        "description": "",
+        "year": 2009
+      },
+      "x2" : {
+        "title": "x2 performance",
+        "thumb": "/assets/images/thumbs/x2.png",
         "agency": "",
         "description": "",
         "year": 2009
@@ -122,14 +129,14 @@
       },
       "fractals" : {
         "title": "Museum Tower Wall Covering",
-        "thumb": "/assets/images/thumbs/fractal.jpg",
+        "thumb": "/assets/images/thumbs/fractal.png",
         "agency": "",
         "description": "",
         "year": 2009
       },
       "newdeal" : {
         "title": " New Deal Design",
-        "thumb": "/assets/images/thumbs/ndd.jpg",
+        "thumb": "/assets/images/thumbs/ndd.png",
         "agency": "",
         "description": "",
         "year": 2009
@@ -143,21 +150,21 @@
       },
       "aro" : {
         "title": " Architecture Research Office",
-        "thumb": "/assets/images/thumbs/aro.jpg",
+        "thumb": "/assets/images/thumbs/aro.png",
         "agency": "",
         "description": "",
         "year": 2009
       },
       "kitchen" : {
         "title": "The Kitchen",
-        "thumb": "/assets/images/thumbs/kitchen.jpg",
+        "thumb": "/assets/images/thumbs/kitchen.png",
         "agency": "",
         "description": "",
         "year": 2009
       },
       "typem" : {
         "title": "Type M",
-        "thumb": "/assets/images/thumbs/typem.jpg",
+        "thumb": "/assets/images/thumbs/typem.png",
         "agency": "",
         "description": "",
         "year": 2009
@@ -171,7 +178,7 @@
       },
       "ucla" : {
         "title": " UCLA Architecture & Urban Design",
-        "thumb": "/assets/images/thumbs/ucla.jpg",
+        "thumb": "/assets/images/thumbs/ucla.png",
         "agency": "",
         "description": "",
         "year": 2009
