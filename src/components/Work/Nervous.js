@@ -19,7 +19,7 @@ class Nervous {
 
   constructor(detune: number) {
     this.delay = new FeedbackDelay(0.15, 0.1).toMaster();
-    this.delay.wet.value = 0.2;
+    this.delay.wet.value = 0.1;
     this.synth = new PolySynth(6, Synth, {
       oscillator: {
         partials: [0, 2, 3, 4]
@@ -130,7 +130,7 @@ class Nervous {
   play(note: string): void {
     // this.synth.triggerRelease(this.currentNote);
     // this.currentNote = note;
-    this.synth.triggerAttackRelease(note, "5n", undefined, 0.1);
+    this.synth.triggerAttackRelease(note, 1, undefined, 0.5);
   }
 
   stop(): void {

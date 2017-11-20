@@ -77,6 +77,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     const transitioned: boolean =
       this.props.selectedProject !== prevProps.selectedProject;
     if (selected && transitioned && this.slider) this.slider.resize();
+    this.fpsInterval = 1000 / 10;
   }
 
   toggle() {
