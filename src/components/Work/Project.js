@@ -3,6 +3,7 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import Flickity from "flickity";
 import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
@@ -47,6 +48,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   raf: number;
   nervous: Nervous;
   blip: number;
+  slider: Flickity;
 
   constructor(props: WithDispatch<OwnProps>) {
     super(props);
@@ -58,6 +60,20 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.state = {
       showPixels: false
     };
+  }
+
+  componentDidMount() {
+    this.slider = new Flickity(`.carousel-${this.props.projectId}`, {
+      pageDots: false
+    });
+  }
+
+  componentDidUpdate(prevProps: OwnProps) {
+    const selected: boolean =
+      this.props.projectId === this.props.selectedProject;
+    const transitioned: boolean =
+      this.props.selectedProject !== prevProps.selectedProject;
+    if (selected && transitioned && this.slider) this.slider.resize();
   }
 
   toggle() {
@@ -203,6 +219,15 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
             </MetaWrapper>
           </DetailWrapper>
         )}
+        <CarouselWrapper
+          className={`carousel carousel-${projectId} show-${showDetails}`}
+        >
+          <div className="carousel-cell" />
+          <div className="carousel-cell" />
+          <div className="carousel-cell" />
+          <div className="carousel-cell" />
+          <div className="carousel-cell" />
+        </CarouselWrapper>
         <hr />
       </Project>
     );
@@ -212,6 +237,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
 export default connect(mapStateToProps)(ProjectInner);
 
 const Project = styled.div`
+  position: relative;
   hr {
     height: 1px;
     border: none;
@@ -286,5 +312,22 @@ const FxWrapper = styled.div`
     &.showPixels {
       visibility: visible;
     }
+  }
+`;
+
+const CarouselWrapper = styled.div`
+  position: relative;
+  margin: 1em;
+  :focus {
+    outline: 0;
+  }
+  &.show-false {
+    display: none;
+  }
+  .carousel-cell {
+    width: 25%;
+    height: 300px;
+    background: red;
+    margin: 0.5em;
   }
 `;
