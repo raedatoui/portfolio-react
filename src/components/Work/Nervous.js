@@ -29,6 +29,7 @@ class Nervous {
     this.midiMax = 100;
     this.midiMin = 36;
     this.notes = this.randomWalk();
+    // Master.mute = true;
   }
 
   boxMullerRandom(): RandFunc {
