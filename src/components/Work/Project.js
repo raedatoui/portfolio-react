@@ -234,7 +234,6 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
           <div className="carousel-cell" />
           <div className="carousel-cell" />
         </CarouselWrapper>
-        {/*<hr />*/}
       </Project>
     );
   }
