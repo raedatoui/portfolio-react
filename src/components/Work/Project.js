@@ -7,9 +7,8 @@ import Flickity from "flickity";
 import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
-import { copy } from "@src/styles";
+import { copy, colors } from "@src/styles";
 import { Text } from "@src/components/Shared";
-import { colors } from "@src/styles";
 import Nervous, { type NervousPoint } from "./nervous";
 
 type Props = {|
@@ -68,7 +67,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     });
   }
 
-  componentDidUpdate(prevProps: OwnProps) {
+  componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
     const selected: boolean =
       this.props.projectId === this.props.selectedProject;
     const transitioned: boolean =
@@ -146,6 +145,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
 
   handleImageLoaded() {
     this.context = this.fx.getContext("2d");
+    this.fx.width = this.src.width;
+    this.fx.height = this.src.height;
     // this.context.mozImageSmoothingEnabled = false;
     // this.context.webkitImageSmoothingEnabled = false;
     this.context.imageSmoothingEnabled = false;
@@ -169,7 +170,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     const { project, projectId } = this.props;
     const showDetails = this.props.projectId === this.props.selectedProject;
     const showPixels = this.state.showPixels;
-
+    const headerClass = (showPixels || showDetails).toString();
     return (
       <Project
         id={projectId}
@@ -178,8 +179,9 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
+        className="Grid-cells"
       >
-        <Header onClick={() => this.toggle()}>
+        <Card onClick={() => this.toggle()}>
           <FxWrapper>
             <img
               src={project.thumb}
@@ -196,8 +198,12 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
               }}
             />
           </FxWrapper>
-          <span>{project.title}</span>
-        </Header>
+
+          <Header className={`show-${headerClass}`}>
+            <span>{project.title}</span>
+          </Header>
+        </Card>
+
         {showDetails && (
           <DetailWrapper>
             <Text content={project.description} />
@@ -220,7 +226,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
           </DetailWrapper>
         )}
         <CarouselWrapper
-          className={`carousel carousel-${projectId} show-${showDetails}`}
+          className={`carousel carousel-${projectId} show-${showDetails.toString()}`}
         >
           <div className="carousel-cell" />
           <div className="carousel-cell" />
@@ -228,7 +234,6 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
           <div className="carousel-cell" />
           <div className="carousel-cell" />
         </CarouselWrapper>
-        <hr />
       </Project>
     );
   }
@@ -237,7 +242,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
 export default connect(mapStateToProps)(ProjectInner);
 
 const Project = styled.div`
-  position: relative;
+  width: calc(25% - 2em);
+  margin: 1em;
   hr {
     height: 1px;
     border: none;
@@ -245,26 +251,54 @@ const Project = styled.div`
     margin: 0.61em 0;
   }
   &:focus {
-    outline: 2px dotted ${colors.red};
+    outline: 2px solid ${colors.red};
   }
 `;
 
-const Header = styled.h4`
-  min-height: 140px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: 0.5em 0;
-  transition: 0.25s all;
+const Card = styled.div`width: 100%;`;
 
+const Header = styled.h4`
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding: 0.5em;
+  visibility: hidden;
   span {
     cursor: pointer;
   }
   &:hover {
     color: ${colors.red};
+  }
+  &.show-true {
+    visibility: visible;
+  }
+`;
+
+const FxWrapper = styled.div`
+  max-height: 400px;
+  position: relative;
+  cursor: pointer;
+  img {
+    opacity: 1;
+    width: 100%;
+    display: flex;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -o-crisp-edges;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    visibility: hidden;
+    &.showPixels {
+      visibility: visible;
+    }
   }
 `;
 
@@ -283,37 +317,6 @@ const MetaLabel = styled.span`
 `;
 
 const MetaValue = styled.span`display: inline-block;`;
-
-const FxWrapper = styled.div`
-  position: relative;
-  width: 20%;
-  max-width: 140px;
-  height: 140px;
-  margin: 0 1em 0 0;
-  img {
-    opacity: 1;
-  }
-  img,
-  canvas {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  canvas {
-    height: 100%;
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -o-crisp-edges;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
-    visibility: hidden;
-    &.showPixels {
-      visibility: visible;
-    }
-  }
-`;
 
 const CarouselWrapper = styled.div`
   position: relative;

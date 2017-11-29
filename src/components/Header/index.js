@@ -133,7 +133,7 @@ const SourceLink = styled.div`
 
 const MuteButton = styled.span`
   cursor: pointer;
-  color: ${colors.black};
+  color: ${colors.grey};
   &:hover {
     color: ${colors.red};
     text-decoration: underline;
