@@ -56,5 +56,6 @@ export type State = {|
   viewsource: string,
   lists: {
     [listId: string]: List
-  }
+  },
+  frameRate: number
 |};

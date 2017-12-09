@@ -11,6 +11,7 @@ export const colors = {
   grey: "#444444",
   red: "#EE4938",
   white: "#ffffff",
+  lightGrey: "#d7dcdf",
   reda: "rgba(238, 73, 56, 0.25)"
 };
 

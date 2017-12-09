@@ -21,3 +21,16 @@ const getList: ActionCreator<
 });
 
 export default getList;
+
+export const setFrameRate: ActionCreator<
+  number,
+  void
+> = new ActionCreator(frameRate => ops => {
+  const state: Types.State = ops.getState();
+  ops.dispatch(
+    setState({
+      ...state,
+      frameRate
+    })
+  );
+});

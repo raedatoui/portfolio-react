@@ -9,6 +9,7 @@ import getHeader from "./actions";
 import HeaderListItem from "./ListItem";
 import { colors } from "@src/styles";
 import { Master } from "tone";
+import { RangeSlider } from "../Shared";
 
 type Props = {|
   nets: Types.List,
@@ -78,6 +79,8 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
           </HeaderLinks>
         </HeaderWrapper>
         <SourceLink>
+          <RangeSlider min={1} max={100} step={1} />
+          <span>&nbsp;&nbsp;</span>
           <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
           <span>&nbsp;&nbsp;&nbsp;</span>
           <a target="_blank" href={viewsource}>
@@ -123,7 +126,8 @@ const HeaderList = styled.u`
 
 const SourceLink = styled.div`
   margin: 0.75em -1em 0 -1em;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: flex-end;
   width: 100%;
   text-align: right;
   &:visited {

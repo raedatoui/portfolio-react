@@ -57,7 +57,8 @@ const defaultState: Types.State = {
   selectedProject: null,
   bio: { link: "", content: "" },
   lists: {},
-  viewsource: ""
+  viewsource: "",
+  frameRate: 0
 };
 
 const enhancer = compose(

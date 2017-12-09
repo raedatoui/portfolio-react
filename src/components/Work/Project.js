@@ -12,7 +12,8 @@ import { Text } from "@src/components/Shared";
 import Nervous, { type NervousPoint } from "./nervous";
 
 type Props = {|
-  selectedProject: ?string
+  selectedProject: ?string,
+  frameRate: number
 |};
 
 type OwnProps = {|
@@ -27,7 +28,8 @@ type State = {|
 |};
 
 const mapStateToProps = (state: Types.State): Props => ({
-  selectedProject: state.selectedProject
+  selectedProject: state.selectedProject,
+  frameRate: state.frameRate
 });
 
 const projectFields: Array<{| field: string, label: string |}> = [
@@ -62,7 +64,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
       showPixels: false
     };
     this.then = new Date();
-    this.fpsInterval = 1000.0 / 750.0;
+    this.fpsInterval = 1000.0 / 5.0;
   }
 
   componentDidMount() {
@@ -77,7 +79,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     const transitioned: boolean =
       this.props.selectedProject !== prevProps.selectedProject;
     if (selected && transitioned && this.slider) this.slider.resize();
-    this.fpsInterval = 1000 / 10;
+    this.fpsInterval = 1000.0 / this.props.frameRate;
   }
 
   toggle() {
@@ -145,13 +147,13 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         this.nervousPlay();
       } else {
         this.raf = window.requestAnimationFrame(this.animate.bind(this));
-        this.nervousPlay();
-        // const now = Date.now();
-        // const elapsed = now - this.then;
-        // if (elapsed > this.fpsInterval) {
-        //   this.then = now - elapsed % this.fpsInterval;
-        //   this.nervousPlay();
-        // }
+        // this.nervousPlay();
+        const now = Date.now();
+        const elapsed = now - this.then;
+        if (elapsed > this.fpsInterval) {
+          this.then = now - elapsed % this.fpsInterval;
+          this.nervousPlay();
+        }
       }
     } else {
       this.nervous.stop();
@@ -183,10 +185,11 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   };
 
   render() {
-    const { project, projectId } = this.props;
+    const { project, projectId, frameRate } = this.props;
     const showDetails = this.props.projectId === this.props.selectedProject;
     const showPixels = this.state.showPixels;
     const headerClass = (showPixels || showDetails).toString();
+    this.fpsInterval = 1000.0 / frameRate;
     return (
       <Project
         id={projectId}
