@@ -1,9 +1,17 @@
 // @flow
-import { PolySynth, Synth, Frequency, FeedbackDelay, Master } from "tone";
+import {
+  PolySynth,
+  Synth,
+  Frequency,
+  FeedbackDelay,
+  Master,
+  PitchShift
+} from "tone";
 
 export type NervousPoint = {|
   midi: string,
-  pixelation: number
+  pixelation: number,
+  pitch: number
 |};
 
 type RandFunc = () => number;
@@ -16,6 +24,7 @@ class Nervous {
   midiMax: number;
   midiMin: number;
   delay: FeedbackDelay;
+  pitchShift: PitchShift;
 
   constructor(detune: number) {
     this.delay = new FeedbackDelay(0.15, 0.1).toMaster();
@@ -28,13 +37,12 @@ class Nervous {
     Master.set("volume", -6);
     // this.panVol = new PanVol();
     // this.synth.chain(this.delay, this.panVol, Master);
-
+    // this.pitchShift = new PitchShift(1).toMaster();
     this.currentNote = "";
     this.synth.set("detune", -100 * detune);
     this.midiMax = 100;
     this.midiMin = 36;
     this.notes = this.randomWalk();
-    this.then = new Date();
   }
 
   boxMullerRandom(): RandFunc {
@@ -105,9 +113,7 @@ class Nervous {
     for (t = 0; t < steps; t += 1) {
       value += randFunc();
       points.push(value);
-      points.push(value);
-      points.push(value);
-      points.push(value);
+      if (t > 1) points.push(points[t - 2]);
     }
 
     const max = points.reduce((a, b) => {
@@ -122,7 +128,8 @@ class Nervous {
         this.mapRange(p, min, max, this.midiMin, this.midiMax),
         "midi"
       ).toNote(),
-      pixelation: this.mapRange(p, min, max, 0, 25)
+      pixelation: this.mapRange(p, min, max, 0, 25),
+      pitch: this.mapRange(p, min, max, -48, 48)
     }));
     return nervousPoints;
   }
@@ -130,7 +137,7 @@ class Nervous {
   play(note: string): void {
     // this.synth.triggerRelease(this.currentNote);
     // this.currentNote = note;
-    this.synth.triggerAttackRelease(note, 1, undefined, 0.5);
+    this.synth.triggerAttackRelease(note, 1, undefined, 1);
   }
 
   stop(): void {

@@ -57,7 +57,7 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
     const { muted } = this.state;
     Master.mute = muted;
     const muteLabel = muted ? "unmute" : "mute";
-    const { nets, viewsource } = this.props;
+    const { nets, viewsource, dispatch } = this.props;
 
     return (
       <HeaderOuterWrapper>
@@ -79,7 +79,7 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
           </HeaderLinks>
         </HeaderWrapper>
         <SourceLink>
-          <RangeSlider min={1} max={100} step={1} />
+          <RangeSlider min={1} max={100} step={1} dispatch={dispatch} />
           <span>&nbsp;&nbsp;</span>
           <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
           <span>&nbsp;&nbsp;&nbsp;</span>
