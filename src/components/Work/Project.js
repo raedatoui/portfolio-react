@@ -3,16 +3,14 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import Flickity from "flickity";
 import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
-import { copy, colors } from "@src/styles";
-import { Text } from "@src/components/Shared";
+//import * as SharedActions from "@src/components/Shared/actions";
 import Nervous, { type NervousPoint } from "./nervous";
 
 type Props = {|
-  selectedProject: ?string,
+  selectedProjectId: ?string,
   frameRate: number
 |};
 
@@ -20,7 +18,9 @@ type OwnProps = {|
   ...Props,
   project: Types.Project,
   projectId: string,
-  detune: number
+  groupId: string,
+  detune: number,
+  disabled: boolean
 |};
 
 type State = {|
@@ -28,16 +28,9 @@ type State = {|
 |};
 
 const mapStateToProps = (state: Types.State): Props => ({
-  selectedProject: state.selectedProject,
+  selectedProjectId: state.selectedProjectId,
   frameRate: state.frameRate
 });
-
-const projectFields: Array<{| field: string, label: string |}> = [
-  { field: "agency", label: "Agency: " },
-  { field: "year", label: "Year: " },
-  { field: "role", label: "Role: " },
-  { field: "tech", label: "Tech: " }
-];
 
 class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   fx: HTMLCanvasElement;
@@ -49,9 +42,10 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   raf: number;
   nervous: Nervous;
   blip: number;
-  slider: Flickity;
   prev: Date;
   fpsInterval: number;
+  delta: number;
+  counter: number;
 
   constructor(props: WithDispatch<OwnProps>) {
     super(props);
@@ -60,6 +54,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.counter = 0;
     this.nervous = new Nervous(this.props.detune);
     this.blip = 0;
+    this.delta = 1;
+    this.counter = 0;
     this.state = {
       showPixels: false
     };
@@ -67,25 +63,25 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.fpsInterval = 1000.0 / 5.0;
   }
 
-  componentDidMount() {
-    this.slider = new Flickity(`.carousel-${this.props.projectId}`, {
-      pageDots: false
-    });
-  }
-
-  componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
-    const selected: boolean =
-      this.props.projectId === this.props.selectedProject;
-    const transitioned: boolean =
-      this.props.selectedProject !== prevProps.selectedProject;
-    if (selected && transitioned && this.slider) this.slider.resize();
-    this.fpsInterval = 1000.0 / this.props.frameRate;
-  }
+  // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
+  //   // const selected: boolean =
+  //   //   this.props.projectId === this.props.selectedProject;
+  //   // const transitioned: boolean =
+  //   //   this.props.selectedProject !== prevProps.selectedProject;
+  //   // if (selected && transitioned && this.slider) this.slider.resize();
+  //   this.fpsInterval = 1000.0 / this.props.frameRate;
+  // }
 
   toggle() {
     const projectId = this.props.projectId;
-    if (this.props.selectedProject !== projectId) {
-      this.props.dispatch(ProjectActions.openProject(this.props.projectId));
+    if (this.props.selectedProjectId !== projectId) {
+      this.props.dispatch(
+        ProjectActions.openProject({
+          project: this.props.project,
+          projectId: this.props.projectId,
+          groupId: this.props.groupId
+        })
+      );
       this.play = false;
       this.nervousPlay();
     } else {
@@ -129,7 +125,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.pixelate(note.pixelation);
 
     if (this.counter % (this.nervous.notes.length / 4))
-      this.fpsInterval = 1000 / (Math.random() * 100 + 1);
+      this.fpsInterval = 1000 / (Math.random() * this.props.frameRate + 1);
 
     if (this.counter === 0 || this.counter === this.nervous.notes.length - 1) {
       this.step = -this.step;
@@ -139,7 +135,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   animate() {
     // loop
     if (this.play) {
-      if (this.props.selectedProject === this.props.projectId) {
+      if (this.props.selectedProjectId === this.props.projectId) {
         this.blip++;
         if (this.blip === 10) {
           window.cancelAnimationFrame(this.raf);
@@ -155,6 +151,15 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         if (elapsed > this.fpsInterval) {
           this.prev = now - elapsed % this.fpsInterval;
           this.nervousPlay();
+          // this.counter += 1;
+          if (this.props.frameRate >= 100) this.delta = -1;
+          if (this.props.frameRate <= 1) this.delta = 1;
+          // if (this.counter === 4) {
+          //   this.props.dispatch(
+          //     SharedActions.setFrameRate(this.props.frameRate +  this.delta)
+          //   );
+          // this.counter = 0;
+          // }
         }
       }
     } else {
@@ -187,8 +192,8 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   };
 
   render() {
-    const { project, projectId, frameRate } = this.props;
-    const showDetails = this.props.projectId === this.props.selectedProject;
+    const { project, projectId, frameRate, disabled } = this.props;
+    const showDetails = this.props.projectId === this.props.selectedProjectId;
     const showPixels = this.state.showPixels;
     const headerClass = (showPixels || showDetails).toString();
     this.fpsInterval = 1000.0 / frameRate;
@@ -200,7 +205,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        className="Grid-cells"
+        className={`Grid-cells dis-${disabled.toString()} det-${showDetails.toString()}`}
       >
         <Card onClick={() => this.toggle()}>
           <FxWrapper>
@@ -224,37 +229,6 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
             <span>{project.title}</span>
           </Header>
         </Card>
-
-        {showDetails && (
-          <DetailWrapper>
-            <Text content={project.description} />
-            <MetaWrapper>
-              {projectFields.map(field => {
-                return (
-                  field.field in project && (
-                    <MetaLine key={`${projectId}-${field.field}`}>
-                      <MetaLabel>{field.label}</MetaLabel>
-                      <MetaValue
-                        dangerouslySetInnerHTML={{
-                          __html: project[field.field]
-                        }}
-                      />
-                    </MetaLine>
-                  )
-                );
-              })}
-            </MetaWrapper>
-          </DetailWrapper>
-        )}
-        <CarouselWrapper
-          className={`carousel carousel-${projectId} show-${showDetails.toString()}`}
-        >
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-        </CarouselWrapper>
       </Project>
     );
   }
@@ -271,8 +245,11 @@ const Project = styled.div`
     background-color: #ddd;
     margin: 0.61em 0;
   }
+  &.dis-true {
+    opacity: 0.1;
+  }
   &:focus {
-    outline: 2px solid ${colors.red};
+    outline: none;
   }
 `;
 
@@ -285,9 +262,6 @@ const Header = styled.h4`
   visibility: hidden;
   span {
     cursor: pointer;
-  }
-  &:hover {
-    color: ${colors.red};
   }
   &.show-true {
     visibility: visible;
@@ -320,38 +294,5 @@ const FxWrapper = styled.div`
     &.showPixels {
       visibility: visible;
     }
-  }
-`;
-
-const DetailWrapper = styled.div``;
-
-const MetaWrapper = styled.div``;
-
-const MetaLine = styled(copy)`display: flex;`;
-
-const MetaLabel = styled.span`
-  font-weight: 600;
-  width: 90px;
-  margin-right: 0.5em;
-  display: inline-block;
-  text-align: right;
-`;
-
-const MetaValue = styled.span`display: inline-block;`;
-
-const CarouselWrapper = styled.div`
-  position: relative;
-  margin: 1em;
-  :focus {
-    outline: 0;
-  }
-  &.show-false {
-    display: none;
-  }
-  .carousel-cell {
-    width: 25%;
-    height: 300px;
-    background: red;
-    margin: 0.5em;
   }
 `;

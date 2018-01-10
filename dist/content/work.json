@@ -6,7 +6,7 @@
       "sal" : {
         "title": "Better Call Sal",
         "thumb": "/assets/images/thumbs/sal.png",
-        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a class=\"no-dec\" href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a>",
+        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a class=\"no-dec\" href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a><br /><a target=\"_blank\" href=\"http://bettercallsal.biz\">view site</a>",
         "year": 2016,
         "tech": "ES6, Web Audio, WebGL, GLSL"
       },
@@ -14,22 +14,54 @@
         "title": "Pierre Emmanuel Fillet",
         "thumb": "/assets/images/thumbs/pierre.png",
         "agency": "",
-        "description": "",
-        "year": 2009
+        "description": "Website for artist Pierre Emmanuel Fillet. Custom solution for viewing gigapixel artworks using a multi-tile interactive viewer.<br /><a target=\"_blank\" href=\"https://storage.googleapis.com/pierreemmanuelfillet.com/index.html\">view site</a>",
+        "year": 2012,
+        "tech": "HTML, CSS, JS, PHP, Ruby, ImageMagick, Wordpress"
       },
       "ica" : {
         "title": "The Institute of Contemporary Art - UPenn",
         "thumb": "/assets/images/thumbs/ica.png",
-        "agency": "",
-        "description": "Website for The Institute of Contemporary Art at the University of Pennsylvania.<br>Conceived and build at <a href='http://www.othermeans.us/'>Other Means</a>, in collaboration with&nbsp;<a href='http://ja.ckjennin.gs/'>Jack Jennings</a>",
+        "tech": "graph theory, api design, Ruby on Rails, Solr, Spine.js, Coffeescript, Susy CSS grid library",
+        "description": "Website for The Institute of Contemporary Art at the University of Pennsylvania.<br>Conceived and build at <a href='http://www.othermeans.us/' target='_blank'>Other Means</a>, in collaboration with&nbsp;<a href='http://ja.ckjennin.gs/' target='_blank'>Jack Jennings</a><br /><a href='http://icaphila.org/' target='_blank'>View site</a>.",
         "year": "nov 2012 - aug 2015"
       },
       "christa" : {
         "title": "Mnemonic Devices",
         "thumb": "/assets/images/thumbs/mnemonic.jpg",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "role": "research assistant, application development and architecture, prototyping",
+        "description": "Series of technology driven art installations developed under the direction of Christa Erickson. This body of work was part of Christa's solo faculty exhibition at Stony Brook University Staller Center for the Arts.<br><br><a href='http://emedia.art.sunysb.edu/christa/mdevices.html' target='_blank'>View project documentation</a>",
+        "year": 2007,
+        "sub": [
+          {
+            "title": "Seesaw",
+            "description": "<i>See/Saw</i> is part of <i>MNEMONIC DEVICES</i>. The most prominent component of the work, this twelve-foot seesaw, literally requires two peoples' participation, even cooperation. The seesaw acts like a giant video switcher: the way the participants 'play' determines the sequence, direction, and speed of images projected on an adjacent screen. Imagery is shot on super8 film, lending a home movie feel, and depicting closely cropped gestures between people. With no one at 'play', the screen contains images of 'leaders' collaged from TV, film, and video games that span this century.",
+            "tech": "Arduino, potentiometer attached to seesaw, analog signal treatment, Max MSP Jitter",
+            "video": "http://emedia.art.sunysb.edu/christa/mdevicesdoc/video/handhold.mov"
+          },
+          {
+            "title": "Whirl",
+            "description": "In <i>Whirl</i> memory and nostalgia is revealed as a warped phenomena. The viewer's breath is mapped such that blowing a pinwheel controls the playback of both record player and video, warping nostalgic sound from a found record of old rhyming favorites and imagery of wildly physical play on turn of the century (19th to 20th) circle swing.",
+            "tech": "Arduino, piezo attached to pinwheel, analog signal treatment, Max MSP Jitter",
+            "video": "http://emedia.art.sunysb.edu/christa/movs/EricksonWhirl.mov"
+          },
+          {
+            "title": "Debt Reducer",
+            "description": "As the U.S. National debt has recently surpassed $16 trillion, living to excess and beyond our means increasingly embodies and distresses our culture.<i>Debt Reducer</i> invites participants to contemplate personal and collective implications of debt and our culture of over-consumption. <br>This piece conveys a graphic, bodily sense of debt as constraining and suffocating through its \"belt tightening\" device and audio-video. A motorized corset and interactive video installation responds to individual debt levels that gallery visitors submit via their cell phones. As debt is submitted, the device squeezes a bloated dress-dummy torso through an elaborate pulley and winch system. Simultaneously, video of gold foil covered chocolate coins cascades down and accumulates at different heights according to amounts of debt. Absent viewer input, it randomly scrolls through the U.S. national debt, average student loan, and median gallery visitors’ debt that is projected upon audio-video of simmering fat.",
+            "tech": "Adobe Director, Arduino, Voltage controlled DC motors, HTML scrapper in Java, Email / SMS parser in Python",
+            "video": "http://emedia.art.sunysb.edu/christa/movs/EricksonDebt.mov"
+          },
+          {
+            "title": "Web Game",
+            "description": "<i>Scavenger Hunt</i> is part of <i>MNEMONIC DEVICES</i>. It examines the e-rhetoric of \"connection\" and the collective memory of the web. The two on-site web stations (laptops on opposite ends of a table that resembles the seesaw) allow people to play a scavenger hunt game with each other or people in remote locations. It asks a series of questions that are answered via a search engine. The one who finds all the answers first wins.",
+            "tech": "Adobe Flex, ActionScript 3,  multi threaded server in Java SE, real time sockets"
+          },
+          {
+            "title": "Climate Shifts",
+            "description": "We are all affected by our immediate context and its political, environmental, cultural and temporal influences. “Climate Shifts” juxtaposes various locations around the globe and their points of view through local news headlines and weather data. Differences in concerns and perspectives emerge, sometimes about the same world events, allowing a glimpse into the collective psyche of each place. How do geographically differing news sources interpret an election season? What are the primary concerns in Beirut versus Jerusalem? What events in Asia echo in Latin America?<br>A large umbrella acts as an overhead screen upon which the piece animates shifts through various destinations with the top of the umbrella pole acting as a locator. 'Climate' news, weather and time are gathered from real-time RSS feeds and layered over an illuminated light pollution satellite image of the globe. Time is reflected by clock hands that spin and adjust according to the time zone.",
+            "tech": "Adobe Flex, ActionScript 3, RSS parsing, PHP, MySQL",
+            "video": "http://emedia.art.sunysb.edu/christa/movs/EricksonClimate.mov"
+          }
+        ]
       }
     }
   },
@@ -40,8 +72,7 @@
       "orchard" : {
         "title": "The Orchard",
         "thumb": "/assets/images/thumbs/orchard.png",
-        "agency": "",
-        "description": "",
+        "description": "Contributing to The Orchard.",
         "year": "sept 2017 - present"
       }
     }
@@ -71,7 +102,6 @@
       "twg" : {
         "title": "Think with Google",
         "thumb": "/assets/images/thumbs/twg.png",
-        "agency": "The Map Office",
         "description": "Think with Google is Google's unique editorial and data insights destination for marketing professionals. Worked as a backend lead developing custom publishing solutions on a propietary content platform, continous integration and delivery practices for the tech team and a scalable localisation platform. Worked closely with content strategists on information architecture and translating that to efficient database designs. Mentored and helped on board new developers.",
         "year": "May 2014- June 2015",
         "agency": "Huge",
@@ -81,9 +111,10 @@
       "playstation" : {
         "title": "First To Greatness - PS4",
         "thumb": "/assets/images/thumbs/first-to-greatness.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "Stink Digital",
+        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>solving front end bugs and cross browser video delivery issues on a extremely tight deadline. Problem solving, FFMPEG, CSS3 effects optimization, Javascript animations optimization, CMS customization.",
+        "year": 2014,
+        "tech": "Ruby on Rails, ffmpeg, CSS3 animations"
       },
       "rangerover" : {
         "title": "Race The Sun",

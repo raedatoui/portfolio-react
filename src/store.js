@@ -55,6 +55,8 @@ const defaultState: Types.State = {
   work: {},
   sections: {},
   selectedProject: null,
+  selectedGroupId: null,
+  selectedProjectId: null,
   bio: { link: "", content: "" },
   lists: {},
   viewsource: "",

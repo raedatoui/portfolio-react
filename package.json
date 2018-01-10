@@ -9,6 +9,7 @@
     "bluebird": "^3.5.0",
     "callable-class": "^2.0.0",
     "flickity": "^2.0.10",
+    "fsevents": "^1.1.3",
     "pushid": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

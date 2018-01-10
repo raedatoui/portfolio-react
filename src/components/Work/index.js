@@ -8,9 +8,14 @@ import { getWork } from "./actions";
 import * as Types from "@src/types";
 import Project from "./Project";
 import { Text } from "@src/components/Shared/index";
+import ProjectDetail from "./ProjectDetail";
+import { colors } from "@src/styles";
 
 type Props = {|
-  work: Types.Work
+  work: Types.Work,
+  selectedProject: ?Types.Project,
+  selectedProjectId: ?string,
+  selectedGroupId: ?string
 |};
 
 type OwnProps = {|
@@ -21,13 +26,35 @@ type OwnProps = {|
 type Group = Array<string>;
 
 const mapStateToProps = (state: Types.State): Props => ({
-  work: state.work
+  work: state.work,
+  selectedProject: state.selectedProject,
+  selectedGroupId: state.selectedGroupId,
+  selectedProjectId: state.selectedProjectId
 });
 
 class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
+  details: {
+    [string]: ContentBox
+  };
+
+  constructor(props: WithDispatch<OwnProps>) {
+    super(props);
+    this.details = {};
+  }
+
   componentDidMount() {
     this.props.dispatch(getWork(this.props.contentPath));
   }
+
+  // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
+  //   const transitioned: boolean =
+  //     this.props.selectedProject !== prevProps.selectedProject;
+  //   this.setState({
+  //     showProjectDetail: transitioned && this.props.selectedProject !== null
+  //   });
+  //   // if (selected && transitioned && this.slider) this.slider.resize();
+  // }
+
   createGroupedArray = (arr: Group, chunkSize: number): Array<Group> => {
     let groups: Array<Group> = [];
     let i: number;
@@ -39,7 +66,9 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
 
   render() {
     const list = Object.keys(this.props.work || {});
+    const { selectedGroupId, selectedProjectId } = this.props;
     let counter = 0;
+
     return (
       <ProjectsWrapper>
         {list.map(workId => {
@@ -57,23 +86,43 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
               <WorkHeader>{work.label}</WorkHeader>
               <Text content={work.description} />
               {pList.map((group, j) => (
-                <ListWrapper
-                  className="Grid Grid--gutters"
-                  key={`group-${workId}-${j}`}
-                >
-                  {group.map(projectId => {
-                    const project = work.work[projectId];
-                    counter++;
-                    return (
-                      <Project
-                        key={projectId}
-                        project={project}
-                        projectId={projectId}
-                        detune={counter}
-                      />
-                    );
-                  })}
-                </ListWrapper>
+                <div key={`group-${workId}-${j}`}>
+                  <ListWrapper className="Grid Grid--gutters">
+                    {group.map(projectId => {
+                      const project = work.work[projectId];
+                      const disabled =
+                        selectedGroupId === `group-${workId}-${j}` &&
+                        projectId !== selectedProjectId;
+                      counter++;
+                      return (
+                        <Project
+                          key={projectId}
+                          project={project}
+                          projectId={projectId}
+                          groupId={`group-${workId}-${j}`}
+                          detune={counter}
+                          disabled={disabled}
+                        />
+                      );
+                    })}
+                  </ListWrapper>
+                  <ContentBox
+                    ref={ref => {
+                      if (ref)
+                        this.details[
+                          `group-${workId}-${j}`
+                        ] = (ref: ContentBox);
+                    }}
+                  >
+                    {selectedGroupId === `group-${workId}-${j}` &&
+                      this.props.selectedProject && (
+                        <ProjectDetail
+                          project={this.props.selectedProject}
+                          projectId={this.props.selectedProjectId || ""}
+                        />
+                      )}
+                  </ContentBox>
+                </div>
               ))}
             </WorkWrapper>
           );
@@ -96,4 +145,6 @@ const WorkWrapper = styled.div`
   }
 `;
 
-const ListWrapper = styled.div`margin: 2em 0;`;
+const ListWrapper = styled.div`margin-top: 2em;`;
+
+const ContentBox = styled.div`border: 0px solid ${colors.red};`;

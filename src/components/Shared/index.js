@@ -5,6 +5,7 @@ import styled from "styled-components";
 import type { WithDispatch } from "@src/store";
 import * as SharedActions from "./actions";
 import { colors } from "@src/styles";
+import { connect } from "react-redux";
 
 type Props = {|
   content: string
@@ -31,7 +32,12 @@ const rangeTrackHeight = "2px";
 const rangeLabelColor = `${colors.grey}`;
 const rangeLabelWidth = 50;
 
+type SliderProps = {|
+  frameRate: number
+|};
+
 type SliderOwnProps = {|
+  ...SliderProps,
   dispatch: () => void,
   min: number,
   max: number,
@@ -42,7 +48,11 @@ type State = {|
   value: number
 |};
 
-export class RangeSlider extends React.Component<
+const mapStateToProps = (state: Types.State): Props => ({
+  frameRate: state.frameRate
+});
+
+export class RangeSliderInner extends React.Component<
   WithDispatch<SliderOwnProps>,
   State
 > {
@@ -51,6 +61,12 @@ export class RangeSlider extends React.Component<
     this.state = {
       value: 1
     };
+  }
+
+  componentWillReceiveProps(props: WithDispatch<OwnProps>): void {
+    this.setState({
+      value: props.frameRate
+    });
   }
 
   handleChange(event: Event) {
@@ -79,7 +95,7 @@ export class RangeSlider extends React.Component<
     );
   }
 }
-// export const RangeSlider = connect(mapStateToProps)(RangeSliderInner);
+export const RangeSlider = connect(mapStateToProps)(RangeSliderInner);
 
 const SliderContainer = styled.div`
   width: 200px;

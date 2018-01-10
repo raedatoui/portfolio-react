@@ -19,14 +19,16 @@ export const getWork: ActionCreator<
 });
 
 export const openProject: ActionCreator<
-  string,
+  { project: Types.Project, projectId: string, groupId: string },
   void
-> = new ActionCreator(projectId => ops => {
+> = new ActionCreator(({ project, projectId, groupId }) => ops => {
   const state: Types.State = ops.getState();
   ops.dispatch(
     setState({
       ...state,
-      selectedProject: projectId
+      selectedProject: project,
+      selectedProjectId: projectId,
+      selectedGroupId: groupId
     })
   );
 });
@@ -39,7 +41,9 @@ export const closeAllProjects: ActionCreator<
   ops.dispatch(
     setState({
       ...state,
-      selectedProject: null
+      selectedProject: null,
+      selectedProjectId: null,
+      selectedGroupId: null
     })
   );
 });

@@ -137,7 +137,7 @@ class Nervous {
   play(note: string): void {
     // this.synth.triggerRelease(this.currentNote);
     // this.currentNote = note;
-    this.synth.triggerAttackRelease(note, 1, undefined, 1);
+    this.synth.triggerAttackRelease(note, 0.5, undefined, 0.5);
   }
 
   stop(): void {

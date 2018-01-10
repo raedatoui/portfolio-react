@@ -51,7 +51,9 @@ export type Work = {|
 export type State = {|
   sections: SectionMap,
   work: Work,
-  selectedProject: ?string,
+  selectedProject: ?Project,
+  selectedGroupId: ?string,
+  selectedProjectId: ?string,
   bio: Bio,
   viewsource: string,
   lists: {
