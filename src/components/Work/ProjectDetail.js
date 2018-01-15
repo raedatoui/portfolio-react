@@ -33,7 +33,9 @@ class ProjectDetail extends React.Component<Props> {
   }
 
   render() {
-    const subs = this.props.project.sub || [];
+    const project: Types.Project = this.props.project;
+    const subs: Array<Types.SubProject> = project.sub || [];
+    const gallery: ?Types.Gallery = project.gallery;
     return (
       <DetailWrapper>
         <Text content={this.props.project.description} />
@@ -52,7 +54,7 @@ class ProjectDetail extends React.Component<Props> {
               )
             );
           })}
-          {subs.map((sub, idx) => {
+          {subs.map((sub: Types.SubProject, idx: number) => {
             return (
               <SubContainer key={`sub-${this.props.projectId}-${idx}`}>
                 <Header>{sub.title}</Header>
@@ -78,15 +80,17 @@ class ProjectDetail extends React.Component<Props> {
             );
           })}
         </MetaWrapper>
-        <CarouselWrapper
-          className={`carousel carousel-${this.props.projectId} show-true`}
-        >
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-          <div className="carousel-cell" />
-        </CarouselWrapper>
+        {gallery && (
+          <CarouselWrapper
+            className={`carousel carousel-${this.props.projectId} show-true`}
+          >
+            <div className="carousel-cell" />
+            <div className="carousel-cell" />
+            <div className="carousel-cell" />
+            <div className="carousel-cell" />
+            <div className="carousel-cell" />
+          </CarouselWrapper>
+        )}
       </DetailWrapper>
     );
   }

@@ -11,33 +11,39 @@ export type SectionMap = {|
   +[sectionId: string]: Section
 |};
 
-type SubProject = {
+export type SubProject = {
   title: string,
   description: string,
   tech: string,
   video?: string
 };
 
+export type GalleryItemType = "image" | "vimeo" | "youtube";
+
+export type Gallery = {
+  path: string,
+  assets: Array<{
+    file: string,
+    type: GalleryItemType,
+    caption?: string
+  }>
+};
+
 export type Project = {
   title: string,
   thumb: string,
   description: string,
-  carousel?: Carousel,
   agency: string,
   description: string,
   role: string,
   tech: string,
-  sub?: Array<SubProject>
+  sub?: Array<SubProject>,
+  gallery?: Gallery
 };
 
 export type ProjectMap = {|
   +[projectId: string]: Project
 |};
-
-export type Carousel = {|
-  assets: { [string]: string }
-|};
-
 export type List = Array<{|
   name: string,
   link?: string
