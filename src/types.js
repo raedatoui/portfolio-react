@@ -11,6 +11,13 @@ export type SectionMap = {|
   +[sectionId: string]: Section
 |};
 
+type SubProject = {
+  title: string,
+  description: string,
+  tech: string,
+  video?: string
+};
+
 export type Project = {
   title: string,
   thumb: string,
@@ -19,7 +26,8 @@ export type Project = {
   agency: string,
   description: string,
   role: string,
-  tech: string
+  tech: string,
+  sub?: Array<SubProject>
 };
 
 export type ProjectMap = {|

@@ -6,6 +6,7 @@ import type { WithDispatch } from "@src/store";
 import * as SharedActions from "./actions";
 import { colors } from "@src/styles";
 import { connect } from "react-redux";
+import * as Types from "@src/types";
 
 type Props = {|
   content: string
@@ -48,7 +49,7 @@ type State = {|
   value: number
 |};
 
-const mapStateToProps = (state: Types.State): Props => ({
+const mapStateToProps = (state: Types.State): SliderProps => ({
   frameRate: state.frameRate
 });
 
@@ -63,7 +64,7 @@ export class RangeSliderInner extends React.Component<
     };
   }
 
-  componentWillReceiveProps(props: WithDispatch<OwnProps>): void {
+  componentWillReceiveProps(props: WithDispatch<SliderOwnProps>): void {
     this.setState({
       value: props.frameRate
     });

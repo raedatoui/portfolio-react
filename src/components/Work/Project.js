@@ -146,10 +146,10 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         this.nervousPlay();
       } else {
         this.raf = window.requestAnimationFrame(this.animate.bind(this));
-        const now = Date.now();
-        const elapsed: Date = now - this.prev;
+        const now: number = Date.now();
+        const elapsed: number = now - this.prev.getTime();
         if (elapsed > this.fpsInterval) {
-          this.prev = now - elapsed % this.fpsInterval;
+          this.prev.setTime(now - elapsed % this.fpsInterval);
           this.nervousPlay();
           // this.counter += 1;
           if (this.props.frameRate >= 100) this.delta = -1;
