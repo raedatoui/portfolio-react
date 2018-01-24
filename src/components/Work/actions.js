@@ -47,3 +47,16 @@ export const closeAllProjects: ActionCreator<
     })
   );
 });
+
+export const openGallery: ActionCreator<
+  ?Types.Gallery,
+  void
+> = new ActionCreator((gallery: ?Types.Gallery) => ops => {
+  const state: Types.State = ops.getState();
+  ops.dispatch(
+    setState({
+      ...state,
+      selectedGallery: gallery
+    })
+  );
+});

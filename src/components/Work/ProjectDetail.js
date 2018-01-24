@@ -2,14 +2,14 @@
 
 import React from "react";
 import styled from "styled-components";
-import Flickity from "flickity";
 import * as Types from "@src/types";
 import { copy } from "@src/styles";
 import { Text } from "@src/components/Shared";
 
 type Props = {|
   project: Types.Project,
-  projectId: string
+  projectId: string,
+  galleryFn: Function
 |};
 
 const projectFields: Array<{| field: string, label: string |}> = [
@@ -20,22 +20,14 @@ const projectFields: Array<{| field: string, label: string |}> = [
 ];
 
 class ProjectDetail extends React.Component<Props> {
-  slider: Flickity;
-
   constructor(props: Props) {
     super(props);
   }
 
-  componentDidMount() {
-    this.slider = new Flickity(`.carousel-${this.props.projectId}`, {
-      pageDots: false
-    });
-  }
-
   render() {
-    const project: Types.Project = this.props.project;
+    const { project, projectId } = this.props;
     const subs: Array<Types.SubProject> = project.sub || [];
-    const gallery: ?Types.Gallery = project.gallery;
+    const gallery: Types.Gallery = project.gallery || [];
     return (
       <DetailWrapper>
         <Text content={this.props.project.description} />
@@ -81,15 +73,22 @@ class ProjectDetail extends React.Component<Props> {
           })}
         </MetaWrapper>
         {gallery && (
-          <CarouselWrapper
-            className={`carousel carousel-${this.props.projectId} show-true`}
-          >
-            <div className="carousel-cell" />
-            <div className="carousel-cell" />
-            <div className="carousel-cell" />
-            <div className="carousel-cell" />
-            <div className="carousel-cell" />
-          </CarouselWrapper>
+          <GallerylWrapper>
+            {gallery.map((item, idx) => {
+              return (
+                <div
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => this.props.galleryFn()}
+                  onKeyDown={ev => {
+                    if (ev.keyCode === 13) this.props.galleryFn();
+                  }}
+                  key={`${projectId}-gallery-${idx}`}
+                  className="carousel-item"
+                />
+              );
+            })}
+          </GallerylWrapper>
         )}
       </DetailWrapper>
     );
@@ -98,7 +97,10 @@ class ProjectDetail extends React.Component<Props> {
 
 export default ProjectDetail;
 
-const DetailWrapper = styled.div``;
+const DetailWrapper = styled.div`
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+`;
 
 const MetaWrapper = styled.div``;
 
@@ -112,20 +114,30 @@ const MetaLabel = styled.span`
 
 const MetaValue = styled.span`display: inline-block;`;
 
-const CarouselWrapper = styled.div`
-  position: relative;
+const GallerylWrapper = styled.div`
   margin: 1em;
+  display: flex;
+  flex-basis: row;
+  flex-wrap: wrap;
   :focus {
     outline: 0;
   }
-  &.show-false {
-    display: none;
-  }
-  .carousel-cell {
-    width: 25%;
-    height: 300px;
-    background: red;
-    margin: 0.5em;
+  .carousel-item {
+    height: 75px;
+    cursor: pointer;
+    z-index: 0;
+    img {
+      height: 75px;
+      transition: 0.25s all;
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+    &:hover {
+      z-index: 1;
+      img {
+        transform: scale3d(1.2, 1.2, 1);
+      }
+    }
   }
 `;
 

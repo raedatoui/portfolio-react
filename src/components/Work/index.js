@@ -4,18 +4,20 @@ import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import type { WithDispatch } from "@src/store";
-import { getWork } from "./actions";
 import * as Types from "@src/types";
 import Project from "./Project";
 import { Text } from "@src/components/Shared/index";
 import ProjectDetail from "./ProjectDetail";
 import { colors } from "@src/styles";
+import * as ProjectActions from "./actions";
+import Carousel from "./Carousel";
 
 type Props = {|
   work: Types.Work,
   selectedProject: ?Types.Project,
   selectedProjectId: ?string,
-  selectedGroupId: ?string
+  selectedGroupId: ?string,
+  selectedGallery: ?Types.Gallery
 |};
 
 type OwnProps = {|
@@ -29,7 +31,8 @@ const mapStateToProps = (state: Types.State): Props => ({
   work: state.work,
   selectedProject: state.selectedProject,
   selectedGroupId: state.selectedGroupId,
-  selectedProjectId: state.selectedProjectId
+  selectedProjectId: state.selectedProjectId,
+  selectedGallery: state.selectedGallery
 });
 
 class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
@@ -43,9 +46,19 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
   }
 
   componentDidMount() {
-    this.props.dispatch(getWork(this.props.contentPath));
+    this.props.dispatch(ProjectActions.getWork(this.props.contentPath));
   }
 
+  openGallery = () => {
+    if (this.props.selectedProject && this.props.selectedProject.gallery)
+      this.props.dispatch(
+        ProjectActions.openGallery(this.props.selectedProject.gallery)
+      );
+  };
+
+  closeGallery = () => {
+    this.props.dispatch(ProjectActions.openGallery(null));
+  };
   // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
   //   const transitioned: boolean =
   //     this.props.selectedProject !== prevProps.selectedProject;
@@ -66,7 +79,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
 
   render() {
     const list = Object.keys(this.props.work || {});
-    const { selectedGroupId, selectedProjectId } = this.props;
+    const { selectedGroupId, selectedProjectId, selectedGallery } = this.props;
     let counter = 0;
 
     return (
@@ -119,6 +132,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                         <ProjectDetail
                           project={this.props.selectedProject}
                           projectId={this.props.selectedProjectId || ""}
+                          galleryFn={this.openGallery}
                         />
                       )}
                   </ContentBox>
@@ -127,6 +141,13 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
             </WorkWrapper>
           );
         })}
+        {selectedGallery && (
+          <Carousel
+            gallery={selectedGallery}
+            galleryFn={this.closeGallery}
+            projectId={this.props.selectedProjectId || ""}
+          />
+        )}
       </ProjectsWrapper>
     );
   }

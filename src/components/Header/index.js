@@ -36,6 +36,7 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
     this.state = {
       muted: false
     };
+    Master.mute = true;
   }
 
   componentDidMount() {
@@ -100,7 +101,7 @@ const HeaderOuterWrapper = styled.header`
   right: 0;
   margin: 0 auto;
   position: sticky;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const HeaderWrapper = styled.div`
