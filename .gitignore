@@ -3,3 +3,4 @@ node_modules/
 dist/generated/
 .idea
 .DS_store
+.vscode

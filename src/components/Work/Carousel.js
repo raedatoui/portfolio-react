@@ -20,7 +20,7 @@ export default class Carousel extends React.Component<Props> {
   }
 
   componentDidMount() {
-    if (document.body) document.body.style.overflow = "hidden";
+    // if (document.body) document.body.style.overflow = "hidden";
     this.slider = new Flickity(".carousel", {
       pageDots: false
     });
@@ -28,7 +28,8 @@ export default class Carousel extends React.Component<Props> {
   }
 
   componentWillUnmount() {
-    if (document.body) document.body.style.overflow = "inherit";
+    // if (document.body) document.body.style.overflow = "inherit";
+    window.removeEventListener("resize", this.updateDimensions);
     this.slider.destroy();
   }
 
@@ -65,28 +66,16 @@ export default class Carousel extends React.Component<Props> {
 const CarouselContainer = styled.div`
   background: white;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  // height: 100%;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
   z-index: 10;
   .flickity-slider {
     display: flex;
     align-items: center;
-    .cell {
-      background: #ddd;
-      img {
-        opacity: 0.5;
-      }
-      &.is-selected {
-        background: black;
-        img {
-          opacity: 1;
-        }
-      }
-    }
   }
 `;
 
@@ -112,4 +101,9 @@ const CloseButton = styled.span`
 
 const CarouselWrapper = styled.div``;
 
-const Cell = styled.div``;
+const Cell = styled.div`
+  width: 100%;
+  img {
+    width: 100%;
+  }
+`;

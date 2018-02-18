@@ -10,7 +10,6 @@ import { Text } from "@src/components/Shared/index";
 import ProjectDetail from "./ProjectDetail";
 import { colors } from "@src/styles";
 import * as ProjectActions from "./actions";
-import Carousel from "./Carousel";
 
 type Props = {|
   work: Types.Work,
@@ -79,7 +78,12 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
 
   render() {
     const list = Object.keys(this.props.work || {});
-    const { selectedGroupId, selectedProjectId, selectedGallery } = this.props;
+    const {
+      selectedProject,
+      selectedGroupId,
+      selectedProjectId,
+      selectedGallery
+    } = this.props;
     let counter = 0;
 
     return (
@@ -128,11 +132,13 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                     }}
                   >
                     {selectedGroupId === `group-${workId}-${j}` &&
-                      this.props.selectedProject && (
+                      selectedProject && (
                         <ProjectDetail
-                          project={this.props.selectedProject}
-                          projectId={this.props.selectedProjectId || ""}
-                          galleryFn={this.openGallery}
+                          project={selectedProject}
+                          projectId={selectedProjectId || ""}
+                          openGalleryFn={this.openGallery}
+                          closeGalleryFn={this.closeGallery}
+                          selectedGallery={selectedGallery}
                         />
                       )}
                   </ContentBox>
@@ -141,13 +147,6 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
             </WorkWrapper>
           );
         })}
-        {selectedGallery && (
-          <Carousel
-            gallery={selectedGallery}
-            galleryFn={this.closeGallery}
-            projectId={this.props.selectedProjectId || ""}
-          />
-        )}
       </ProjectsWrapper>
     );
   }

@@ -78,16 +78,16 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
                 ))}
             </HeaderList>
           </HeaderLinks>
+          <HeaderControls>
+            <RangeSlider min={1} max={100} step={1} dispatch={dispatch} />
+            <span>&nbsp;&nbsp;</span>
+            <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <a target="_blank" href={viewsource}>
+              ( source )
+            </a>
+          </HeaderControls>
         </HeaderWrapper>
-        <SourceLink>
-          <RangeSlider min={1} max={100} step={1} dispatch={dispatch} />
-          <span>&nbsp;&nbsp;</span>
-          <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
-          <span>&nbsp;&nbsp;&nbsp;</span>
-          <a target="_blank" href={viewsource}>
-            ( source )
-          </a>
-        </SourceLink>
       </HeaderOuterWrapper>
     );
   }
@@ -105,17 +105,26 @@ const HeaderOuterWrapper = styled.header`
 `;
 
 const HeaderWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0px 12px 10px -6px rgba(0, 0, 0, 0.4);
   padding: 0 1em;
 `;
 
-const HeaderLabel = styled.h1`margin: 0;`;
+const HeaderLabel = styled.h2`
+  margin: 0;
+  display: inline-block;
+  width: auto;
+`;
 
-const HeaderLinks = styled.div``;
+const HeaderLinks = styled.div`
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  height: 100%;
+  align-items: center;
+`;
 
 const HeaderList = styled.u`
   list-style: none;
@@ -125,15 +134,19 @@ const HeaderList = styled.u`
   perspective: 2000px;
 `;
 
-const SourceLink = styled.div`
-  margin: 0.75em -1em 0 -1em;
-  display: inline-flex;
+const HeaderControls = styled.div`
+  display: flex;
   justify-content: flex-end;
-  width: 100%;
   text-align: right;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  right: 1em;
+  align-items: center;
   &:visited {
     color: ${colors.red};
   }
+  z-index: 2;
 `;
 
 const MuteButton = styled.span`

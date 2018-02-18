@@ -5,11 +5,14 @@ import styled from "styled-components";
 import * as Types from "@src/types";
 import { copy } from "@src/styles";
 import { Text } from "@src/components/Shared";
+import Carousel from "./Carousel";
 
 type Props = {|
   project: Types.Project,
   projectId: string,
-  galleryFn: Function
+  openGalleryFn: Function,
+  closeGalleryFn: Function,
+  selectedGallery: ?Types.Gallery
 |};
 
 const projectFields: Array<{| field: string, label: string |}> = [
@@ -25,21 +28,27 @@ class ProjectDetail extends React.Component<Props> {
   }
 
   render() {
-    const { project, projectId } = this.props;
+    const {
+      project,
+      projectId,
+      selectedGallery,
+      openGalleryFn,
+      closeGalleryFn
+    } = this.props;
     const subs: Array<Types.SubProject> = project.sub || [];
     const gallery: Types.Gallery = project.gallery || [];
     return (
       <DetailWrapper>
-        <Text content={this.props.project.description} />
+        <Text content={project.description} />
         <MetaWrapper>
           {projectFields.map(field => {
             return (
-              field.field in this.props.project && (
-                <MetaLine key={`${this.props.projectId}-${field.field}`}>
+              field.field in project && (
+                <MetaLine key={`${projectId}-${field.field}`}>
                   <MetaLabel>{field.label}</MetaLabel>
                   <MetaValue
                     dangerouslySetInnerHTML={{
-                      __html: this.props.project[field.field]
+                      __html: project[field.field]
                     }}
                   />
                 </MetaLine>
@@ -48,16 +57,13 @@ class ProjectDetail extends React.Component<Props> {
           })}
           {subs.map((sub: Types.SubProject, idx: number) => {
             return (
-              <SubContainer key={`sub-${this.props.projectId}-${idx}`}>
+              <SubContainer key={`sub-${projectId}-${idx}`}>
                 <Header>{sub.title}</Header>
                 <Text content={sub.description} />
                 {projectFields.map(field => {
                   return (
                     field.field in sub && (
-                      <MetaLine
-                        key={`sub-${this.props
-                          .projectId}-${idx}-${field.field}`}
-                      >
+                      <MetaLine key={`sub-${projectId}-${idx}-${field.field}`}>
                         <MetaLabel>{field.label}</MetaLabel>
                         <MetaValue
                           dangerouslySetInnerHTML={{
@@ -72,23 +78,36 @@ class ProjectDetail extends React.Component<Props> {
             );
           })}
         </MetaWrapper>
-        {gallery && (
-          <GallerylWrapper>
-            {gallery.map((item, idx) => {
-              return (
-                <div
-                  role="button"
-                  tabIndex="0"
-                  onClick={() => this.props.galleryFn()}
-                  onKeyDown={ev => {
-                    if (ev.keyCode === 13) this.props.galleryFn();
-                  }}
-                  key={`${projectId}-gallery-${idx}`}
-                  className="carousel-item"
-                />
-              );
-            })}
-          </GallerylWrapper>
+        {gallery &&
+          !selectedGallery && (
+            <GallerylWrapper>
+              {gallery.map((item, idx) => {
+                return (
+                  <div
+                    role="button"
+                    tabIndex="0"
+                    onClick={() => openGalleryFn()}
+                    onKeyDown={ev => {
+                      if (ev.keyCode === 13) openGalleryFn();
+                    }}
+                    key={`${projectId}-gallery-${idx}`}
+                    className="carousel-item"
+                  >
+                    <img
+                      alt={item.caption}
+                      src={`/content/images/projects/${projectId}/${item.asset}`}
+                    />
+                  </div>
+                );
+              })}
+            </GallerylWrapper>
+          )}
+        {selectedGallery && (
+          <Carousel
+            gallery={selectedGallery}
+            galleryFn={closeGalleryFn}
+            projectId={projectId || ""}
+          />
         )}
       </DetailWrapper>
     );
