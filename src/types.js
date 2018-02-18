@@ -21,9 +21,10 @@ export type SubProject = {
 export type GalleryItemType = "image" | "vimeo" | "youtube";
 
 export type Gallery = Array<{
-  asset: string,
+  image: string,
   type: GalleryItemType,
-  caption?: string
+  caption?: string,
+  asset?: string
 }>;
 
 export type Project = {
@@ -63,6 +64,7 @@ export type State = {|
   selectedGroupId: ?string,
   selectedProjectId: ?string,
   selectedGallery: ?Gallery,
+  selectedGalleryItem: ?number,
   bio: Bio,
   viewsource: string,
   lists: {

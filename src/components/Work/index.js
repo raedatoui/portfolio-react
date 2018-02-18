@@ -16,7 +16,8 @@ type Props = {|
   selectedProject: ?Types.Project,
   selectedProjectId: ?string,
   selectedGroupId: ?string,
-  selectedGallery: ?Types.Gallery
+  selectedGallery: ?Types.Gallery,
+  selectedGalleryItem: ?number
 |};
 
 type OwnProps = {|
@@ -31,7 +32,8 @@ const mapStateToProps = (state: Types.State): Props => ({
   selectedProject: state.selectedProject,
   selectedGroupId: state.selectedGroupId,
   selectedProjectId: state.selectedProjectId,
-  selectedGallery: state.selectedGallery
+  selectedGallery: state.selectedGallery,
+  selectedGalleryItem: state.selectedGalleryItem
 });
 
 class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
@@ -48,16 +50,22 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
     this.props.dispatch(ProjectActions.getWork(this.props.contentPath));
   }
 
-  openGallery = () => {
+  openGallery = (idx: number) => {
     if (this.props.selectedProject && this.props.selectedProject.gallery)
       this.props.dispatch(
-        ProjectActions.openGallery(this.props.selectedProject.gallery)
+        ProjectActions.openGallery({
+          gallery: this.props.selectedProject.gallery,
+          selectedItem: idx
+        })
       );
   };
 
   closeGallery = () => {
-    this.props.dispatch(ProjectActions.openGallery(null));
+    this.props.dispatch(
+      ProjectActions.openGallery({ gallery: null, selectedItem: null })
+    );
   };
+
   // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
   //   const transitioned: boolean =
   //     this.props.selectedProject !== prevProps.selectedProject;
@@ -82,7 +90,8 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
       selectedProject,
       selectedGroupId,
       selectedProjectId,
-      selectedGallery
+      selectedGallery,
+      selectedGalleryItem
     } = this.props;
     let counter = 0;
 
@@ -139,6 +148,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                           openGalleryFn={this.openGallery}
                           closeGalleryFn={this.closeGallery}
                           selectedGallery={selectedGallery}
+                          selectedGalleryItem={selectedGalleryItem}
                         />
                       )}
                   </ContentBox>

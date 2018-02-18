@@ -58,6 +58,7 @@ const defaultState: Types.State = {
   selectedGroupId: null,
   selectedProjectId: null,
   selectedGallery: null,
+  selectedGalleryItem: null,
   bio: { link: "", content: "" },
   lists: {},
   viewsource: "",

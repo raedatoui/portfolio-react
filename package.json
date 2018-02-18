@@ -5,6 +5,7 @@
   "repository": "git@github.com:raedatoui/portfolio-react.git",
   "author": "Raec Atoui <raedsubscribes@gmail.com>",
   "dependencies": {
+    "@vimeo/player": "^2.2.1",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.0",
     "callable-class": "^2.0.0",

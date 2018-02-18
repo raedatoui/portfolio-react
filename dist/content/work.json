@@ -16,7 +16,7 @@
         "agency": "",
         "description": "Website for artist Pierre Emmanuel Fillet. Custom solution for viewing gigapixel artworks using a multi-tile interactive viewer.<br /><a target=\"_blank\" href=\"https://storage.googleapis.com/pierreemmanuelfillet.com/index.html\">view site</a>",
         "year": 2012,
-        "tech": "HTML, CSS, JS, PHP, Ruby, ImageMagick, Wordpress"
+        "tech": "Jekyll, ImageMagick, Vanilla JS"
       },
       "ica" : {
         "title": "The Institute of Contemporary Art - UPenn",
@@ -117,19 +117,19 @@
         "tech": "Ruby on Rails, ffmpeg, CSS3 animations",
         "gallery": [
           {
-            "asset": "pKrETfs2cM8",
+            "image": "pKrETfs2cM8",
             "type": "youtube"
           },
           {
-            "asset": "ftg1.jpg",
+            "image": "ftg1.jpg",
             "type": "image"
           },
           {
-            "asset": "ftg2.jpg",
+            "image": "ftg2.jpg",
             "type": "image"
           },
           {
-            "asset": "ftg3.jpg",
+            "image": "ftg3.jpg",
             "type": "image"
           }          
         ]
@@ -142,55 +142,55 @@
         "year": 2009,
         "gallery": [
            {
-              "asset":"hero-large.jpg",
+              "image":"hero-large.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-01.jpg",
+              "image":"rangerover-01.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-02.jpg",
+              "image":"rangerover-02.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-03.jpg",
+              "image":"rangerover-03.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-04.jpg",
+              "image":"rangerover-04.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-05.jpg",
+              "image":"rangerover-05.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-06.jpg",
+              "image":"rangerover-06.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-07.jpg",
+              "image":"rangerover-07.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-08.jpg",
+              "image":"rangerover-08.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-10.jpg",
+              "image":"rangerover-10.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-11.jpg",
+              "image":"rangerover-11.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-12.jpg",
+              "image":"rangerover-12.jpg",
               "type":"image"
            },
            {
-              "asset":"rangerover-13.jpg",
+              "image":"rangerover-13.jpg",
               "type":"image"
            }
         ]
@@ -206,67 +206,77 @@
         "title": "Nature Valley Trail View",
         "thumb": "/assets/images/thumbs/nvtv.png",
         "agency": "Your Majesty",
-        "description": "",
+        "description": "The Trail View project was born out of Nature Valley’s commitment to nature and their mission to preserve it.<br>It was the first-of-its-kind hiking experience and glimpse into America’s National Parks using Street View technology, and to pull it off we hiked, climbed, and captured over 400 miles of 360° photo-views across the country.<br>Choosing from Grand Canyon, Yellowstone, Great Smoky Mountains and Sequoia, hikers can pick one of the parks and explore its trails in depth via a topographic map.  In addition we shot and developed high-quality full 360 point-of-interest panorama photography as key call outs on the site, mixed with ambient natural sound from the respective environments. Trail View 2.0 also highlights Nature Valley’s preservation efforts, flora and fauna and mobile-optimized experience.<br><blockquote><i>They ported the Street View 360 technology into creating the original,<br>unprecedented Trail View platform</i> &mdash; Google</blockquote><h4>Milestones</h4><ul> <li>38.4 million media impressions.</li><li>Brand fanbase up 16,000+.</li><li>$1.3 mil raised and donated for conservation.</li><li>10x growth in visitors.</li><li>Average 3:41 min spent on site following broadcast spot.</li><li>Featured in IDEO’s lecture series.</li><li>34 awards including 2x Cannes Cyber Lions, 2x Clios, and 2x Webby wins.</li></ul><h4>Press</h4><ul> <li> <a class='no-dec' href='https://www.fastcompany.com/1790419/street-view-style-tour-national-parks-hiking-trails-courtesy-nature-valley' target='_blank' rel='noopener'> <span>A Street View-Style Tour Of National Parks Hiking Trails, Courtesy Of Nature Valley</span> </a> <span><i> &mdash; Fast Company</i></span> </li><li> <a class='no-dec' href='http://www.nytimes.com/2012/03/08/business/media/virtual-hikes-promote-nature-valley-granola-bars.html' target='_blank' rel='noopener'> <span>Marketers Promoting a Granola Bar Hit the Trails in National Parks</span> </a> <span><i> &mdash; The New York Times</i></span> </li><li> <a class='no-dec' href='http://www.cntraveler.com/stories/2012-03-07/nature-valley-granola-national-parks-view-hiking' target='_blank' rel='noopener'> <span>Hike Yellowstone From Home: Nature Valley Releases Virtual Park Tours</span> </a> <span><i> &mdash; Condé Nast Traveler</i></span> </li><li> <a class='no-dec' href='https://www.theverge.com/2012/3/8/2854332/nature-valley-trail-view-national-park-virtual-tour' target='_blank' rel='noopener'> <span>Trail View captures 300 miles of US national park trails in 360 degrees</span> </a> <span><i> &mdash; The Verge</i></span> </li><li> <a class='no-dec' href='http://www.adweek.com/creativity/nature-valley-trail-view-celebrated-digital-campaign-national-parks-gets-update-148895/' target='_blank' rel='noopener'> <span>Nature Valley Trail View, Celebrated Digital Campaign for the National Parks, Gets an Update</span> </a> <span><i> &mdash; Adweek</i></span> </li><li> <a class='no-dec' href='https://www.thinkwithgoogle.com/intl/en-gb/campaigns/general-mills-nature-valley-trail-view.html' target='_blank' rel='noopener'> <span>Nature Valley Trail View</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a class='no-dec' href='https://www.thinkwithgoogle.com/campaigns/general-mills-nature-valley-trail-view.html' target='_blank' rel='noopener'> <span>Nature Valley Trail View 2.0</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a class='no-dec' href='http://www.pcmag.com/article2/0,2817,2402065,00.asp' target='_blank' rel='noopener'> <span>Nature Valley Offering ‘Street View’ for Hiking U.S. Parks</span> <span><i> &mdash; PCMag</i></span> </a> </li><li> <a class='no-dec' href='http://www.popularmechanics.com/culture/web/a7547/sxsw-virtually-hike-national-parks-with-nature-valleys-trail-view-7358691/' target='_blank' rel='noopener'> <span>SXSW: Virtually Hike National Parks With Nature Valley’s Trail View</span> </a> <span><i> &mdash; Popular Mechanics</i></span> </li></ul>", 
         "year": "2012-13",
+        "role": "Tech Lead",
         "tech": "Ruby on Rails, Spine.js, FFMPEG, Google Maps API, Krpano, Rackspace",
         "gallery": [
+          { 
+            "image": "video1.png",
+            "type": "vimeo",
+            "asset": "42582327"
+          },
           {
-            "asset": "nvtv0.jpg",
+            "image": "nvtv0.jpg",
             "type": "image"
           }, 
           {
-            "asset": "nvtv1.jpg",
+            "image": "nvtv1.jpg",
             "type": "image"
           },
           {
-            "asset": "nvtv2.jpg",
+            "image": "nvtv2.jpg",
             "type": "image"
           },
           {
-            "asset": "nvtv3.jpg",
+            "image": "nvtv3.jpg",
             "type": "image"
           }, 
           {
-            "asset": "nvtv4.jpg",
+            "image": "nvtv4.jpg",
             "type": "image"
           },
           {
-            "asset": "nvtv5.jpg",
+            "image": "nvtv5.jpg",
             "type": "image"
           }, 
           {
-            "asset": "nvtv6.jpg",
+            "image": "nvtv6.jpg",
             "type": "image"
           }, 
           {
-            "asset": "nvtv7.jpg",
+            "image": "nvtv7.jpg",
             "type": "image"
           },
           {
-            "asset": "nvtv8.jpg",
+            "image": "nvtv8.jpg",
             "type": "image"
           }, 
           {
-            "asset": "nvtv9.jpg",
+            "image": "nvtv9.jpg",
             "type": "image"
           },
           {
-            "asset": "nvtv10.jpg",
+            "image": "nvtv10.jpg",
             "type": "image"
           },           
           {
-            "asset": "41114976",
-            "type": "vimeo"
+            "image": "video2.png",
+            "type": "vimeo",
+            "asset": "41114976"
           },
           {
+            "image": "video3.png",
             "asset": "64149044",
             "type": "vimeo"
           },
           {
+            "image": "video4.png",
             "asset": "64029089",
             "type": "vimeo"
           },
           {
+            "image": "video5.png",
             "asset": "44758448",
             "type": "vimeo"
           }

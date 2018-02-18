@@ -28,7 +28,8 @@ export const openProject: ActionCreator<
       ...state,
       selectedProject: project,
       selectedProjectId: projectId,
-      selectedGroupId: groupId
+      selectedGroupId: groupId,
+      selectedGallery: null
     })
   );
 });
@@ -49,14 +50,15 @@ export const closeAllProjects: ActionCreator<
 });
 
 export const openGallery: ActionCreator<
-  ?Types.Gallery,
+  { gallery: ?Types.Gallery, selectedItem: ?number },
   void
-> = new ActionCreator((gallery: ?Types.Gallery) => ops => {
+> = new ActionCreator(({ gallery, selectedItem }) => ops => {
   const state: Types.State = ops.getState();
   ops.dispatch(
     setState({
       ...state,
-      selectedGallery: gallery
+      selectedGallery: gallery,
+      selectedGalleryItem: selectedItem
     })
   );
 });

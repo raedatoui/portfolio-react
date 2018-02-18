@@ -12,7 +12,8 @@ type Props = {|
   projectId: string,
   openGalleryFn: Function,
   closeGalleryFn: Function,
-  selectedGallery: ?Types.Gallery
+  selectedGallery: ?Types.Gallery,
+  selectedGalleryItem: ?number
 |};
 
 const projectFields: Array<{| field: string, label: string |}> = [
@@ -32,6 +33,7 @@ class ProjectDetail extends React.Component<Props> {
       project,
       projectId,
       selectedGallery,
+      selectedGalleryItem,
       openGalleryFn,
       closeGalleryFn
     } = this.props;
@@ -86,16 +88,16 @@ class ProjectDetail extends React.Component<Props> {
                   <div
                     role="button"
                     tabIndex="0"
-                    onClick={() => openGalleryFn()}
+                    onClick={() => openGalleryFn(idx)}
                     onKeyDown={ev => {
-                      if (ev.keyCode === 13) openGalleryFn();
+                      if (ev.keyCode === 13) openGalleryFn(idx);
                     }}
                     key={`${projectId}-gallery-${idx}`}
                     className="carousel-item"
                   >
                     <img
                       alt={item.caption}
-                      src={`/content/images/projects/${projectId}/${item.asset}`}
+                      src={`/content/images/projects/${projectId}/${item.image}`}
                     />
                   </div>
                 );
@@ -105,6 +107,7 @@ class ProjectDetail extends React.Component<Props> {
         {selectedGallery && (
           <Carousel
             gallery={selectedGallery}
+            selectedItem={selectedGalleryItem || 0}
             galleryFn={closeGalleryFn}
             projectId={projectId || ""}
           />
@@ -119,6 +122,11 @@ export default ProjectDetail;
 const DetailWrapper = styled.div`
   border-bottom: 1px solid #ddd;
   padding-bottom: 1em;
+  h4 {
+    text-decoration: underline;
+    margin-bottom: 0.33em;
+    font-size: 1em;
+  }
 `;
 
 const MetaWrapper = styled.div``;
