@@ -114,7 +114,25 @@
         "agency": "Stink Digital",
         "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>solving front end bugs and cross browser video delivery issues on a extremely tight deadline. Problem solving, FFMPEG, CSS3 effects optimization, Javascript animations optimization, CMS customization.",
         "year": 2014,
-        "tech": "Ruby on Rails, ffmpeg, CSS3 animations"
+        "tech": "Ruby on Rails, ffmpeg, CSS3 animations",
+        "gallery": [
+          {
+            "asset": "pKrETfs2cM8",
+            "type": "youtube"
+          },
+          {
+            "asset": "ftg1.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "ftg2.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "ftg3.jpg",
+            "type": "image"
+          }          
+        ]
       },
       "rangerover" : {
         "title": "Race The Sun",
@@ -123,59 +141,59 @@
         "description": "",
         "year": 2009,
         "gallery": [
-   {
-      "asset":"hero-large.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-01.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-02.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-03.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-04.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-05.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-06.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-07.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-08.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-10.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-11.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-12.jpg",
-      "type":"image"
-   },
-   {
-      "asset":"rangerover-13.jpg",
-      "type":"image"
-   }
-]
+           {
+              "asset":"hero-large.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-01.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-02.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-03.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-04.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-05.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-06.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-07.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-08.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-10.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-11.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-12.jpg",
+              "type":"image"
+           },
+           {
+              "asset":"rangerover-13.jpg",
+              "type":"image"
+           }
+        ]
       },
       "x2" : {
         "title": "x2 performance",
@@ -187,9 +205,72 @@
       "nvtv" : {
         "title": "Nature Valley Trail View",
         "thumb": "/assets/images/thumbs/nvtv.png",
-        "agency": "",
+        "agency": "Your Majesty",
         "description": "",
-        "year": 2009
+        "year": "2012-13",
+        "tech": "Ruby on Rails, Spine.js, FFMPEG, Google Maps API, Krpano, Rackspace",
+        "gallery": [
+          {
+            "asset": "nvtv0.jpg",
+            "type": "image"
+          }, 
+          {
+            "asset": "nvtv1.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "nvtv2.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "nvtv3.jpg",
+            "type": "image"
+          }, 
+          {
+            "asset": "nvtv4.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "nvtv5.jpg",
+            "type": "image"
+          }, 
+          {
+            "asset": "nvtv6.jpg",
+            "type": "image"
+          }, 
+          {
+            "asset": "nvtv7.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "nvtv8.jpg",
+            "type": "image"
+          }, 
+          {
+            "asset": "nvtv9.jpg",
+            "type": "image"
+          },
+          {
+            "asset": "nvtv10.jpg",
+            "type": "image"
+          },           
+          {
+            "asset": "41114976",
+            "type": "vimeo"
+          },
+          {
+            "asset": "64149044",
+            "type": "vimeo"
+          },
+          {
+            "asset": "64029089",
+            "type": "vimeo"
+          },
+          {
+            "asset": "44758448",
+            "type": "vimeo"
+          }
+        ]
       },
       "bespoken" : {
         "title": "Bespoken Clothiers",
