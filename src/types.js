@@ -20,12 +20,16 @@ export type SubProject = {
 
 export type GalleryItemType = "image" | "vimeo" | "youtube";
 
-export type Gallery = Array<{
+export type GalleryItem = {
   image: string,
   type: GalleryItemType,
   caption?: string,
-  asset?: string
-}>;
+  asset?: string,
+  width: ?number,
+  height: ?number
+};
+
+export type Gallery = Array<GalleryItem>;
 
 export type Project = {
   title: string,

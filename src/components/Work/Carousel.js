@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Flickity from "flickity";
 import * as Types from "@src/types";
 import { colors } from "@src/styles";
-import VimeoPlayer from "./Vimeo";
+import VideoPlayer from "./Video";
 
 type Props = {|
   gallery: Types.Gallery,
@@ -16,7 +16,7 @@ type Props = {|
 
 export default class Carousel extends React.Component<Props> {
   slider: Flickity;
-  videos: Array<VimeoPlayer>;
+  videos: Array<VideoPlayer>;
 
   constructor(props: Props) {
     super(props);
@@ -29,15 +29,17 @@ export default class Carousel extends React.Component<Props> {
       wrapAround: true,
       initialIndex: this.props.selectedItem
     });
+
     this.slider.on("select", () => {
       const slide = this.props.gallery[this.slider.selectedIndex];
-      let currentPlayer;
+      let currentVideo: ?VideoPlayer;
       if (slide.type === "vimeo" && slide.asset)
-        currentPlayer = this.getPlayerByVideoId(slide.asset);
-      this.videos.forEach(elem => {
-        if (elem !== currentPlayer) elem.player.pause();
+        currentVideo = this.getPlayerByVideoId(slide.asset);
+      this.videos.forEach(video => {
+        if (video !== currentVideo) video.pause();
       });
     });
+
     window.addEventListener("resize", this.updateDimensions);
   }
 
@@ -46,8 +48,8 @@ export default class Carousel extends React.Component<Props> {
     this.slider.destroy();
   }
 
-  getPlayerByVideoId(videoId: string): ?VimeoPlayer {
-    return this.videos.find(elem => elem.props.videoId === videoId);
+  getPlayerByVideoId(videoId: string): ?VideoPlayer {
+    return this.videos.find(elem => elem.props.item.asset === videoId);
   }
 
   updateDimensions = () => {
@@ -71,10 +73,10 @@ export default class Carousel extends React.Component<Props> {
                     alt={item.caption}
                   />
                 )}
-                {item.type === "vimeo" &&
+                {(item.type === "vimeo" || item.type === "youtube") &&
                   item.asset && (
-                    <VimeoPlayer
-                      videoId={item.asset}
+                    <VideoPlayer
+                      item={item}
                       ref={ref => {
                         if (ref) this.videos.push(ref);
                       }}

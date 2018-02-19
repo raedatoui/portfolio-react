@@ -142,6 +142,13 @@
         "year": 2009,
         "gallery": [
            {
+             "image": "video1.png",
+             "asset": "Wz37OXoJOss",
+             "type": "youtube",
+             "width": 1280,
+             "height": 834
+           },
+           {
               "image":"hero-large.jpg",
               "type":"image"
            },
