@@ -112,13 +112,16 @@
         "title": "First To Greatness - PS4",
         "thumb": "/assets/images/thumbs/first-to-greatness.png",
         "agency": "Stink Digital",
-        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>solving front end bugs and cross browser video delivery issues on a extremely tight deadline. Problem solving, FFMPEG, CSS3 effects optimization, Javascript animations optimization, CMS customization.",
+        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>solving front end bugs and cross browser video delivery issues on a extremely tight deadline. Problem solving, FFMPEG, CSS3 effects optimization, Javascript animations optimization, CMS customization.<h4>Project Press</h4><a class='no-dec' href='http://www.ign.com/articles/2013/11/27/sony-announces-first-to-greatness-ps4-competition'>IGN</a><br/><a class='no-dec' href='http://www.joystiq.com/2013/11/24/sony-challenges-ps4-community-launches-first-to-greatness-campa/'>Joystiq</a><br/><a class='no-dec' href='http://www.businessinsider.com/playstations-first-to-greatness-campaign-2013-11'>Business Insider</a><h4>Project Awards</h4><a class='no-dec' href='http://www.thefwa.com/site/first-to-greatness'>FWA SOTD</a><br/><a class='no-dec' href='http://www.dandad.org/awards/professional/2014/integrated-earned-media/23037/the-launch-of-greatness-awaits/'>D&amp;AD Book</a><br/><a class='no-dec' href='http://winners.canneslions.com/2014/interactive/entry.cfm?entryid=12224&amp;award=101&amp;order=0&amp;direction=1&amp;keywords=playstation'>Cannes Cyber Lion - Silver</a>",
         "year": 2014,
         "tech": "Ruby on Rails, ffmpeg, CSS3 animations",
         "gallery": [
           {
-            "image": "pKrETfs2cM8",
-            "type": "youtube"
+            "image": "ftg1.jpg",
+            "asset": "pKrETfs2cM8",
+            "type": "youtube",
+            "Width": 1300,
+            "height": 700
           },
           {
             "image": "ftg1.jpg",
@@ -137,9 +140,11 @@
       "rangerover" : {
         "title": "Race The Sun",
         "thumb": "/assets/images/thumbs/race-the-sun.png",
-        "agency": "",
-        "description": "",
-        "year": 2009,
+        "agency": "Stink Digital",
+        "description": "Race the Sun is a big, sweeping interactive film that users control via their mobile phone or keyboard.<br> In the experience, users follow our driver as he races to deliver a Range Rover to a hidden location before sunset. Users have the option to use their mobile phone as a second screen that allows them to play racing games within the narrative. The games call back to key features of the Sport, such as acceleration, agility and off-road capabilities.<br>Race The Sun was built using NodeJS and web sockets to enable the phone syncing experience.<br>We implemented a video playback system that incorporated multiple streaming HTML5 players to allow users to proceed through the experience quickly and with virtually no buffering. The games incorporated mobile specific technologies such as accelerometer and swipe gestures.<br>Thanks to HTML5 video and other modern web technologies, we were able to support a wide array of desktops and tablets, broadening our reach.",
+        "year": 2013,
+        "tech": "Node.js, Socket.IO, Youtube API, Backbone.js, Amazon S3 for assets, Krpano for panoramas, Nodejitsu for application hosting",
+        "awards": "FWA Site Of The Day,  FWA Mobile Site Of The Day, FWA Adobe Cutting Edge Award",
         "gallery": [
            {
              "image": "video1.png",
