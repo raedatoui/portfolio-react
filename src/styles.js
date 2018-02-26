@@ -10,6 +10,7 @@ export const Card = (h: number = 1) => css`
 export const colors = {
   grey: "#444444",
   red: "#EE4938",
+  darkRed: "#AD3529",
   white: "#ffffff",
   lightGrey: "#d7dcdf",
   reda: "rgba(238, 73, 56, 0.25)"
@@ -65,10 +66,10 @@ injectGlobal`
   small, .font_small {font-size: 0.707em;}
 
   a {
-    color: ${colors.grey};
+    color: ${colors.darkRed};
     text-decoration: none;
     &:visited {
-      color: ${colors.grey};
+      color: ${colors.darkRed};
     }
     &:hover {
       color: ${colors.red};

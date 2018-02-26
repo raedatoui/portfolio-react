@@ -19,10 +19,6 @@ const Section = (props: Props) => (
 
 export default Section;
 
-const SectionWrapper = styled.section`
-  padding: 1em;
-  padding-top: ${props => (props.index == 1 ? "0" : "1em")};
-  margin-top: ${props => (props.index == 1 ? "-2.5em" : "0")};
-`;
+const SectionWrapper = styled.section`padding: 1em;`;
 
 const SectionHeader = styled.h2``;

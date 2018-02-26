@@ -122,10 +122,14 @@ export default ProjectDetail;
 const DetailWrapper = styled.div`
   border-bottom: 1px solid #ddd;
   padding-bottom: 1em;
+  p {
+    h4 {
+      font-size: 1em;
+    }
+  }
   h4 {
     text-decoration: underline;
     margin-bottom: 0.33em;
-    font-size: 1em;
   }
 `;
 

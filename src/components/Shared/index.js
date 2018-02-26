@@ -16,14 +16,7 @@ export const Text = (props: Props) => (
   <Description dangerouslySetInnerHTML={{ __html: props.content }} />
 );
 
-const Description = styled.p`
-  a {
-    text-decoration: underline;
-    &.no-dec {
-      text-decoration: none;
-    }
-  }
-`;
+const Description = styled.p``;
 
 const rangeHandleColor = `${colors.grey}`;
 const rangeHandleColorHover = `${colors.red}`;

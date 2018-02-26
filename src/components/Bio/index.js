@@ -30,6 +30,7 @@ class BioInner extends React.Component<WithDispatch<OwnProps>> {
     return (
       <BioText>
         {content}
+        <br />
         <a href={link}>view full resume</a>
       </BioText>
     );
