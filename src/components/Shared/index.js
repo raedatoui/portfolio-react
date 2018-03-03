@@ -24,7 +24,7 @@ const rangeHandleSize = "10px";
 const rangeTrackColor = `${colors.lightGrey}`;
 const rangeTrackHeight = "2px";
 const rangeLabelColor = `${colors.grey}`;
-const rangeLabelWidth = 50;
+const rangeLabelWidth = 5;
 
 type SliderProps = {|
   frameRate: number
@@ -92,7 +92,7 @@ export class RangeSliderInner extends React.Component<
 export const RangeSlider = connect(mapStateToProps)(RangeSliderInner);
 
 const SliderContainer = styled.div`
-  width: 200px;
+  width: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +100,7 @@ const SliderContainer = styled.div`
 
 const SliderLabel = styled.span`
   position: relative;
-  width: ${rangeLabelWidth}px;
+  width: ${rangeLabelWidth}vw;
   color: ${rangeLabelColor};
   line-height: 10px;
   text-align: center;
@@ -109,7 +109,7 @@ const SliderLabel = styled.span`
 
 const SliderInput = styled.input`
   -webkit-appearance: none;
-  width: calc(100% - ${rangeLabelWidth + 13}px);
+  width: calc(100% - ${rangeLabelWidth}vw);
   height: ${rangeTrackHeight};
   border-radius: 2px;
   background: ${rangeTrackColor};

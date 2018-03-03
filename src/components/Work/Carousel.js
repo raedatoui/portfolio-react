@@ -102,7 +102,7 @@ const CarouselContainer = styled.div`
 `;
 
 const SourceLink = styled.div`
-  margin: 0.75em -1em 0 -1em;
+  margin-top: 0.5rem;
   display: inline-flex;
   justify-content: flex-end;
   width: 100%;
@@ -115,6 +115,7 @@ const SourceLink = styled.div`
 const CloseButton = styled.span`
   cursor: pointer;
   color: ${colors.grey};
+  font-size: 0.75rem;
   &:hover {
     color: ${colors.red};
     text-decoration: underline;

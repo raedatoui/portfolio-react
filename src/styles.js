@@ -18,18 +18,9 @@ export const colors = {
 
 export const copy = styled.div``;
 
-// const baseline = "1.5rem";
-
-// const minScreen = "20rem";
-// const maxScreen = "50rem";
-// const minFont = ".8rem";
-// const maxFont = "2rem";
-
-// const h1 = "2rem";
-// const h2 = "1.5rem";
-// const h3 = "1.25rem";
-// const h4 = "1rem";
-// const h5 = ".875rem";
+const breakSm = "min-width: 384px";
+const breakMd = "min-width: 576px";
+const breakLg = "min-width: 768px";
 
 injectGlobal`
 * {
@@ -37,12 +28,14 @@ injectGlobal`
   font-weight: 400;
 }
 
+/* Fluid Type
+---------------------------------------------- */
 html {
   box-sizing: border-box;
   height: 100%;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 0.8rem;
+  font-size: 0.8rem;  
 }
 
 @media screen and (min-width: 20rem) {
@@ -50,9 +43,10 @@ html {
     font-size: calc(0.8rem + 1.0 * ((100vw - 20rem) / 80));
   }
 }
+
 @media screen and (min-width: 100rem) {
   html {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -62,9 +56,9 @@ body {
   width: 100%;
   margin: 0;
   background-color: ${colors.white};
-  color: ${colors.grey};
-  font-family: 'Work Sans', sans-serif; 
-  line-height: 1.5rem;   
+  color: ${colors.grey};   
+  line-height: 1.5rem;
+  font-family: 'Work Sans', sans-serif;   
 }
 
 
@@ -95,11 +89,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
   margin-bottom: 1.5rem;
 }
 
@@ -135,9 +125,13 @@ h5 {
   line-height: 0.875rem;
   margin-top: calc((1.5rem - 0.875rem) + 1.5rem*2);
 }
+
+/* Custom Styles
+---------------------------------------------- */
 ul {
   padding-left: 1rem;
 }
+
 
 a {
   color: ${colors.darkRed};
@@ -160,6 +154,8 @@ a {
 
 ::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
 
+/* Image Grid
+---------------------------------------------- */
 .Grid {
   display: flex;
   flex-wrap: wrap;
@@ -228,7 +224,7 @@ a {
   flex: 0 0 25%;
 }
 
-@media (--break-sm) {
+@media (${breakSm}) {
   .small-Grid--fit > .Grid-cell {
     flex: 1;
   }
@@ -246,7 +242,7 @@ a {
   }
 }
 
-@media (--break-md) {
+@media (${breakMd}) {
   .med-Grid--fit > .Grid-cell {
     flex: 1;
   }
@@ -264,7 +260,7 @@ a {
   }
 }
 
-@media (--break-lg) {
+@media (${breakLg}) {
   .large-Grid--fit > .Grid-cell {
     flex: 1;
   }
@@ -285,6 +281,7 @@ a {
 .Grid--gutters {
   margin: -1em 0 1em -1em;
 }
+
 .Grid--gutters > .Grid-cell {
   padding: 1em 0 0 1em;
 }
@@ -292,6 +289,7 @@ a {
 .Grid--guttersLg {
   margin: -1.5em 0 1.5em -1.5em;
 }
+
 .Grid--guttersLg > .Grid-cell {
   padding: 1.5em 0 0 1.5em;
 }
@@ -299,11 +297,12 @@ a {
 .Grid--guttersXl {
   margin: -2em 0 2em -2em;
 }
+
 .Grid--guttersXl > .Grid-cell {
   padding: 2em 0 0 2em;
 }
 
-@media (--break-sm) {
+@media (${breakSm}) {
   .small-Grid--gutters {
     margin: -1em 0 1em -1em;
   }
@@ -324,7 +323,7 @@ a {
   }
 }
 
-@media (--break-md) {
+@media (${breakMd}) {
   .med-Grid--gutters {
     margin: -1em 0 1em -1em;
   }
@@ -345,7 +344,7 @@ a {
   }
 }
 
-@media (--break-lg) {
+@media (${breakLg}) {
   .large-Grid--gutters {
     margin: -1em 0 1em -1em;
   }
@@ -366,136 +365,136 @@ a {
   }
 }
    
-  /*! Flickity v2.0.10
-  http://flickity.metafizzy.co
-  ---------------------------------------------- */
-  
-  .flickity-enabled {
-    position: relative;
-  }
-  
-  .flickity-enabled:focus { outline: none; }
-  
-  .flickity-viewport {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-  }
-  
-  .flickity-slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* draggable */
-  
-  .flickity-enabled.is-draggable {
-    -webkit-tap-highlight-color: transparent;
-            tap-highlight-color: transparent;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  
-  .flickity-enabled.is-draggable .flickity-viewport {
-    cursor: move;
-    cursor: -webkit-grab;
-    cursor: grab;
-  }
-  
-  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-  }
-  
-  /* ---- previous/next buttons ---- */
-  
-  .flickity-prev-next-button {
-    position: absolute;
-    top: 50%;
-    margin-top: -22px;
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 50%;
-    background: white;
-    background: hsla(0, 0%, 100%, 0.75);
-    cursor: pointer;
-    /* vertically center */
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-  
-  .flickity-prev-next-button:hover { background: white; }
-  
-  .flickity-prev-next-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px #09F;
-  }
-  
-  .flickity-prev-next-button:active {
-    opacity: 0.6;
-  }
-  
-  .flickity-prev-next-button.previous { left: 10px; }
-  .flickity-prev-next-button.next { right: 10px; }
-  /* right to left */
-  .flickity-rtl .flickity-prev-next-button.previous {
-    left: auto;
-    right: 10px;
-  }
-  .flickity-rtl .flickity-prev-next-button.next {
-    right: auto;
-    left: 10px;
-  }
-  
-  .flickity-prev-next-button:disabled {
-    opacity: 0.3;
-    cursor: auto;
-  }
-  
-  .flickity-prev-next-button svg {
-    position: absolute;
-    left: 20%;
-    top: 20%;
-    width: 60%;
-    height: 60%;
-  }
-  
-  .flickity-prev-next-button .arrow {
-    fill: #333;
-  }
-  
-  /* ---- page dots ---- */
-  
-  .flickity-page-dots {
-    position: absolute;
-    width: 100%;
-    bottom: -25px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    line-height: 1;
-  }
-  
-  .flickity-rtl .flickity-page-dots { direction: rtl; }
-  
-  .flickity-page-dots .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    background: #333;
-    border-radius: 50%;
-    opacity: 0.25;
-    cursor: pointer;
-  }
-  
-  .flickity-page-dots .dot.is-selected {
-    opacity: 1;
-  }  
+/*! Flickity v2.0.10
+http://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+          tap-highlight-color: transparent;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.75);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover { background: white; }
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.next { right: 10px; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #333;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}  
   
 `;

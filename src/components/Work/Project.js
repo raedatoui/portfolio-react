@@ -205,7 +205,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        className={`Grid-cells dis-${disabled.toString()} det-${showDetails.toString()}`}
+        className={`Grid-cell dis-${disabled.toString()} det-${showDetails.toString()} small-Grid--1of2`}
       >
         <Card onClick={() => this.toggle()}>
           <FxWrapper>
@@ -237,7 +237,6 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
 export default connect(mapStateToProps)(ProjectInner);
 
 const Project = styled.div`
-  width: calc(25% - 2em);
   margin: 1em;
   hr {
     height: 1px;

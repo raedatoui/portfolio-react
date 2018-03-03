@@ -142,6 +142,7 @@ const HeaderControls = styled.div`
   position: absolute;
   right: 1rem;
   align-items: center;
+  font-size: 0.7rem;
   &:visited {
     color: ${colors.red};
   }
