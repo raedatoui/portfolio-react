@@ -164,17 +164,17 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
 
 export default connect(mapStateToProps)(ProjectsInner);
 
-const ProjectsWrapper = styled.div`padding: 0 2em;`;
+const ProjectsWrapper = styled.div`padding: 0 2rem;`;
 
 const WorkHeader = styled.h3`margin-bottom: 0;`;
 
 const WorkWrapper = styled.div`
-  padding: 1em 0;
+  padding: 0;
   p {
-    margin-top: 0.5em;
+    margin-top: 0.5rem;
   }
 `;
 
-const ListWrapper = styled.div`margin-top: 2em;`;
+const ListWrapper = styled.div`margin-top: 2rem;`;
 
 const ContentBox = styled.div`border: 0px solid ${colors.red};`;

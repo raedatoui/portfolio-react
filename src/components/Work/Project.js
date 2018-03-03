@@ -255,10 +255,10 @@ const Project = styled.div`
 
 const Card = styled.div`width: 100%;`;
 
-const Header = styled.h4`
+const Header = styled.h5`
   text-align: center;
   border-top: 1px solid #ccc;
-  padding: 0.5em;
+  padding: 0.5rem;
   visibility: hidden;
   span {
     cursor: pointer;

@@ -64,12 +64,11 @@ const ListWrapper = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: stretch;
-  padding: 0 2em;
+  padding: 0 2rem;
 `;
 
 const ListItem = styled.li`
-  font-size: 2em;
-  margin: 0 1.5em 0 0;
+  margin: 0 1.5rem 0 0;
   cursor: default;
   transition: 0.25s all;
   &:hover {

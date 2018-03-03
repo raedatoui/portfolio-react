@@ -16,77 +16,151 @@ export const colors = {
   reda: "rgba(238, 73, 56, 0.25)"
 };
 
-export const copy = styled.div`
-  font-size: 1.414em;
-  line-height: 1.6968em;
-`;
+export const copy = styled.div``;
+
+// const baseline = "1.5rem";
+
+// const minScreen = "20rem";
+// const maxScreen = "50rem";
+// const minFont = ".8rem";
+// const maxFont = "2rem";
+
+// const h1 = "2rem";
+// const h2 = "1.5rem";
+// const h3 = "1.25rem";
+// const h4 = "1rem";
+// const h5 = ".875rem";
 
 injectGlobal`
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: ${colors.white};
-    color:  ${colors.grey};
-    font-weight: 400;
-    font: normal 100%/1.4 'Work Sans', sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-  }
-  
-  h1, h2, h3, h4 {
-    font-weight: inherit;
-    line-height: 1.2;
-  }
-  
-  h1 {
-    margin-top: 0;
-    font-size: 3.998em;
-    font-weight: 600;
-  }
-  
-  h2 {
-    font-size: 2.827em;
-    font-weight: 600;
-  }
-  
-  h3 {
-    font-size: 1.999em;
-    font-weight: 500;
-  }
-  
-  h4 {font-size: 1.414em;}
+* {
+  box-sizing: border-box;
+  font-weight: 400;
+}
 
-  p {
-    font-size: 1.414em;
-    line-height: 1.6968em;
-  }
-    
-  small, .font_small {font-size: 0.707em;}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-size: 0.8rem;
+}
 
-  a {
+@media screen and (min-width: 20rem) {
+  html {
+    font-size: calc(0.8rem + 1.0 * ((100vw - 20rem) / 80));
+  }
+}
+@media screen and (min-width: 100rem) {
+  html {
+    font-size: 2rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: ${colors.white};
+  color: ${colors.grey};
+  font-family: 'Work Sans', sans-serif; 
+  line-height: 1.5rem;   
+}
+
+
+pre {
+  font-size: 12px;
+  padding: 10px;
+  background: white;
+  border: solid 1px #777;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  border: 1px solid #666;
+}
+
+td, th {
+  padding: 0.25rem .5rem;
+  border: 1px solid #666;
+}
+
+span {
+  line-height: 1.5rem;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: calc((1.5rem - 2rem) + 1.5rem);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: calc((1.5rem - 1.5rem) + 1.5rem*2);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: calc((1.5rem - 1.25rem) + 1.5rem*2);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: calc((1.5rem - 1rem) + 1.5rem*2);
+}
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin-top: calc((1.5rem - 0.875rem) + 1.5rem*2);
+}
+ul {
+  padding-left: 1rem;
+}
+
+a {
+  color: ${colors.darkRed};
+  text-decoration: none;
+  &:visited {
     color: ${colors.darkRed};
-    text-decoration: none;
-    &:visited {
-      color: ${colors.darkRed};
-    }
-    &:hover {
-      color: ${colors.red};
-      text-decoration: underline;
-    }
-    &:focus {
-      outline: 1px dotted ${colors.red};
-    }
   }
-   
-  #root {
-    padding: 0em;
+  &:hover {
+    color: ${colors.red};
+    text-decoration: underline;
   }
-  
-  ::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
-  
-  .Grid {
+  &:focus {
+    outline: 1px dotted ${colors.red};
+  }
+}
+
+#root {
+  padding: 0em;
+}
+
+::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
+
+.Grid {
   display: flex;
   flex-wrap: wrap;
   list-style: none;

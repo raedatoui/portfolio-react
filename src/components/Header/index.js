@@ -140,7 +140,7 @@ const HeaderControls = styled.div`
   top: 0;
   height: 100%;
   position: absolute;
-  right: 1em;
+  right: 1rem;
   align-items: center;
   &:visited {
     color: ${colors.red};
