@@ -124,7 +124,8 @@ const DetailWrapper = styled.div`
   padding-bottom: 1em;
   h4 {
     text-decoration: underline;
-    margin-bottom: 0.33em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -134,7 +135,7 @@ const MetaLine = styled(copy)`display: flex;`;
 
 const MetaLabel = styled.span`
   font-weight: 600;
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
   display: inline-block;
 `;
 
@@ -167,9 +168,6 @@ const GallerylWrapper = styled.div`
   }
 `;
 
-const Header = styled.h4`
-  text-decoration: underline;
-  margin-bottom: 0.33em;
-`;
+const Header = styled.h4``;
 
 const SubContainer = styled.div`padding: 0 1em;`;

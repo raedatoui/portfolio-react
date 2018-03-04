@@ -8,6 +8,7 @@ import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
 //import * as SharedActions from "@src/components/Shared/actions";
 import Nervous, { type NervousPoint } from "./nervous";
+import { breakLg } from "@src/styles";
 
 type Props = {|
   selectedProjectId: ?string,
@@ -205,7 +206,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        className={`Grid-cell dis-${disabled.toString()} det-${showDetails.toString()} small-Grid--1of2`}
+        className={`Grid-cell dis-${disabled.toString()} det-${showDetails.toString()}`}
       >
         <Card onClick={() => this.toggle()}>
           <FxWrapper>
@@ -237,7 +238,6 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
 export default connect(mapStateToProps)(ProjectInner);
 
 const Project = styled.div`
-  margin: 1em;
   hr {
     height: 1px;
     border: none;
@@ -246,9 +246,15 @@ const Project = styled.div`
   }
   &.dis-true {
     opacity: 0.1;
+    display: none;
   }
   &:focus {
     outline: none;
+  }
+  @media (${breakLg}) {
+    &.dis-true {
+      display: block;
+    }
   }
 `;
 

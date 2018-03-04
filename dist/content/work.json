@@ -6,24 +6,23 @@
       "sal" : {
         "title": "Better Call Sal",
         "thumb": "/assets/images/thumbs/sal.png",
-        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a  href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a><br /><a target=\"_blank\" href=\"http://bettercallsal.biz\">view site</a>",
+        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a target=\"_blank\" href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a><br /><a target=\"_blank\" href=\"http://bettercallsal.biz\">view site</a>",
         "year": 2016,
         "tech": "ES6, Web Audio, WebGL, GLSL"
       },
       "pierre" : {
         "title": "Pierre Emmanuel Fillet",
         "thumb": "/assets/images/thumbs/pierre.png",
-        "agency": "",
-        "description": "Website for artist Pierre Emmanuel Fillet. Custom solution for viewing gigapixel artworks using a multi-tile interactive viewer.<br /><a target=\"_blank\" href=\"https://storage.googleapis.com/pierreemmanuelfillet.com/index.html\">view site</a>",
+        "description": "Website for artist Pierre Emmanuel Fillet. Custom solution for viewing gigapixel artworks using a multi-tile interactive viewer. <a target=\"_blank\" href=\"https://github.com/raedatoui/pef\">( source )</a><br /><a target=\"_blank\" href=\"https://storage.googleapis.com/pierreemmanuelfillet.com/index.html\">view site</a>",
         "year": 2012,
-        "tech": "Jekyll, ImageMagick, Vanilla JS"
+        "tech": "Jekyll, ImageMagick, Ruby, IIPMooViewer"
       },
       "ica" : {
         "title": "The Institute of Contemporary Art - UPenn",
         "thumb": "/assets/images/thumbs/ica.png",
-        "tech": "graph theory, api design, Ruby on Rails, Solr, Spine.js, Coffeescript, Susy CSS grid library",
+        "tech": "graph theory, api design, Ruby on Rails, Solr, Spine.js, Coffeescript, Susy CSS",
         "description": "Website for The Institute of Contemporary Art at the University of Pennsylvania.<br>Conceived and built at <a href='http://www.othermeans.us/' target='_blank'>Other Means</a>, in collaboration with&nbsp;<a href='http://ja.ckjennin.gs/' target='_blank'>Jack Jennings</a><br /><a href='http://icaphila.org/' target='_blank'>View site</a>.",
-        "year": "nov 2012 - aug 2015"
+        "year": "Nov 2012 - Aug 2015"
       },
       "christa" : {
         "title": "Mnemonic Devices",
@@ -87,17 +86,17 @@
         "agency": "Huge",
         "description": "Website re-plaform and redesign for non-profit organization, Physicians for Reproductive Health",
         "role": "Technical Architect",
-        "year": "april - june 2017",
-        "tech": "wordpress, Twilio auth API"
+        "year": "April - June 2017",
+        "tech": "Wordpress, Twilio auth API"
       },
       "livecase" : {
         "title": "LiveCase by Google",
         "thumb": "/assets/images/thumbs/livecase.png",
         "agency": "Huge",
         "role": "Lead full stack engineer",
-        "description": "Google Live Case is a personalized case for Nexus and Pixel phones available from the Google Store. The case is fully customizable and comes with a live wallpaper to match your design. Additionally, the case packs an NFC chip, which activates the companion app. Huge was tasked with designing and building the product selection, customizer and checkout flow.<br />We created three different \"generators\" for Google. For the Places generator, users choose their device, locate and position a place on Google Maps, and choose an optional style and color scheme. Photos allowed you deck your case out with your favorite photos. Artist Collections lets you browse and select from a curated list of graphic artist.<br />I contributed to all areas of the product development. From setting up the CI pipeline, devising load testing and profiling strategy, 3rd party API integrations for content moderation and companion app, 3d rendering pipeline optimizations, custom shaders.<br /><a href='https://livecase.withgoogle.com/'>view product",
-        "year": "july 2015 - oct 2016",
-        "tech": "backend: Python, Golang, Google Cloud(AppEngine, Services, Task Queues, Storage, BigQuery, Datastore)<br />frontend: Angular.js, Three.js, GLSL"
+        "description": "Google Live Case is a personalized case for Nexus and Pixel phones available from the Google Store. The case is fully customizable and comes with a live wallpaper to match your design. Additionally, the case packs an NFC chip, which activates the companion app. Huge was tasked with designing and building the product selection, customizer and checkout flow.<br />We created three different \"generators\" for Google. For the Places generator, users choose their device, locate and position a place on Google Maps, and choose an optional style and color scheme. Photos allowed you deck your case out with your favorite photos. Artist Collections lets you browse and select from a curated list of graphic artist.<br />I contributed to all areas of the product development. From setting up the CI pipeline, developing a load testing and profiling rig, 3rd party API integrations for content moderation and companion app, 3d rendering optimizations, custom shaders.<br /><a href='https://livecase.withgoogle.com/'>view product",
+        "year": "Yuly 2015 - Oct 2016",
+        "tech": "Backend: Python, Golang, Google Cloud(AppEngine, Services, Task Queues, Storage, BigQuery, Datastore)<br />Frontend: Angular.js, Three.js, GLSL"
       },
       "twg" : {
         "title": "Think with Google",
@@ -112,9 +111,9 @@
         "title": "First To Greatness - PS4",
         "thumb": "/assets/images/thumbs/first-to-greatness.png",
         "agency": "Stink Digital",
-        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>solving front end bugs and cross browser video delivery issues on a extremely tight deadline. Problem solving, FFMPEG, CSS3 effects optimization, Javascript animations optimization, CMS customization.<h4>Project Press</h4><a href='http://www.ign.com/articles/2013/11/27/sony-announces-first-to-greatness-ps4-competition'>IGN</a><br/><a href='http://www.joystiq.com/2013/11/24/sony-challenges-ps4-community-launches-first-to-greatness-campa/'>Joystiq</a><br/><a href='http://www.businessinsider.com/playstations-first-to-greatness-campaign-2013-11'>Business Insider</a><h4>Project Awards</h4><a href='http://www.thefwa.com/site/first-to-greatness'>FWA SOTD</a><br/><a href='http://www.dandad.org/awards/professional/2014/integrated-earned-media/23037/the-launch-of-greatness-awaits/'>D&amp;AD Book</a><br/><a href='http://winners.canneslions.com/2014/interactive/entry.cfm?entryid=12224&amp;award=101&amp;order=0&amp;direction=1&amp;keywords=playstation'>Cannes Cyber Lion - Silver</a>",
+        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>I only joined the project in its last few weeks and helped with its launch. I helped solve front end bugs and cross browser video delivery issues on a extremely tight deadline. I implemented custom scripts to transcode a large amount of user generated videos to multiple formats right after the initial beta release.<h4>Project Press</h4><a href='http://www.ign.com/articles/2013/11/27/sony-announces-first-to-greatness-ps4-competition'>IGN</a><br/><a href='http://www.joystiq.com/2013/11/24/sony-challenges-ps4-community-launches-first-to-greatness-campa/'>Joystiq</a><br/><a href='http://www.businessinsider.com/playstations-first-to-greatness-campaign-2013-11'>Business Insider</a><h4>Project Awards</h4><a href='http://www.thefwa.com/site/first-to-greatness'>FWA SOTD</a><br/><a href='http://www.dandad.org/awards/professional/2014/integrated-earned-media/23037/the-launch-of-greatness-awaits/'>D&amp;AD Book</a><br/><a href='http://winners.canneslions.com/2014/interactive/entry.cfm?entryid=12224&amp;award=101&amp;order=0&amp;direction=1&amp;keywords=playstation'>Cannes Cyber Lion - Silver</a>",
         "year": 2014,
-        "tech": "Ruby on Rails, ffmpeg, CSS3 animations",
+        "tech": "FFMPEG, Ruby on Rails, Active Admin CMS customizations, CSS3 animations, Javascript performance optimization",
         "gallery": [
           {
             "image": "ftg1.jpg",

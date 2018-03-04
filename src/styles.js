@@ -18,9 +18,9 @@ export const colors = {
 
 export const copy = styled.div``;
 
-const breakSm = "min-width: 384px";
-const breakMd = "min-width: 576px";
-const breakLg = "min-width: 768px";
+export const breakSm = "min-width: 24em";
+export const breakMd = "min-width: 48em";
+export const breakLg = "min-width: 60em";
 
 injectGlobal`
 * {

@@ -113,7 +113,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
               <Text content={work.description} />
               {pList.map((group, j) => (
                 <div key={`group-${workId}-${j}`}>
-                  <ListWrapper className="Grid Grid--gutters Grid--full">
+                  <ListWrapper className="Grid Grid--gutters small-Grid--1of2 large-Grid--1of4">
                     {group.map(projectId => {
                       const project = work.work[projectId];
                       const disabled =
