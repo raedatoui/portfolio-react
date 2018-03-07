@@ -65,5 +65,4 @@ export const AppWrapper = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
 `;

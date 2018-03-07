@@ -10,6 +10,7 @@ import HeaderListItem from "./ListItem";
 import { colors } from "@src/styles";
 import { Master } from "tone";
 import { RangeSlider } from "../Shared";
+import { breakMd } from "@src/styles";
 
 type Props = {|
   nets: Types.List,
@@ -76,16 +77,18 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
                   />
                 ))}
             </HeaderList>
+            <HeaderControls>
+              <RangeSlider min={1} max={100} step={1} dispatch={dispatch} />
+              <span>&nbsp;&nbsp;</span>
+              <MuteButton onClick={() => this.mute()}>
+                ( {muteLabel} )
+              </MuteButton>
+              <span>&nbsp;&nbsp;&nbsp;</span>
+              <a target="_blank" href={viewsource}>
+                ( source )
+              </a>
+            </HeaderControls>
           </HeaderLinks>
-          <HeaderControls>
-            <RangeSlider min={1} max={100} step={1} dispatch={dispatch} />
-            <span>&nbsp;&nbsp;</span>
-            <MuteButton onClick={() => this.mute()}>( {muteLabel} )</MuteButton>
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <a target="_blank" href={viewsource}>
-              ( source )
-            </a>
-          </HeaderControls>
         </HeaderWrapper>
       </HeaderOuterWrapper>
     );
@@ -106,7 +109,7 @@ const HeaderOuterWrapper = styled.header`
 const HeaderWrapper = styled.div`
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0px 12px 10px -6px rgba(0, 0, 0, 0.4);
-  padding: 0 1em;
+  padding: 0.25rem 1rem;
 `;
 
 const HeaderLabel = styled.h1`
@@ -116,20 +119,26 @@ const HeaderLabel = styled.h1`
 `;
 
 const HeaderLinks = styled.div`
-  position: absolute;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  top: 0;
-  height: 100%;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  @media (${breakMd}) {
+    justify-content: center;
+  }
 `;
 
 const HeaderList = styled.u`
   list-style: none;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
+  @media (${breakMd}) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
   perspective: 2000px;
 `;
 
@@ -137,16 +146,18 @@ const HeaderControls = styled.div`
   display: flex;
   justify-content: flex-end;
   text-align: right;
-  top: 0;
-  height: 100%;
-  position: absolute;
-  right: 1rem;
   align-items: center;
   font-size: 0.7rem;
   &:visited {
     color: ${colors.red};
   }
   z-index: 2;
+  @media (${breakMd}) {
+    right: 1rem;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
 `;
 
 const MuteButton = styled.span`

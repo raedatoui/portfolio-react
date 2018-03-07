@@ -2,6 +2,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import { breakSm, breakMd, breakLg } from "@src/styles";
 
 type OwnProps = {
   name: string,
@@ -48,14 +49,34 @@ class HeaderListItem extends React.Component<OwnProps> {
 const ListItem = styled.li`
   margin: 0 2px;
   transition: 0.25s all;
-  height: 24px;
   &:hover {
     transform: rotateY(-180deg);
     transform-origin: 50%, 50%;
     backface-visibility: visible;
   }
-  img {
+  @media (${breakSm}) {
+    width: 20px;
+    height: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  @media (${breakMd}) {
+    width: 22px;
+    height: 22px;
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  @media (${breakLg}) {
     width: 24px;
+    height: 24px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
   }
 `;
 

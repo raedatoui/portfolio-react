@@ -242,7 +242,7 @@ const Project = styled.div`
     height: 1px;
     border: none;
     background-color: #ddd;
-    margin: 0.61em 0;
+    margin: 0.61rem 0;
   }
   &.dis-true {
     opacity: 0.1;

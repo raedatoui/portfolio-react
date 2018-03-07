@@ -121,7 +121,7 @@ export default ProjectDetail;
 
 const DetailWrapper = styled.div`
   border-bottom: 1px solid #ddd;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
   h4 {
     text-decoration: underline;
     margin-top: 1.5rem;
@@ -142,7 +142,7 @@ const MetaLabel = styled.span`
 const MetaValue = styled.span`display: inline-block;`;
 
 const GallerylWrapper = styled.div`
-  margin: 1em;
+  margin: 1rem;
   display: flex;
   flex-basis: row;
   flex-wrap: wrap;
@@ -170,4 +170,4 @@ const GallerylWrapper = styled.div`
 
 const Header = styled.h4``;
 
-const SubContainer = styled.div`padding: 0 1em;`;
+const SubContainer = styled.div`padding: 0 1rem;`;
