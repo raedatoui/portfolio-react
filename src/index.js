@@ -16,6 +16,7 @@ const loadYTScripts = (YT: {}, YTConfig: {}) => {
   let l = [];
   // $FlowFixMe
   YT.ready = function(f) {
+    // $FlowFixMe
     if (YT.loaded) {
       f();
     } else {
@@ -79,7 +80,8 @@ const renderApp = () => {
       <App />
     </Provider>
   );
-  ReactDOM.render(elem, document.getElementById("root"));
+  const container = document.getElementById("root");
+  if (container !== null) ReactDOM.render(elem, container);
 };
 
 window.onYouTubeIframeAPIReady = () => {
@@ -88,6 +90,7 @@ window.onYouTubeIframeAPIReady = () => {
 
 loadYT();
 
+// $FlowFixMe
 if (module.hot) {
   const mhr = (module.hot: any);
   mhr.accept(undefined, renderApp);
