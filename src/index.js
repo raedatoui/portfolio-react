@@ -4,7 +4,7 @@ import "babel-polyfill";
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
-
+import { BrowserRouter } from "react-router-dom";
 import { App } from "@src/components/App";
 import { makeStore, reducer } from "@src/store";
 
@@ -77,7 +77,9 @@ const loadYT = () => {
 const renderApp = () => {
   const elem = (
     <Provider store={globalStore}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   );
   const container = document.getElementById("root");

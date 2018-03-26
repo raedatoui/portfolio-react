@@ -9,6 +9,7 @@ import * as ProjectActions from "./actions";
 //import * as SharedActions from "@src/components/Shared/actions";
 import Nervous, { type NervousPoint } from "./nervous";
 import { breakLg } from "@src/styles";
+import { withRouter, type WithRouter } from "react-router-dom";
 
 type Props = {|
   selectedProjectId: ?string,
@@ -33,7 +34,10 @@ const mapStateToProps = (state: Types.State): Props => ({
   frameRate: state.frameRate
 });
 
-class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
+class ProjectInner extends React.Component<
+  WithDispatch<WithRouter<OwnProps>>,
+  State
+> {
   fx: HTMLCanvasElement;
   src: HTMLImageElement;
   context: CanvasRenderingContext2D;
@@ -48,7 +52,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   delta: number;
   counter: number;
 
-  constructor(props: WithDispatch<OwnProps>) {
+  constructor(props: WithRouter<WithDispatch<OwnProps>>) {
     super(props);
     this.play = false;
     this.step = 1;
@@ -235,7 +239,7 @@ class ProjectInner extends React.Component<WithDispatch<OwnProps>, State> {
   }
 }
 
-export default connect(mapStateToProps)(ProjectInner);
+export default withRouter(connect(mapStateToProps)(ProjectInner));
 
 const Project = styled.div`
   hr {
@@ -258,7 +262,9 @@ const Project = styled.div`
   }
 `;
 
-const Card = styled.div`width: 100%;`;
+const Card = styled.div`
+  width: 100%;
+`;
 
 const Header = styled.h5`
   text-align: center;
