@@ -1,42 +1,9 @@
 // flow-typed signature: 7ef7e99bfa7953a438470755d51dc345
 // flow-typed version: 107feb8c45/react-router-dom_v4.x.x/flow_>=v0.53.x
-
-declare module "react-router-dom" {
-  declare export class BrowserRouter extends React$Component<{
-    basename?: string,
-    forceRefresh?: boolean,
-    getUserConfirmation?: GetUserConfirmation,
-    keyLength?: number,
-    children?: React$Node
-  }> {}
-
-  declare export class HashRouter extends React$Component<{
-    basename?: string,
-    getUserConfirmation?: GetUserConfirmation,
-    hashType?: "slash" | "noslash" | "hashbang",
-    children?: React$Node
-  }> {}
-
-  declare export class Link extends React$Component<{
-    to: string | LocationShape,
-    replace?: boolean,
-    children?: React$Node
-  }> {}
-
-  declare export class NavLink extends React$Component<{
-    to: string | LocationShape,
-    activeClassName?: string,
-    className?: string,
-    activeStyle?: Object,
-    style?: Object,
-    isActive?: (match: Match, location: Location) => boolean,
-    children?: React$Node,
-    exact?: boolean,
-    strict?: boolean
-  }> {}
-
-  // NOTE: Below are duplicated from react-router. If updating these, please
-  // update the react-router and react-router-native types as well.
+declare module "react-router" {
+  // NOTE: many of these are re-exported by react-router-dom and
+  // react-router-native, so when making changes, please be sure to update those
+  // as well.
   declare export type Location = {
     pathname: string,
     search: string,
@@ -118,7 +85,7 @@ declare module "react-router-dom" {
   }> {}
 
   declare export class Prompt extends React$Component<{
-    message: string | ((location: Location) => string | boolean),
+    message: string | ((location: Location) => string | true),
     when?: boolean
   }> {}
 
@@ -144,9 +111,6 @@ declare module "react-router-dom" {
     Component: React$ComponentType<{| ...ContextRouter, ...P |}>
   ): React$ComponentType<P>;
 
-  //declare export function withRouter<P, S>(Component: React.ComponentType<P,S>): React.ComponentType<$Diff<P, ContextRouter>, S>;
-  declare export function withRouter<P>(Component: React$ComponentType<P>): React$ComponentType<$Diff<P, ContextRouter>>;
-  
   declare export type WithRouter<P> = {
     ...$Exact<P>,
     ...$Exact<ContextRouter>,
@@ -155,10 +119,9 @@ declare module "react-router-dom" {
   declare type MatchPathOptions = {
     path?: string,
     exact?: boolean,
-    sensitive?: boolean,
-    strict?: boolean
+    strict?: boolean,
+    sensitive?: boolean
   };
-
   declare export function matchPath(
     pathname: string,
     options?: MatchPathOptions | string
