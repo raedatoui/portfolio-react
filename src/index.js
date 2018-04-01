@@ -5,8 +5,8 @@ import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import { App } from "@src/components/App";
 import { makeStore, reducer } from "@src/store";
+import { App, ProjectRoute } from "@src/components/App";
 
 const noop = () => {};
 
@@ -78,7 +78,9 @@ const renderApp = () => {
   const elem = (
     <Provider store={globalStore}>
       <BrowserRouter>
-        <App />
+        <ProjectRoute path="/*" dispatch={globalStore.dispatch}>
+          <App />
+        </ProjectRoute>
       </BrowserRouter>
     </Provider>
   );

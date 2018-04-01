@@ -19,6 +19,8 @@ const Section = (props: Props) => (
 
 export default Section;
 
-const SectionWrapper = styled.section`padding: 0 1rem;`;
+const SectionWrapper = styled.section`
+  padding: 0 1rem;
+`;
 
 const SectionHeader = styled.h2``;

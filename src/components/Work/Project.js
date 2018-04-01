@@ -35,7 +35,7 @@ const mapStateToProps = (state: Types.State): Props => ({
 });
 
 class ProjectInner extends React.Component<
-  WithDispatch<WithRouter<OwnProps>>,
+  WithRouter<WithDispatch<OwnProps>>,
   State
 > {
   fx: HTMLCanvasElement;
@@ -52,7 +52,7 @@ class ProjectInner extends React.Component<
   delta: number;
   counter: number;
 
-  constructor(props: WithRouter<WithDispatch<OwnProps>>) {
+  constructor(props: WithDispatch<WithRouter<OwnProps>>) {
     super(props);
     this.play = false;
     this.step = 1;
@@ -78,18 +78,13 @@ class ProjectInner extends React.Component<
   // }
 
   toggle() {
-    const projectId = this.props.projectId;
+    const { history, projectId } = this.props;
     if (this.props.selectedProjectId !== projectId) {
-      this.props.dispatch(
-        ProjectActions.openProject({
-          project: this.props.project,
-          projectId: this.props.projectId,
-          groupId: this.props.groupId
-        })
-      );
+      history.push(projectId);
       this.play = false;
       this.nervousPlay();
     } else {
+      history.push("/");
       this.props.dispatch(ProjectActions.closeAllProjects());
     }
   }

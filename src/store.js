@@ -62,7 +62,8 @@ const defaultState: Types.State = {
   bio: { link: "", content: "" },
   lists: {},
   viewsource: "",
-  frameRate: 1
+  frameRate: 1,
+  initialRoute: ""
 };
 
 const enhancer = compose(

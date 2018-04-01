@@ -1,8 +1,10 @@
+// @flow
+
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const webpackHotMiddleware = require("webpack-hot-middleware");
 const express = require("express");
 const webpack = require("webpack");
-const webpackConfig = require("./webpack.config-dev");
+const webpackConfig = require("./webpack.config");
 
 const mainApp = express();
 const compiler = webpack(webpackConfig);
@@ -15,6 +17,11 @@ mainApp.use(
 );
 
 mainApp.use(webpackHotMiddleware(compiler));
-mainApp.use(express.static("./dist/"));
 
 mainApp.listen(8080);
+
+mainApp.use(express.static("./dist/"));
+
+mainApp.get("/*", function(req, res) {
+  res.sendFile(__dirname + "/dist/index.html");
+});

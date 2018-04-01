@@ -1,20 +1,15 @@
+// @flow
 const webpack = require("webpack");
 const path = require("path");
 
 module.exports = {
+  mode: "development",
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   entry: ["webpack-hot-middleware/client", "./src/index.js"],
-  devtool: "cheap-module-source-map",
-  devServer: {
-    port: 8080,
-    contentBase: "./dist",
-    historyApiFallback: {
-      disableDotRule: true
-    }
-  },
+  devtool: "eval-source-map",
   module: {
     rules: [
       {
