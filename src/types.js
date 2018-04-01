@@ -74,5 +74,6 @@ export type State = {|
   lists: {
     [listId: string]: List
   },
-  frameRate: number
+  frameRate: number,
+  initialRoute: string
 |};

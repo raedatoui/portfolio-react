@@ -4,9 +4,9 @@ import "babel-polyfill";
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
-
-import { App } from "@src/components/App";
+import { BrowserRouter } from "react-router-dom";
 import { makeStore, reducer } from "@src/store";
+import { App, ProjectRoute } from "@src/components/App";
 
 const noop = () => {};
 
@@ -16,6 +16,7 @@ const loadYTScripts = (YT: {}, YTConfig: {}) => {
   let l = [];
   // $FlowFixMe
   YT.ready = function(f) {
+    // $FlowFixMe
     if (YT.loaded) {
       f();
     } else {
@@ -76,10 +77,15 @@ const loadYT = () => {
 const renderApp = () => {
   const elem = (
     <Provider store={globalStore}>
-      <App />
+      <BrowserRouter>
+        <ProjectRoute path="/*" dispatch={globalStore.dispatch}>
+          <App />
+        </ProjectRoute>
+      </BrowserRouter>
     </Provider>
   );
-  ReactDOM.render(elem, document.getElementById("root"));
+  const container = document.getElementById("root");
+  if (container !== null) ReactDOM.render(elem, container);
 };
 
 window.onYouTubeIframeAPIReady = () => {
@@ -88,6 +94,7 @@ window.onYouTubeIframeAPIReady = () => {
 
 loadYT();
 
+// $FlowFixMe
 if (module.hot) {
   const mhr = (module.hot: any);
   mhr.accept(undefined, renderApp);

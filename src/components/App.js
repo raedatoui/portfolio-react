@@ -2,14 +2,34 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
+import { Route } from "react-router-dom";
 import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as Actions from "./actions";
+import * as ProjectActions from "@src/components/Work/actions";
 import Section from "./Section";
 import Work from "./Work";
 import Header from "./Header";
 import StuffList from "./StuffList";
 import Bio from "./Bio";
+
+export class ProjectRoute extends Route {
+  componentWillMount() {
+    const projectId = this.getProject();
+    const { dispatch } = this.props;
+    dispatch(ProjectActions.setInitialRoute(projectId));
+  }
+
+  componentWillReceiveProps() {
+    const projectId = this.getProject();
+    const { dispatch } = this.props;
+    dispatch(ProjectActions.routeToProject(projectId));
+  }
+
+  getProject() {
+    return this.context.router.history.location.pathname.substring(1);
+  }
+}
 
 type Props = {
   sections: Types.SectionMap

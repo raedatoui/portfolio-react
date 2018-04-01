@@ -2,7 +2,7 @@
 .*/node_modules/config-chain/test/.*
 .*/node_modules/styled-components/.*
 .*/node_modules/stylelint/lib/.*
-
+dev-server.js
 
 [include]
 

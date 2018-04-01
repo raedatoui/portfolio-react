@@ -97,7 +97,9 @@ class ProjectDetail extends React.Component<Props> {
                   >
                     <img
                       alt={item.caption}
-                      src={`/content/images/projects/${projectId}/${item.image}`}
+                      src={`/content/images/projects/${projectId}/${
+                        item.image
+                      }`}
                     />
                   </div>
                 );
@@ -131,7 +133,9 @@ const DetailWrapper = styled.div`
 
 const MetaWrapper = styled.div``;
 
-const MetaLine = styled(copy)`display: flex;`;
+const MetaLine = styled(copy)`
+  display: flex;
+`;
 
 const MetaLabel = styled.span`
   font-weight: 600;
@@ -139,7 +143,9 @@ const MetaLabel = styled.span`
   display: inline-block;
 `;
 
-const MetaValue = styled.span`display: inline-block;`;
+const MetaValue = styled.span`
+  display: inline-block;
+`;
 
 const GallerylWrapper = styled.div`
   margin: 1rem;
@@ -170,4 +176,6 @@ const GallerylWrapper = styled.div`
 
 const Header = styled.h4``;
 
-const SubContainer = styled.div`padding: 0 1rem;`;
+const SubContainer = styled.div`
+  padding: 0 1rem;
+`;
