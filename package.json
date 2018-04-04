@@ -89,7 +89,7 @@
     "unit-test": "jest",
     "fmt": "prettier --write \"src/**/*.js\"",
     "stylelint": "stylelint src/**/*.js",
-    "flow-report": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90" 
+    "flow": "./node_modules/.bin/flow" 
   },
   "jest": {
     "setupFiles": [
