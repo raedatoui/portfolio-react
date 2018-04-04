@@ -1,4 +1,5 @@
 ### Portfolio
+[![CircleCI](https://circleci.com/gh/raedatoui/portfolio-react/tree/master.svg?style=svg)](https://circleci.com/gh/raedatoui/portfolio-react/tree/master)
 
 *Based on this [example](https://github.com/sleexyz/flow-react-redux-example)*
 - react
