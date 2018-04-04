@@ -152,7 +152,9 @@ a {
   padding: 0em;
 }
 
-::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
+::selection { background: ${colors.red}; color:${
+  colors.white
+}; text-shadow: none; }
 
 /* Image Grid
 ---------------------------------------------- */
@@ -166,6 +168,9 @@ a {
 
 .Grid-cell {
   flex: 1;
+  &:focus {
+    outline: none;
+  }
 }
 
 .Grid--flexCells > .Grid-cell {

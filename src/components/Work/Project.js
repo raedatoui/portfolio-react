@@ -192,20 +192,19 @@ class ProjectInner extends React.Component<
   };
 
   render() {
-    const { project, projectId, frameRate, disabled } = this.props;
+    const { project, frameRate, disabled } = this.props;
     const showDetails = this.props.projectId === this.props.selectedProjectId;
     const showPixels = this.state.showPixels;
     const headerClass = (showPixels || showDetails).toString();
     this.fpsInterval = 1000.0 / frameRate;
     return (
       <Project
-        id={projectId}
         tabIndex="0"
         onBlur={this.handleMouseOut}
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        className={`Grid-cell dis-${disabled.toString()} det-${showDetails.toString()}`}
+        className={`dis-${disabled.toString()} det-${showDetails.toString()}`}
       >
         <Card onClick={() => this.toggle()}>
           <FxWrapper>
@@ -243,12 +242,12 @@ const Project = styled.div`
     background-color: #ddd;
     margin: 0.61rem 0;
   }
+  &:focus {
+    outline: none;
+  }
   &.dis-true {
     opacity: 0.1;
     display: none;
-  }
-  &:focus {
-    outline: none;
   }
   @media (${breakLg}) {
     &.dis-true {
@@ -264,7 +263,9 @@ const Card = styled.div`
 const Header = styled.h5`
   text-align: center;
   border-top: 1px solid #ccc;
-  padding: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0;
   visibility: hidden;
   span {
     cursor: pointer;
