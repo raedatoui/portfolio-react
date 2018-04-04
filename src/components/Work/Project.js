@@ -8,7 +8,7 @@ import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
 //import * as SharedActions from "@src/components/Shared/actions";
 import Nervous, { type NervousPoint } from "./nervous";
-import { breakLg } from "@src/styles";
+import { breakLg, colors } from "@src/styles";
 import { withRouter, type WithRouter } from "react-router-dom";
 
 type Props = {|
@@ -192,43 +192,41 @@ class ProjectInner extends React.Component<
   };
 
   render() {
-    const { project, projectId, frameRate, disabled } = this.props;
+    const { project, frameRate, disabled } = this.props;
     const showDetails = this.props.projectId === this.props.selectedProjectId;
     const showPixels = this.state.showPixels;
     const headerClass = (showPixels || showDetails).toString();
     this.fpsInterval = 1000.0 / frameRate;
     return (
       <Project
-        id={projectId}
         tabIndex="0"
+        onClick={() => this.toggle()}
         onBlur={this.handleMouseOut}
         onFocus={this.handleMouseOver}
         onMouseOver={this.handleMouseOver}
         onMouseOut={this.handleMouseOut}
-        className={`Grid-cell dis-${disabled.toString()} det-${showDetails.toString()}`}
+        className={`dis-${disabled.toString()} det-${showDetails.toString()}`}
       >
-        <Card onClick={() => this.toggle()}>
-          <FxWrapper>
-            <img
-              src={project.thumb}
-              alt={project.title}
-              onLoad={() => this.handleImageLoaded()}
-              ref={ref => {
-                if (ref) this.src = ref;
-              }}
-            />
-            <canvas
-              className={showPixels ? "showPixels" : ""}
-              ref={ref => {
-                if (ref) this.fx = ref;
-              }}
-            />
-          </FxWrapper>
+        <FxWrapper>
+          <img
+            src={project.thumb}
+            alt={project.title}
+            onLoad={() => this.handleImageLoaded()}
+            ref={ref => {
+              if (ref) this.src = ref;
+            }}
+          />
+          <canvas
+            className={showPixels ? "showPixels" : ""}
+            ref={ref => {
+              if (ref) this.fx = ref;
+            }}
+          />
+        </FxWrapper>
 
-          <Header className={`show-${headerClass}`}>
-            <span>{project.title}</span>
-          </Header>
-        </Card>
+        <Header className={`show-${headerClass}`}>
+          <span>{project.title}</span>
+        </Header>
       </Project>
     );
   }
@@ -237,18 +235,19 @@ class ProjectInner extends React.Component<
 export default withRouter(connect(mapStateToProps)(ProjectInner));
 
 const Project = styled.div`
+  width: 100%;
   hr {
     height: 1px;
     border: none;
     background-color: #ddd;
     margin: 0.61rem 0;
   }
+  &:focus {
+    outline: 1px dotted ${colors.red};
+  }
   &.dis-true {
     opacity: 0.1;
     display: none;
-  }
-  &:focus {
-    outline: none;
   }
   @media (${breakLg}) {
     &.dis-true {
@@ -257,14 +256,12 @@ const Project = styled.div`
   }
 `;
 
-const Card = styled.div`
-  width: 100%;
-`;
-
 const Header = styled.h5`
   text-align: center;
   border-top: 1px solid #ccc;
-  padding: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0;
   visibility: hidden;
   span {
     cursor: pointer;

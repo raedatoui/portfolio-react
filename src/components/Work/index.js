@@ -1,6 +1,6 @@
 // @flow
 
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import type { WithDispatch } from "@src/store";
@@ -10,6 +10,7 @@ import { Text } from "@src/components/Shared/index";
 import ProjectDetail from "./ProjectDetail";
 import { colors } from "@src/styles";
 import * as ProjectActions from "./actions";
+import { Element, scroller } from "react-scroll";
 
 type Props = {|
   work: Types.Work,
@@ -66,6 +67,20 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
     );
   };
 
+  componentDidUpdate(prevProps) {
+    const { selectedProjectId: prevProjectId } = prevProps;
+    const { selectedProjectId } = this.props;
+    if (selectedProjectId !== null && prevProjectId !== selectedProjectId) {
+      let offset = 0;
+      const header = document.getElementById("header");
+      if (header) offset = header.clientHeight;
+      scroller.scrollTo(selectedProjectId, {
+        duration: 800,
+        smooth: "easeInOutQuart",
+        offset: -offset
+      });
+    }
+  }
   // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
   //   const transitioned: boolean =
   //     this.props.selectedProject !== prevProps.selectedProject;
@@ -112,7 +127,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
               <WorkHeader>{work.label}</WorkHeader>
               <Text content={work.description} />
               {pList.map((group, j) => (
-                <div key={`group-${workId}-${j}`}>
+                <Fragment key={`group-list-${workId}-${j}`}>
                   <ListWrapper className="Grid Grid--gutters small-Grid--1of2 large-Grid--1of4">
                     {group.map(projectId => {
                       const project = work.work[projectId];
@@ -121,18 +136,25 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                         projectId !== selectedProjectId;
                       counter++;
                       return (
-                        <Project
+                        <Element
+                          name={projectId}
+                          id={projectId}
                           key={projectId}
-                          project={project}
-                          projectId={projectId}
-                          groupId={`group-${workId}-${j}`}
-                          detune={counter}
-                          disabled={disabled}
-                        />
+                          className="Grid-cell"
+                        >
+                          <Project
+                            project={project}
+                            projectId={projectId}
+                            groupId={`group-${workId}-${j}`}
+                            detune={counter}
+                            disabled={disabled}
+                          />
+                        </Element>
                       );
                     })}
                   </ListWrapper>
                   <ContentBox
+                    id={`group-${workId}-${j}`}
                     ref={ref => {
                       if (ref)
                         this.details[
@@ -152,7 +174,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                         />
                       )}
                   </ContentBox>
-                </div>
+                </Fragment>
               ))}
             </WorkWrapper>
           );

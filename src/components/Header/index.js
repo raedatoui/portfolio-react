@@ -61,7 +61,7 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
     const { nets, viewsource, dispatch } = this.props;
 
     return (
-      <HeaderOuterWrapper>
+      <HeaderOuterWrapper id="header">
         <HeaderWrapper>
           <HeaderLabel>Raed Atoui</HeaderLabel>
           <HeaderLinks>
