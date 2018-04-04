@@ -243,7 +243,7 @@ const Project = styled.div`
     margin: 0.61rem 0;
   }
   &:focus {
-    outline: 1px dotted ${colors.red};
+    outline: none;
   }
   &.dis-true {
     opacity: 0.1;
