@@ -1,6 +1,6 @@
 // @flow
 
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import type { WithDispatch } from "@src/store";
@@ -127,7 +127,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
               <WorkHeader>{work.label}</WorkHeader>
               <Text content={work.description} />
               {pList.map((group, j) => (
-                <div key={`group-${workId}-${j}`}>
+                <Fragment key={`group-list-${workId}-${j}`}>
                   <ListWrapper className="Grid Grid--gutters small-Grid--1of2 large-Grid--1of4">
                     {group.map(projectId => {
                       const project = work.work[projectId];
@@ -174,7 +174,7 @@ class ProjectsInner extends React.Component<WithDispatch<OwnProps>> {
                         />
                       )}
                   </ContentBox>
-                </div>
+                </Fragment>
               ))}
             </WorkWrapper>
           );
