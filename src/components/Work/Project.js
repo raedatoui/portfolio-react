@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
-//import * as SharedActions from "@src/components/Shared/actions";
 import Nervous, { type NervousPoint } from "./Nervous";
 import { breakLg, colors } from "@src/styles";
 import { withRouter, type WithRouter } from "react-router-dom";
@@ -67,15 +66,6 @@ class ProjectInner extends React.Component<
     this.prev = new Date();
     this.fpsInterval = 1000.0 / 5.0;
   }
-
-  // componentDidUpdate(prevProps: WithDispatch<OwnProps>): void {
-  //   // const selected: boolean =
-  //   //   this.props.projectId === this.props.selectedProject;
-  //   // const transitioned: boolean =
-  //   //   this.props.selectedProject !== prevProps.selectedProject;
-  //   // if (selected && transitioned && this.slider) this.slider.resize();
-  //   this.fpsInterval = 1000.0 / this.props.frameRate;
-  // }
 
   toggle() {
     const { history, projectId } = this.props;
@@ -243,7 +233,7 @@ const Project = styled.div`
     margin: 0.61rem 0;
   }
   &:focus {
-    outline: none;
+    outline: 1px dotted ${colors.red};
   }
   &.dis-true {
     opacity: 0.1;
