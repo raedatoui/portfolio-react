@@ -32,23 +32,23 @@ class StuffListInner extends React.Component<WithDispatch<OwnProps>> {
     );
   }
 
-  renderItem(item: { name: string, link?: string }) {
-    if (item.link)
-      return (
-        <a href={item.link} target="_blank">
-          {item.name}
-        </a>
-      );
-    return item.name;
-  }
-
   render() {
+    const dir =
+      this.props.list && this.props.list[0].dates !== undefined
+        ? "column"
+        : "row";
     return (
-      <ListWrapper>
+      <ListWrapper style={{ flexDirection: dir }}>
         {this.props.list &&
           this.props.list.map((item, i) => (
             <ListItem key={`${item.name}-${i}`}>
-              {this.renderItem(item)}
+              {item.link && (
+                <a href={item.link} target="_blank">
+                  {item.name}
+                </a>
+              )}
+              {!item.link && item.name}
+              {item.dates && <span>&nbsp;&ndash;&nbsp;{item.dates}</span>}
             </ListItem>
           ))}
       </ListWrapper>
@@ -61,7 +61,6 @@ export default connect(mapStateToProps)(StuffListInner);
 const ListWrapper = styled.ul`
   list-style: none;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: stretch;
   padding: 0 2rem;
@@ -73,5 +72,8 @@ const ListItem = styled.li`
   transition: 0.25s all;
   &:hover {
     color: ${colors.red};
+  }
+  span {
+    font-size: 0.85rem;
   }
 `;

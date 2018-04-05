@@ -1,25 +1,36 @@
 [
   {
     "name": "The Orchard",
-    "link": "http://www.theorchard.com/"
+    "link": "http://www.theorchard.com/",
+    "dates": "Sept 2017 - present"
   },
   {
+    "name": "Typedef",
+    "link": "http://www.theorchard.com/",
+    "dates": "Mar 2014 - present"
+  },  
+  {
     "name": "Huge",
-    "link": "http://www.hugeinc.com/"
+    "link": "http://www.hugeinc.com/",
+    "dates": "May 2014 - Sept 2017"
   },
   {
     "name": "Stink",
-    "link": "https://www.stinkstudios.com/"
+    "link": "https://www.stinkstudios.com/",
+    "dates": "Sep 2013 - Mar 2014"
   },
   {
     "name": "Your Majesty",
-    "link": "https://yourmajesty.co/"
+    "link": "https://yourmajesty.co/",
+    "dates": "Aug 2011 - Mar 2013"
   },
   {
     "name": "Pentagram",
-    "link": "https://www.pentagram.com/"
+    "link": "https://www.pentagram.com/",
+    "dates": "Aug 2010 - Mar 2011"
   },
   {
-    "name": "The Map Office"
+    "name": "The Map Office",
+    "dates": "Aug 2010 - Mar 2011"
   }
 ]

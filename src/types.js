@@ -45,7 +45,8 @@ export type Project = {
 
 export type List = Array<{|
   name: string,
-  link?: string
+  link?: string,
+  dates?: string
 |}>;
 
 export type Bio = {|

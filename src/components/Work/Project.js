@@ -7,7 +7,7 @@ import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
 import Nervous, { type NervousPoint } from "./Nervous";
-import { breakLg, colors } from "@src/styles";
+import { breakLg } from "@src/styles";
 import { withRouter, type WithRouter } from "react-router-dom";
 
 type Props = {|
@@ -233,7 +233,7 @@ const Project = styled.div`
     margin: 0.61rem 0;
   }
   &:focus {
-    outline: 1px dotted ${colors.red};
+    outline: none;
   }
   &.dis-true {
     opacity: 0.1;
