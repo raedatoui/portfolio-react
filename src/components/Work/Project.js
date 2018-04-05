@@ -7,7 +7,7 @@ import type { WithDispatch } from "@src/store";
 import * as Types from "@src/types";
 import * as ProjectActions from "./actions";
 //import * as SharedActions from "@src/components/Shared/actions";
-import Nervous, { type NervousPoint } from "./nervous";
+import Nervous, { type NervousPoint } from "./Nervous";
 import { breakLg, colors } from "@src/styles";
 import { withRouter, type WithRouter } from "react-router-dom";
 
