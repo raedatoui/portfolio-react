@@ -27,7 +27,6 @@ export default class Carousel extends React.Component<Props> {
     this.slider = new Flickity(".carousel", {
       pageDots: false,
       wrapAround: true,
-      adaptiveHeight: true,
       initialIndex: this.props.selectedItem
     });
 
