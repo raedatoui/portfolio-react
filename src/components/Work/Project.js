@@ -180,6 +180,7 @@ class ProjectInner extends React.Component<
       this.play = true;
       this.animate();
     }
+    window.ga("send", "event", "nervous", this.props.projectId);
   };
 
   handleMouseOut = () => {
