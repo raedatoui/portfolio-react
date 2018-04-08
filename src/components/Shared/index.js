@@ -70,6 +70,7 @@ export class RangeSliderInner extends React.Component<
         value: value
       });
       this.props.dispatch(SharedActions.setFrameRate(value));
+      window.ga("send", "event", "slider", value);
     }
   }
 

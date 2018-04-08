@@ -69,14 +69,20 @@ class ProjectInner extends React.Component<
 
   toggle() {
     const { history, projectId } = this.props;
+    let page;
     if (this.props.selectedProjectId !== projectId) {
-      history.push(projectId);
+      page = projectId;
       this.play = false;
       this.nervousPlay();
     } else {
-      history.push("/");
+      page = "/";
       this.props.dispatch(ProjectActions.closeAllProjects());
     }
+    history.push(page);
+    window.ga("send", {
+      hitType: "pageview",
+      page: page
+    });
   }
 
   pixelate(v: number = 0) {

@@ -49,9 +49,15 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
   }
 
   mute() {
+    const toggled = !this.state.muted;
+    window.ga("send", "event", "muteBtn", toggled ? "mute" : "unmute");
     this.setState({
-      muted: !this.state.muted
+      muted: toggled
     });
+  }
+
+  onViewSource() {
+    window.ga("send", "event", "github", "click");
   }
 
   render() {
@@ -84,7 +90,11 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
                 ( {muteLabel} )
               </MuteButton>
               <span>&nbsp;&nbsp;&nbsp;</span>
-              <a target="_blank" href={viewsource}>
+              <a
+                target="_blank"
+                href={viewsource}
+                onClick={() => this.onViewSource()}
+              >
                 ( source )
               </a>
             </HeaderControls>

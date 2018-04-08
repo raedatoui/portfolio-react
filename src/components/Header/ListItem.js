@@ -14,14 +14,25 @@ type OwnProps = {
 class HeaderListItem extends React.Component<OwnProps> {
   fx: ?HTMLAudioElement;
 
+  playFx() {
+    if (this.fx) {
+      window.ga("send", "event", "fart", this.props.name);
+      // $FlowFixMe
+      this.fx.play();
+    }
+  }
+  onClick() {
+    window.ga("send", "event", "net", this.props.name);
+  }
+
   render() {
     if (this.fx) this.fx.volume = this.props.muted ? 0 : 1;
     return (
       <ListItem
-        onBlur={() => (this.fx ? this.fx.play() : false)}
-        onFocus={() => (this.fx ? this.fx.play() : false)}
-        onMouseEnter={() => (this.fx ? this.fx.play() : false)}
-        onMouseLeaver={() => (this.fx ? this.fx.play() : false)}
+        onClick={() => this.onClick()}
+        onBlur={() => this.playFx()}
+        onFocus={() => this.playFx()}
+        onMouseEnter={() => this.playFx()}
       >
         <audio
           controls={false}
