@@ -70,7 +70,7 @@ export default class Carousel extends React.Component<Props> {
               <Cell key={`gallery-${idx}`} className="cell">
                 {item.type === "image" && (
                   <img
-                    src={`/content/images/projects/${projectId}/${item.image}`}
+                    src={`/assets/images/projects/${projectId}/${item.image}`}
                     alt={item.caption}
                   />
                 )}

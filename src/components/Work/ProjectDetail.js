@@ -97,9 +97,7 @@ class ProjectDetail extends React.Component<Props> {
                   >
                     <img
                       alt={item.caption}
-                      src={`/content/images/projects/${projectId}/${
-                        item.image
-                      }`}
+                      src={`/assets/images/projects/${projectId}/${item.image}`}
                     />
                   </div>
                 );

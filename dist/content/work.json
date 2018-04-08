@@ -24,6 +24,13 @@
         "description": "Website for The Institute of Contemporary Art at the University of Pennsylvania.<br>Conceived and built at <a href='http://www.othermeans.us/' target='_blank'>Other Means</a>, in collaboration with&nbsp;<a href='http://ja.ckjennin.gs/' target='_blank'>Jack Jennings</a><br /><a href='http://icaphila.org/' target='_blank'>View site</a>.",
         "year": "Nov 2012 - Aug 2015"
       },
+      "16beaver": {
+        "title": "16 Beaver Group",
+        "description": "16 Beaver is the address of a space initiated/run by artists since 1999. Since that time, it has served as place where those involved in art, politics, education, as well as a multiplicity of other contexts and fields of activity could discover and develop a common place to share research, questions, understandings, concerns, and struggles. Thus, it has been an open place to share, present, produce, and discuss a variety of artistic/cultural/economic/political projects. It has also been a site where discussions can lead to actions and action can be discussed and rethought.<br><br>I helped re-platforming and migrating a 10 year old installation of Movable Type to Wordpress. The Movable Type installation ran out of disk space and memory for any operations beyond reading content from cache. It was unsusable as it became impossible to publish or reindex any of its content forcing maintainers to make pages manually. The biggest challenge was installing a development replica of the Movable Type instance from 2003 on a mac in 2010 using perl and php.<br><a href='http://16beavergroup.org' target='_blank'>view site</a>",
+        "thumb": "/assets/images/thumbs/beaver.png",
+        "year": "2012 - present",
+        "tech": "Wordpress, Movable Type, scripting for content migration"
+      },
       "christa" : {
         "title": "Mnemonic Devices",
         "thumb": "/assets/images/thumbs/mnemonic.jpg",
@@ -66,13 +73,14 @@
   },
   "product": {
     "label": "Product",
-    "description": "one thing, one love.",
+    "description": "my work history at product companies",
     "work": {
       "orchard" : {
         "title": "The Orchard",
         "thumb": "/assets/images/thumbs/orchard.png",
-        "description": "Contributing to The Orchard.",
-        "year": "sept 2017 - present"
+        "description": "Contributing to The Orchard as a full stack engineer.",
+        "year": "sept 2017 - present",
+        "tech": "Flask microservices, React, AWS, Snowflake"
       }
     }
   },
@@ -301,9 +309,28 @@
       "bespoken" : {
         "title": "Bespoken Clothiers",
         "thumb": "/assets/images/thumbs/bespoken.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "Your Majesty",
+        "description": "E-commerce and website for Bespoken, a New York-based menswear design collective",
+        "year": "2011",
+        "tech": "Ruby on Rails, Coffeescript, HAML, SCSS, Spree e-commerce",
+        "gallery": [
+          {
+            "image":"bs1.jpg",
+            "type":"image"
+          },
+          {
+            "image":"bs2.jpg",
+            "type":"image"
+          },
+          {
+            "image":"bs3.jpg",
+            "type":"image"
+          },
+          {
+            "image":"bs4.jpg",
+            "type":"image"
+          }          
+        ]
       },
       "view" : {
         "title": "  JWT View",
@@ -371,16 +398,18 @@
       "ucla" : {
         "title": " UCLA Architecture & Urban Design",
         "thumb": "/assets/images/thumbs/ucla.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Website for UCLA's school of Architecture and Urban Design. Powered by the MiG CMS",
+        "year": "2008"
       },
       "mig" : {
         "title": "The MiG CMS",
+        "description": "The MiG is a richly interactive, web-based content and asset management system that excels in both text authoring, as well as the delivery of large quantities of media assets. The project was initiated at The Map Office under the direction of Eddie Opara.",
         "thumb": "/assets/images/thumbs/mig.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "role": "Lead Developer, concepting, architecture",
+        "tech": "Flex, AS3, PHP, MySQL, XMP, FFMPEG, ID3",
+        "year": "Mar 2008 - Oct 2010"
       }
     }
   }
