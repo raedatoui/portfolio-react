@@ -43,18 +43,28 @@ export default class VideoPlayer extends React.Component<Props> {
 
   render() {
     return (
-      <VideoContainer
-        id={this.props.item.asset}
-        ref={ref => {
-          if (ref) this.videoContainer = ref;
-        }}
-      />
+      <VideoWrapper>
+        <div
+          id={this.props.item.asset}
+          ref={ref => {
+            if (ref) this.videoContainer = ref;
+          }}
+        />
+      </VideoWrapper>
     );
   }
 }
 
-const VideoContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
+const VideoWrapper = styled.div`
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 `;

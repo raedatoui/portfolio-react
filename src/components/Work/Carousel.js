@@ -27,6 +27,7 @@ export default class Carousel extends React.Component<Props> {
     this.slider = new Flickity(".carousel", {
       pageDots: false,
       wrapAround: true,
+      adaptiveHeight: true,
       initialIndex: this.props.selectedItem
     });
 
@@ -128,5 +129,6 @@ const Cell = styled.div`
   width: 100%;
   img {
     width: 100%;
+    max-height: 1080px;
   }
 `;
