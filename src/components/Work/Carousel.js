@@ -127,7 +127,9 @@ const CarouselWrapper = styled.div``;
 const Cell = styled.div`
   width: 100%;
   img {
-    width: 100%;
+    max-width: 100%;
     max-height: 1080px;
+    margin: 0 auto;
+    display: block;
   }
 `;
