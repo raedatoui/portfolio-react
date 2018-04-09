@@ -219,13 +219,6 @@
            }
         ]
       },
-      "x2" : {
-        "title": "x2 performance",
-        "thumb": "/assets/images/thumbs/x2.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
-      },
       "nvtv" : {
         "title": "Nature Valley Trail View",
         "thumb": "/assets/images/thumbs/nvtv.png",
@@ -333,11 +326,28 @@
         ]
       },
       "view" : {
-        "title": "  JWT View",
+        "title": "JWT View",
         "thumb": "/assets/images/thumbs/view.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office / Pentagram",
+        "description": "Custom Data Visualization application. Application served as a real time editor and visualizer. Ability to create and organize data sets, edit data, import CSV and immediately visualize the results in multiple windows. Use of timeline animation and clustering techniques for better discovery of trends",
+        "tech": "Adobe AIR, Flex, Robotlegs, PHP, MySQL",
+        "year": "2010-11",
+        "gallery": [
+          {"image": "view1.png", "type": "image"},
+          {"image": "view2.png", "type": "image"},
+          {"image": "view3.png", "type": "image"},
+          {"image": "view4.png", "type": "image"},
+          {"image": "view5.png", "type": "image"},
+          {"image": "view6.png", "type": "image"},
+          {"image": "view7.png", "type": "image"},
+          {"image": "view8.png", "type": "image"},
+          {"image": "view9.png", "type": "image"},
+          {"image": "view10.png", "type": "image"},
+          {"image": "view11.png", "type": "image"},
+          {"image": "view12.png", "type": "image"},
+          {"image": "view13.png", "type": "image"},
+          {"image": "view14.png", "type": "image"}
+        ]
       },
       "nokia" : {
         "title": "Shot by Fans",
@@ -354,53 +364,145 @@
         "year": 2009
       },
       "newdeal" : {
-        "title": " New Deal Design",
+        "title": "New Deal Design",
         "thumb": "/assets/images/thumbs/ndd.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Website for the industrial / product design agency",
+        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, FFMPEG, The MiG CMS",
+        "year": 2010,
+        "gallery": [
+          {"image": "ndd_1.png", "type": "image"},
+          {"image": "ndd_2.png", "type": "image"},
+          {"image": "ndd_3.png", "type": "image"},
+          {"image": "ndd_4.png", "type": "image"},
+          {"image": "ndd_5.png", "type": "image"},
+          {"image": "ndd_6.png", "type": "image"},
+          {"image": "ndd_7.png", "type": "image"},
+          {"image": "ndd_8.png", "type": "image"},
+          {"image": "ndd_9.png", "type": "image"},
+          {"image": "ndd_10.png", "type": "image"},
+          {"image": "ndd_11.png", "type": "image"}
+        ]
       },
       "osl" : {
         "title": "Orchestra of St Luke",
         "thumb": "/assets/images/thumbs/osl.jpg",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "tech": "DarwiinRemote, ActionScript 3, Flash",
+        "description": "This collaboration between Orchestra of St. Luke's / Map utilized the Nintendo Wii Remote as an interactive tool. Using the infrared sensor and detecting application, students were transformed into visual conductors using the Wii Remote to create real-time collages. Controlling; Size, Tint, and Frequency. The installation was performed live alongside the Orchestra, with the graphics projected above. With the theme of \"Home is Everything: New York City,\" selected students ranging from grades 3-5 were asked to photograph \"their\" New York City. These images were then translated by Map and placed into an image bank for the application. Students were asked to orchestrate and compose collages using these image banks, determining size, color, and frequency. The installation was performed alongside the orchestra in front of a live audience at the Brooklyn High School of Performing Arts and the Apollo Theatre in New York City.",
+        "year": 2009,
+        "gallery": [
+          {"image": "osl_wii_1.jpg", "type": "image"},
+          {"image": "osl_wii_2.jpg", "type": "image"},
+          {"image": "osl_wii_3.jpg", "type": "image"},
+          {"image": "osl_wii_4.jpg", "type": "image"},
+          {"image": "osl_wii_5.jpg", "type": "image"},
+          {"image": "osl_wii_6.jpg", "type": "image"},
+          {"image": "osl_wii_7.jpg", "type": "image"}
+        ]
       },
       "aro" : {
-        "title": " Architecture Research Office",
+        "title": "Architecture Research Office",
         "thumb": "/assets/images/thumbs/aro.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Website for the New York-based firm practicing modern architecture and visionary urbanism.",
+        "year": 2009,
+        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "gallery": [
+          {"image": "aro-1.png", "type": "image"},
+          {"image": "aro-2.png", "type": "image"},
+          {"image": "aro-3.png", "type": "image"},
+          {"image": "aro-4.png", "type": "image"},
+          {"image": "aro-5.png", "type": "image"},
+          {"image": "aro-6.png", "type": "image"},
+          {"image": "aro-7.png", "type": "image"},
+          {"image": "aro_01.jpg", "type": "image"},
+          {"image": "aro_02.jpg", "type": "image"},
+          {"image": "aro_03.jpg", "type": "image"},
+          {"image": "aro_04.jpg", "type": "image"},
+          {"image": "aro_05.jpg", "type": "image"},
+          {"image": "aro_06.jpg", "type": "image"},
+          {"image": "aro_07.jpg", "type": "image"},
+          {"image": "aro_08.jpg", "type": "image"}
+        ] 
       },
       "kitchen" : {
         "title": "The Kitchen",
         "thumb": "/assets/images/thumbs/kitchen.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Website for The Kitchen, a non-profit interdisciplinary arts organization.",
+        "tech": "Codeigniter, PHP, MySQL, The MiG CMS",
+        "year": "2009-10",
+        "gallery": [
+          {"image": "kitchen1.jpg", "type": "image"},
+          {"image": "kitchen2.jpg", "type": "image"},
+          {"image": "kitchen3.jpg", "type": "image"},
+          {"image": "kitchen4.jpg", "type": "image"},
+          {"image": "kitchen5.jpg", "type": "image"},
+          {"image": "kitchen6.jpg", "type": "image"},
+          {"image": "kitchen7.jpg", "type": "image"},
+          {"image": "kitchen8.jpg", "type": "image"}
+        ]
       },
       "typem" : {
         "title": "Type M",
         "thumb": "/assets/images/thumbs/typem.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Powered by The MiG, this app showcased a new plugin for the CMS that allowed to dynamically import and enable fonts for Flash site without recompiling anything.<br>The plugin accepted OTF or TTF files and generated ActionScript 3 files using PHP, that were later compiled using mxmlc and java on the server via shell commands.<br>The resulting SWFs contained the embedded fonts and the front end app would fetch them and enable those fonts at runtime",
+        "year": 2009,
+        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "gallery": [
+          {"image": "typem1.png", "type": "image"},
+          {"image": "typem2.png", "type": "image"},
+          {"image": "typem3.png", "type": "image"},
+          {"image": "typem4.png", "type": "image"},
+          {"image": "typem5.png", "type": "image"},
+          {"image": "typem6.png", "type": "image"},
+          {"image": "typem7.png", "type": "image"},
+          {"image": "typem8.png", "type": "image"},
+          {"image": "typem9.png", "type": "image"}
+        ]
       },
       "jazz" : {
-        "title": " Ertegun Jazz Hall of Fame",
+        "title": "Ertegun Jazz Hall of Fame",
         "thumb": "/assets/images/thumbs/jazz.png",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "tech": "Adobe Flex, PHP, MySQL, The MiG CMS",
+        "description": "Website and Kiosks for the Nesuhi Ertegun Hall of Fame - Jazz at Lincoln Center",
+        "year": 2009,
+        "gallery": [
+          {"image": "jalc-hof-0a.jpg", "type": "image"},
+          {"image": "jalc-hof-0b.jpg", "type": "image"},
+          {"image": "jalc-hof-1.jpg", "type": "image"},
+          {"image": "jalc-hof-10.gif", "type": "image"},
+          {"image": "jalc-hof-11.gif", "type": "image"},
+          {"image": "jalc-hof-12.gif", "type": "image"},
+          {"image": "jalc-hof-13.gif", "type": "image"},
+          {"image": "jalc-hof-2.jpg", "type": "image"},
+          {"image": "jalc-hof-3.jpg", "type": "image"},
+          {"image": "jalc-hof-4.jpg", "type": "image"},
+          {"image": "jalc-hof-5.jpg", "type": "image"},
+          {"image": "jalc-hof-6.gif", "type": "image"},
+          {"image": "jalc-hof-7.gif", "type": "image"},
+          {"image": "jalc-hof-8.gif", "type": "image"},
+          {"image": "jalc-hof-9.gif", "type": "image"}
+        ]
       },
       "ucla" : {
-        "title": " UCLA Architecture & Urban Design",
+        "title": "UCLA Architecture & Urban Design",
         "thumb": "/assets/images/thumbs/ucla.png",
         "agency": "The Map Office",
         "description": "Website for UCLA's school of Architecture and Urban Design. Powered by the MiG CMS",
-        "year": "2008"
+        "year": "2008",
+        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "gallery": [
+          {"image": "ucla_site1.png", "type": "image"},
+          {"image": "ucla_site2.png", "type": "image"},
+          {"image": "ucla_site3.png", "type": "image"},
+          {"image": "ucla_site4.png", "type": "image"},
+          {"image": "ucla_site5.png", "type": "image"},
+          {"image": "ucla_site6.png", "type": "image"}
+        ]
       },
       "mig" : {
         "title": "The MiG CMS",
@@ -408,7 +510,7 @@
         "thumb": "/assets/images/thumbs/mig.png",
         "agency": "The Map Office",
         "role": "Lead Developer, concepting, architecture",
-        "tech": "Flex, AS3, PHP, MySQL, XMP, FFMPEG, ID3",
+        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, XMP, FFMPEG, ID3",
         "year": "Mar 2008 - Oct 2010"
       }
     }
