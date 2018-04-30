@@ -6,6 +6,7 @@ import * as Types from "@src/types";
 import { copy } from "@src/styles";
 import { Text } from "@src/components/Shared";
 import Carousel from "./Carousel";
+import { breakMd, breakLg } from "@src/styles";
 
 type Props = {|
   project: Types.Project,
@@ -154,14 +155,21 @@ const GallerylWrapper = styled.div`
     outline: 0;
   }
   .carousel-item {
-    height: 75px;
+    height: 25px;
     cursor: pointer;
     z-index: 0;
-    img {
+    @media (${breakMd}) {
+      height: 50px;
+    }
+    @media (${breakLg}) {
       height: 75px;
+    }
+    img {
+      height: 100%;
       transition: 0.25s all;
       opacity: 1;
       transform: scale3d(1, 1, 1);
+      display: inline-block;
     }
     &:hover {
       z-index: 1;
