@@ -59,12 +59,12 @@
           {
             "title": "Web Game",
             "description": "<i>Scavenger Hunt</i> is part of <i>MNEMONIC DEVICES</i>. It examines the e-rhetoric of \"connection\" and the collective memory of the web. The two on-site web stations (laptops on opposite ends of a table that resembles the seesaw) allow people to play a scavenger hunt game with each other or people in remote locations. It asks a series of questions that are answered via a search engine. The one who finds all the answers first wins.",
-            "tech": "Adobe Flex, ActionScript 3,  multi threaded server in Java SE, real time sockets"
+            "tech": "Flash, Adobe Flex, ActionScript 3, multi threaded server in Java SE, real time sockets"
           },
           {
             "title": "Climate Shifts",
             "description": "We are all affected by our immediate context and its political, environmental, cultural and temporal influences. “Climate Shifts” juxtaposes various locations around the globe and their points of view through local news headlines and weather data. Differences in concerns and perspectives emerge, sometimes about the same world events, allowing a glimpse into the collective psyche of each place. How do geographically differing news sources interpret an election season? What are the primary concerns in Beirut versus Jerusalem? What events in Asia echo in Latin America?<br>A large umbrella acts as an overhead screen upon which the piece animates shifts through various destinations with the top of the umbrella pole acting as a locator. 'Climate' news, weather and time are gathered from real-time RSS feeds and layered over an illuminated light pollution satellite image of the globe. Time is reflected by clock hands that spin and adjust according to the time zone.",
-            "tech": "Adobe Flex, ActionScript 3, RSS parsing, PHP, MySQL",
+            "tech": "Flash, Adobe Flex, ActionScript 3, RSS parsing, PHP, MySQL",
             "video": "http://emedia.art.sunysb.edu/christa/movs/EricksonClimate.mov"
           }
         ]
@@ -92,7 +92,7 @@
         "title": "Physicians for Reproductive Health",
         "thumb": "/assets/images/thumbs/prh.png",
         "agency": "Huge",
-        "description": "Website re-plaform and redesign for non-profit organization, Physicians for Reproductive Health",
+        "description": "Website re-plaform and redesign for non-profit organization, Physicians for Reproductive Health<br><a href'https://prh.org/' target='_blank'>view site</a>",
         "role": "Technical Architect",
         "year": "April - June 2017",
         "tech": "Wordpress, Twilio auth API"
@@ -102,14 +102,14 @@
         "thumb": "/assets/images/thumbs/livecase.png",
         "agency": "Huge",
         "role": "Lead full stack engineer",
-        "description": "Google Live Case is a personalized case for Nexus and Pixel phones available from the Google Store. The case is fully customizable and comes with a live wallpaper to match your design. Additionally, the case packs an NFC chip, which activates the companion app. Huge was tasked with designing and building the product selection, customizer and checkout flow.<br />We created three different \"generators\" for Google. For the Places generator, users choose their device, locate and position a place on Google Maps, and choose an optional style and color scheme. Photos allowed you deck your case out with your favorite photos. Artist Collections lets you browse and select from a curated list of graphic artist.<br />I contributed to all areas of the product development. From setting up the CI pipeline, developing a load testing and profiling rig, 3rd party API integrations for content moderation and companion app, 3d rendering optimizations, custom shaders.<br /><a href='https://livecase.withgoogle.com/'>view product",
+        "description": "Google Live Case is a personalized case for Nexus and Pixel phones available from the Google Store. The case is fully customizable and comes with a live wallpaper to match your design. Additionally, the case packs an NFC chip, which activates the companion app. Huge was tasked with designing and building the product selection, customizer and checkout flow.<br />We created three different \"generators\" for Google. For the Places generator, users choose their device, locate and position a place on Google Maps, and choose an optional style and color scheme. Photos allowed you deck your case out with your favorite photos. Artist Collections lets you browse and select from a curated list of graphic artist.<br />I contributed to all areas of the product development. From setting up the CI pipeline, developing a load testing and profiling rig, 3rd party API integrations for content moderation and companion app, 3d rendering optimizations, custom shaders.<br /><a href='https://livecase.withgoogle.com/' target='_blank'>view product",
         "year": "Yuly 2015 - Oct 2016",
         "tech": "Backend: Python, Golang, Google Cloud(AppEngine, Services, Task Queues, Storage, BigQuery, Datastore)<br />Frontend: Angular.js, Three.js, GLSL"
       },
       "twg" : {
         "title": "Think with Google",
         "thumb": "/assets/images/thumbs/twg.png",
-        "description": "Think with Google is Google's unique editorial and data insights destination for marketing professionals. <br />I Worked as a backend lead developing custom publishing solutions on a propietary content platform, continous integration and delivery practices for the tech team and a scalable localisation platform. <br /> I worked closely with content strategists on information architecture and translating that to efficient database designs. Mentored and helped on board new developers.",
+        "description": "Think with Google is Google's unique editorial and data insights destination for marketing professionals. <br />I worked as a backend lead developing custom publishing solutions on a propietary content platform, continous integration and delivery practices for the tech team and a scalable localisation platform. <br /> I worked closely with content strategists on information architecture and translating that to efficient database designs. Mentored and helped on board new developers.<br><a href='https://thinkwithgoogle.com' target='_blank'>view site</a>",
         "year": "May 2014- June 2015",
         "agency": "Huge",
         "role": "Lead backend engineer",
@@ -119,7 +119,7 @@
         "title": "First To Greatness - PS4",
         "thumb": "/assets/images/thumbs/first-to-greatness.png",
         "agency": "Stink Digital",
-        "description": "First To Greatness is a first of it's kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>I only joined the project in its last few weeks and helped with its launch. I helped solve front end bugs and cross browser video delivery issues on a extremely tight deadline. I implemented custom scripts to transcode a large amount of user generated videos to multiple formats right after the initial beta release.<h4>Project Press</h4><a href='http://www.ign.com/articles/2013/11/27/sony-announces-first-to-greatness-ps4-competition'>IGN</a><br/><a href='http://www.joystiq.com/2013/11/24/sony-challenges-ps4-community-launches-first-to-greatness-campa/'>Joystiq</a><br/><a href='http://www.businessinsider.com/playstations-first-to-greatness-campaign-2013-11'>Business Insider</a><h4>Project Awards</h4><a href='http://www.thefwa.com/site/first-to-greatness'>FWA SOTD</a><br/><a href='http://www.dandad.org/awards/professional/2014/integrated-earned-media/23037/the-launch-of-greatness-awaits/'>D&amp;AD Book</a><br/><a href='http://winners.canneslions.com/2014/interactive/entry.cfm?entryid=12224&amp;award=101&amp;order=0&amp;direction=1&amp;keywords=playstation'>Cannes Cyber Lion - Silver</a>",
+        "description": "First To Greatness is a first of its kind site that allows gamers to upload game footage against a list of 64 challenges to become a part of PlayStation history being made on the new PS4 console.<br>I only joined the project in its last few weeks and helped with its launch. I helped solve front end bugs and cross browser video delivery issues on a extremely tight deadline. I implemented custom scripts to transcode a large amount of user generated videos to multiple formats right after the initial beta release.<h4>Project Press</h4><a href='http://www.ign.com/articles/2013/11/27/sony-announces-first-to-greatness-ps4-competition' target='_blank'>IGN</a><br/><a href='http://www.joystiq.com/2013/11/24/sony-challenges-ps4-community-launches-first-to-greatness-campa/' target='_blank'>Joystiq</a><br/><a href='http://www.businessinsider.com/playstations-first-to-greatness-campaign-2013-11' target='_blank'>Business Insider</a><h4>Project Awards</h4><a href='http://www.thefwa.com/site/first-to-greatness' target='_blank'>FWA SOTD</a><br/><a href='http://www.dandad.org/awards/professional/2014/integrated-earned-media/23037/the-launch-of-greatness-awaits/' target='_blank'>D&amp;AD Book</a><br/><a href='http://winners.canneslions.com/2014/interactive/entry.cfm?entryid=12224&amp;award=101&amp;order=0&amp;direction=1&amp;keywords=playstation' target='_blank'>Cannes Cyber Lion - Silver</a>",
         "year": 2014,
         "tech": "FFMPEG, Ruby on Rails, Active Admin CMS customizations, CSS3 animations, Javascript performance optimization",
         "gallery": [
@@ -153,7 +153,7 @@
         "title": "Race The Sun",
         "thumb": "/assets/images/thumbs/race-the-sun.png",
         "agency": "Stink Digital",
-        "description": "Race the Sun is a big, sweeping interactive film that users control via their mobile phone or keyboard.<br> In the experience, users follow our driver as he races to deliver a Range Rover to a hidden location before sunset. Users have the option to use their mobile phone as a second screen that allows them to play racing games within the narrative. The games call back to key features of the Sport, such as acceleration, agility and off-road capabilities.<br>Race The Sun was built using NodeJS and web sockets to enable the phone syncing experience.<br>We implemented a video playback system that incorporated multiple streaming HTML5 players to allow users to proceed through the experience quickly and with virtually no buffering. The games incorporated mobile specific technologies such as accelerometer and swipe gestures.<br>Thanks to HTML5 video and other modern web technologies, we were able to support a wide array of desktops and tablets, broadening our reach.",
+        "description": "Race the Sun is a big, sweeping interactive film that users control via their mobile phone or keyboard.<br> In the experience, users follow our driver as he races to deliver a Range Rover to a hidden location before sunset. Users have the option to use their mobile phone as a second screen that allows them to play racing games within the narrative. The games call back to key features of the sport, such as acceleration, agility and off-road capabilities.<br>Race The Sun was built using NodeJS and web sockets to enable the phone syncing experience.<br>We implemented a video playback system that incorporated multiple streaming HTML5 players to allow users to proceed through the experience quickly and with virtually no buffering. The games incorporated mobile specific technologies such as accelerometer and swipe gestures.<br>Thanks to HTML5 video and other modern web technologies, we were able to support a wide array of desktops and tablets, broadening our reach.",
         "year": 2013,
         "tech": "Node.js, Socket.IO, Youtube API, Backbone.js, Amazon S3 for assets, Krpano for panoramas, Nodejitsu for application hosting",
         "awards": "FWA Site Of The Day,  FWA Mobile Site Of The Day, FWA Adobe Cutting Edge Award",
@@ -223,7 +223,7 @@
         "title": "Nature Valley Trail View",
         "thumb": "/assets/images/thumbs/nvtv.png",
         "agency": "Your Majesty",
-        "description": "The Trail View project was born out of Nature Valley’s commitment to nature and their mission to preserve it.<br>It was the first-of-its-kind hiking experience and glimpse into America’s National Parks using Street View technology, and to pull it off we hiked, climbed, and captured over 400 miles of 360° photo-views across the country.<br>Choosing from Grand Canyon, Yellowstone, Great Smoky Mountains and Sequoia, hikers can pick one of the parks and explore its trails in depth via a topographic map.  In addition we shot and developed high-quality full 360 point-of-interest panorama photography as key call outs on the site, mixed with ambient natural sound from the respective environments. Trail View 2.0 also highlights Nature Valley’s preservation efforts, flora and fauna and mobile-optimized experience.<br><blockquote><i>They ported the Street View 360 technology into creating the original,<br>unprecedented Trail View platform</i> &mdash; Google</blockquote><h4>Milestones</h4><ul> <li>38.4 million media impressions.</li><li>Brand fanbase up 16,000+.</li><li>$1.3 mil raised and donated for conservation.</li><li>10x growth in visitors.</li><li>Average 3:41 min spent on site following broadcast spot.</li><li>Featured in IDEO’s lecture series.</li><li>34 awards including 2x Cannes Cyber Lions, 2x Clios, and 2x Webby wins.</li></ul><h4>Press</h4><ul> <li> <a href='https://www.fastcompany.com/1790419/street-view-style-tour-national-parks-hiking-trails-courtesy-nature-valley' target='_blank' rel='noopener'> <span>A Street View-Style Tour Of National Parks Hiking Trails, Courtesy Of Nature Valley</span> </a> <span><i> &mdash; Fast Company</i></span> </li><li> <a href='http://www.nytimes.com/2012/03/08/business/media/virtual-hikes-promote-nature-valley-granola-bars.html' target='_blank' rel='noopener'> <span>Marketers Promoting a Granola Bar Hit the Trails in National Parks</span> </a> <span><i> &mdash; The New York Times</i></span> </li><li> <a href='http://www.cntraveler.com/stories/2012-03-07/nature-valley-granola-national-parks-view-hiking' target='_blank' rel='noopener'> <span>Hike Yellowstone From Home: Nature Valley Releases Virtual Park Tours</span> </a> <span><i> &mdash; Condé Nast Traveler</i></span> </li><li> <a href='https://www.theverge.com/2012/3/8/2854332/nature-valley-trail-view-national-park-virtual-tour' target='_blank' rel='noopener'> <span>Trail View captures 300 miles of US national park trails in 360 degrees</span> </a> <span><i> &mdash; The Verge</i></span> </li><li> <a href='http://www.adweek.com/creativity/nature-valley-trail-view-celebrated-digital-campaign-national-parks-gets-update-148895/' target='_blank' rel='noopener'> <span>Nature Valley Trail View, Celebrated Digital Campaign for the National Parks, Gets an Update</span> </a> <span><i> &mdash; Adweek</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/intl/en-gb/campaigns/general-mills-nature-valley-trail-view.html' target='_blank' rel='noopener'> <span>Nature Valley Trail View</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/campaigns/general-mills-nature-valley-trail-view.html' target='_blank' rel='noopener'> <span>Nature Valley Trail View 2.0</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='http://www.pcmag.com/article2/0,2817,2402065,00.asp' target='_blank' rel='noopener'> <span>Nature Valley Offering ‘Street View’ for Hiking U.S. Parks</span> <span><i> &mdash; PCMag</i></span> </a> </li><li> <a href='http://www.popularmechanics.com/culture/web/a7547/sxsw-virtually-hike-national-parks-with-nature-valleys-trail-view-7358691/' target='_blank' rel='noopener'> <span>SXSW: Virtually Hike National Parks With Nature Valley’s Trail View</span> </a> <span><i> &mdash; Popular Mechanics</i></span> </li></ul>", 
+        "description": "The Trail View project was born out of Nature Valley’s commitment to nature and their mission to preserve it.<br>It was the first-of-its-kind hiking experience and glimpse into America’s National Parks using Street View technology, and to pull it off we hiked, climbed, and captured over 400 miles of 360° photo-views across the country.<br>Choosing from Grand Canyon, Yellowstone, Great Smoky Mountains and Sequoia, hikers can pick one of the parks and explore its trails in depth via a topographic map.  In addition we shot and developed high-quality full 360 point-of-interest panorama photography as key call outs on the site, mixed with ambient natural sound from the respective environments. Trail View 2.0 also highlights Nature Valley’s preservation efforts, flora and fauna and mobile-optimized experience.<br><blockquote><i>They ported the Street View 360 technology into creating the original,<br>unprecedented Trail View platform</i> &mdash; Google</blockquote><h4>Milestones</h4><ul> <li>38.4 million media impressions.</li><li>Brand fanbase up 16,000+.</li><li>$1.3 mil raised and donated for conservation.</li><li>10x growth in visitors.</li><li>Average 3:41 min spent on site following broadcast spot.</li><li>Featured in IDEO’s lecture series.</li><li>34 awards including 2x Cannes Cyber Lions, 2x Clios, and 2x Webby wins.</li></ul><h4>Press</h4><ul> <li> <a href='https://www.fastcompany.com/1790419/street-view-style-tour-national-parks-hiking-trails-courtesy-nature-valley' target='_blank'> <span>A Street View-Style Tour Of National Parks Hiking Trails, Courtesy Of Nature Valley</span> </a> <span><i> &mdash; Fast Company</i></span> </li><li> <a href='http://www.nytimes.com/2012/03/08/business/media/virtual-hikes-promote-nature-valley-granola-bars.html' target='_blank'> <span>Marketers Promoting a Granola Bar Hit the Trails in National Parks</span> </a> <span><i> &mdash; The New York Times</i></span> </li><li> <a href='http://www.cntraveler.com/stories/2012-03-07/nature-valley-granola-national-parks-view-hiking' target='_blank'> <span>Hike Yellowstone From Home: Nature Valley Releases Virtual Park Tours</span> </a> <span><i> &mdash; Condé Nast Traveler</i></span> </li><li> <a href='https://www.theverge.com/2012/3/8/2854332/nature-valley-trail-view-national-park-virtual-tour' target='_blank'> <span>Trail View captures 300 miles of US national park trails in 360 degrees</span> </a> <span><i> &mdash; The Verge</i></span> </li><li> <a href='http://www.adweek.com/creativity/nature-valley-trail-view-celebrated-digital-campaign-national-parks-gets-update-148895/' target='_blank'> <span>Nature Valley Trail View, Celebrated Digital Campaign for the National Parks, Gets an Update</span> </a> <span><i> &mdash; Adweek</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/intl/en-gb/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View 2.0</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='http://www.pcmag.com/article2/0,2817,2402065,00.asp' target='_blank'> <span>Nature Valley Offering ‘Street View’ for Hiking U.S. Parks</span> <span><i> &mdash; PCMag</i></span> </a> </li><li> <a href='http://www.popularmechanics.com/culture/web/a7547/sxsw-virtually-hike-national-parks-with-nature-valleys-trail-view-7358691/' target='_blank'> <span>SXSW: Virtually Hike National Parks With Nature Valley’s Trail View</span> </a> <span><i> &mdash; Popular Mechanics</i></span> </li></ul>", 
         "year": "2012-13",
         "role": "Tech Lead",
         "tech": "Ruby on Rails, Spine.js, FFMPEG, Google Maps API, Krpano, Rackspace",
@@ -352,9 +352,28 @@
       "nokia" : {
         "title": "Shot by Fans",
         "thumb": "/assets/images/thumbs/nokia.jpg",
-        "agency": "",
-        "description": "",
-        "year": 2009
+        "agency": "The Map Office",
+        "description": "Designed and programmed in 2009 while working at The Map Office, under contract with JWT. Over 100 fans were invited to shoot the official music video for the Noisettes single \"Saturday Night\", using only Nokia mobile devices. This rich internet application, a flash-based music video creator, was developed entirely in Adobe Flex which allowed visitors to filter through over 200 short clips and edit their own music video.<br><br>Under the watchful eye of a leading music promo director, Kim Gehrig, the fans filmed the Noisettes playing in a disused swimming pool in East London capturing all the energy and excitement of an exceptional Saturday Night out. The fans were both the cast and crew. The application lived on www.shotbyfans.com and only lived for a few months; the application allowed visitors to edit their own video and share it on Facebook.<br><br>Due to the limitation of Flash in handling video buffers at the time, user made edits were rendered on the server using ffmpeg and previews were made possible by simply playing video samples sequentially and using some client caching techniques.",
+        "year": 2009,
+        "client": "JWT",
+        "tech": "Flash, Flex, ActionScript 3, PHP, MySQL, FFMPEG, The MiG CMS",
+        "gallery": [{"image": "noisettes1.png", "type": "image"},
+          {"image": "noisettes2.png", "type": "image"},
+          {"image": "noisettes3.png", "type": "image"},
+          {"image": "noisettes04.png", "type": "image"},
+          {"image": "noisettes05.png", "type": "image"},
+          {"image": "noisettes06.png", "type": "image"},
+          {"image": "noisettes07.png", "type": "image"},
+          {"image": "noisettes08.png", "type": "image"},
+          {"image": "noisettes09.png", "type": "image"},
+          {"image": "noisettes09a.png", "type": "image"},
+          {"image": "noisettes10.png", "type": "image"},
+          {"image": "noisettes11.png", "type": "image"},
+          {"image": "noisettes12.png", "type": "image"},
+          {"image": "noisettes13.png", "type": "image"},
+          {"image": "noisettes14.png", "type": "image"},
+          {"image": "noisettes15.png", "type": "image"},
+          {"image": "noisettes16.png", "type": "image"}]
       },
       "fractals" : {
         "title": "Museum Tower Wall Covering",
@@ -368,7 +387,7 @@
         "thumb": "/assets/images/thumbs/ndd.png",
         "agency": "The Map Office",
         "description": "Website for the industrial / product design agency",
-        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, FFMPEG, The MiG CMS",
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, FFMPEG, The MiG CMS",
         "year": 2010,
         "gallery": [
           {"image": "ndd_1.png", "type": "image"},
@@ -407,7 +426,7 @@
         "agency": "The Map Office",
         "description": "Website for the New York-based firm practicing modern architecture and visionary urbanism.",
         "year": 2009,
-        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
         "gallery": [
           {"image": "aro-1.png", "type": "image"},
           {"image": "aro-2.png", "type": "image"},
@@ -448,9 +467,9 @@
         "title": "Type M",
         "thumb": "/assets/images/thumbs/typem.png",
         "agency": "The Map Office",
-        "description": "Powered by The MiG, this app showcased a new plugin for the CMS that allowed to dynamically import and enable fonts for Flash site without recompiling anything.<br>The plugin accepted OTF or TTF files and generated ActionScript 3 files using PHP, that were later compiled using mxmlc and java on the server via shell commands.<br>The resulting SWFs contained the embedded fonts and the front end app would fetch them and enable those fonts at runtime",
+        "description": "Powered by The MiG, this app showcased a new plugin for the CMS that allowed to dynamically import and enable fonts for a Flash site without recompiling or redeploying the main app.<br>The plugin accepted OTF or TTF files and generated ActionScript 3 files using PHP, that were later compiled using mxmlc and java on the server via shell commands.<br>The resulting SWFs contained the embedded fonts and the front end app would fetch them and enable those fonts at runtime.",
         "year": 2009,
-        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
         "gallery": [
           {"image": "typem1.png", "type": "image"},
           {"image": "typem2.png", "type": "image"},
@@ -467,7 +486,7 @@
         "title": "Ertegun Jazz Hall of Fame",
         "thumb": "/assets/images/thumbs/jazz.png",
         "agency": "The Map Office",
-        "tech": "Adobe Flex, PHP, MySQL, The MiG CMS",
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
         "description": "Website and Kiosks for the Nesuhi Ertegun Hall of Fame - Jazz at Lincoln Center",
         "year": 2009,
         "gallery": [
@@ -494,7 +513,7 @@
         "agency": "The Map Office",
         "description": "Website for UCLA's school of Architecture and Urban Design. Powered by the MiG CMS",
         "year": "2008",
-        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, The MiG CMS",
         "gallery": [
           {"image": "ucla_site1.png", "type": "image"},
           {"image": "ucla_site2.png", "type": "image"},
@@ -510,8 +529,37 @@
         "thumb": "/assets/images/thumbs/mig.png",
         "agency": "The Map Office",
         "role": "Lead Developer, concepting, architecture",
-        "tech": "Adobe Flex, ActionScript 3, PHP, MySQL, XMP, FFMPEG, ID3",
-        "year": "Mar 2008 - Oct 2010"
+        "tech": "Flash, Adobe Flex, ActionScript 3, PHP, MySQL, XMP, FFMPEG, ID3",
+        "year": "Mar 2008 - Oct 2010",
+        "gallery": [
+          {"type": "image", "image": "calendar.jpg"},
+          {"type": "image", "image": "comments.jpg"},
+          {"type": "image", "image": "custom-fields-1.jpg"},
+          {"type": "image", "image": "custom-fields-2.jpg"},
+          {"type": "image", "image": "flex-editor.jpg"},
+          {"type": "image", "image": "general-edit-fields.jpeg"},
+          {"type": "image", "image": "general.jpeg"},
+          {"type": "image", "image": "help-window.jpg"},
+          {"type": "image", "image": "html-editor.jpeg"},
+          {"type": "image", "image": "link-manager1.jpg"},
+          {"type": "image", "image": "link-manager2.jpg"},
+          {"type": "image", "image": "link-manager3.jpg"},
+          {"type": "image", "image": "link-manager4.jpg"},
+          {"type": "image", "image": "link-manager5.jpg"},
+          {"type": "image", "image": "link-manager6.jpg"},
+          {"type": "image", "image": "link-manager7.jpg"},
+          {"type": "image", "image": "link-manager8.jpg"},
+          {"type": "image", "image": "link-manager9.jpg"},
+          {"type": "image", "image": "media1.png"},
+          {"type": "image", "image": "media2.jpg"},
+          {"type": "image", "image": "media3.png"},
+          {"type": "image", "image": "media4.png"},
+          {"type": "image", "image": "search.jpeg"},
+          {"type": "image", "image": "settings.jpeg"},
+          {"type": "image", "image": "settings.jpg"},
+          {"type": "image", "image": "template-manager1.jpg"},
+          {"type": "image", "image": "template-manager2.jpg"}
+        ]
       }
     }
   }

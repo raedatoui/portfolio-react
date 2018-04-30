@@ -79,10 +79,8 @@ class ProjectInner extends React.Component<
       this.props.dispatch(ProjectActions.closeAllProjects());
     }
     history.push(page);
-    window.ga("send", {
-      hitType: "pageview",
-      page: page
-    });
+    window.ga("set", "page", "/" + page);
+    window.ga("send", "pageview");
   }
 
   pixelate(v: number = 0) {

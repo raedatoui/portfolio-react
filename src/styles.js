@@ -35,7 +35,7 @@ html {
   height: 100%;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: 0.8rem;  
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 20rem) {
@@ -58,7 +58,8 @@ body {
   background-color: ${colors.white};
   color: ${colors.grey};   
   line-height: 1.5rem;
-  font-family: 'Work Sans', sans-serif;   
+  font-family: 'Work Sans', sans-serif;
+  margin:
 }
 
 
@@ -149,7 +150,10 @@ a {
 }
 
 #root {
+  max-width: 1600px;
+  margin: 0 auto;  
   padding: 0em;
+
 }
 
 ::selection { background: ${colors.red}; color:${
