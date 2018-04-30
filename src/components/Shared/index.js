@@ -53,7 +53,7 @@ export class RangeSliderInner extends React.Component<
   constructor(props: WithDispatch<SliderOwnProps>) {
     super(props);
     this.state = {
-      value: 1
+      value: 25
     };
   }
 
