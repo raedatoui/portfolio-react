@@ -21,7 +21,7 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.3.1",
-    "tone": "^0.11.11"
+    "tone": "^13.1.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -88,7 +88,7 @@
     "unit-test": "jest",
     "fmt": "prettier --write \"src/**/*.js\"",
     "stylelint": "stylelint src/**/*.js",
-    "typecheck": "./node_modules/.bin/flow" 
+    "typecheck": "./node_modules/.bin/flow"
   },
   "jest": {
     "setupFiles": [
