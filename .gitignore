@@ -1,6 +1,6 @@
 node_modules/
 .tmp
-dist/generated/
+dist/
 .idea
 .DS_store
 .vscode

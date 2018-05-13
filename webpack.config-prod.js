@@ -1,13 +1,20 @@
 // @flow
 const webpack = require("webpack");
 const path = require("path");
+const CompressionPlugin = require("compression-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      // <-- key to reducing React's size
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
+      }
+    }),
     new CopyWebpackPlugin([
       {
         from: "./src/content",
@@ -28,10 +35,16 @@ module.exports = {
         from: "./src/index.html",
         to: ""
       }
-    ])
+    ]),
+    new UglifyJsPlugin({
+      sourceMap: true
+    }),
+    new CompressionPlugin({
+      test: /\.js/,
+      asset: "[path][query]"
+    })
   ],
-  entry: ["webpack-hot-middleware/client", "./src/index.js"],
-  devtool: "eval-source-map",
+  entry: ["./src/index.js"],
   module: {
     rules: [
       {
@@ -51,7 +64,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, "dist", ""),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "/"
   }
