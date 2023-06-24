@@ -81,30 +81,29 @@ class ProjectDetail extends React.Component<Props> {
             );
           })}
         </MetaWrapper>
-        {gallery &&
-          !selectedGallery && (
-            <GallerylWrapper>
-              {gallery.map((item, idx) => {
-                return (
-                  <div
-                    role="button"
-                    tabIndex="0"
-                    onClick={() => openGalleryFn(idx)}
-                    onKeyDown={ev => {
-                      if (ev.keyCode === 13) openGalleryFn(idx);
-                    }}
-                    key={`${projectId}-gallery-${idx}`}
-                    className="carousel-item"
-                  >
-                    <img
-                      alt={item.caption}
-                      src={`/assets/images/projects/${projectId}/${item.image}`}
-                    />
-                  </div>
-                );
-              })}
-            </GallerylWrapper>
-          )}
+        {gallery && !selectedGallery && (
+          <GallerylWrapper>
+            {gallery.map((item, idx) => {
+              return (
+                <div
+                  role="button"
+                  tabIndex="0"
+                  onClick={() => openGalleryFn(idx)}
+                  onKeyDown={ev => {
+                    if (ev.keyCode === 13) openGalleryFn(idx);
+                  }}
+                  key={`${projectId}-gallery-${idx}`}
+                  className="carousel-item"
+                >
+                  <img
+                    alt={item.caption}
+                    src={`/assets/images/projects/${projectId}/${item.image}`}
+                  />
+                </div>
+              );
+            })}
+          </GallerylWrapper>
+        )}
         {selectedGallery && (
           <Carousel
             gallery={selectedGallery}

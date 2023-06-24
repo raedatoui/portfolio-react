@@ -79,8 +79,8 @@ class ProjectInner extends React.Component<
       this.props.dispatch(ProjectActions.closeAllProjects());
     }
     history.push(page);
-    window.ga("set", "page", "/" + page);
-    window.ga("send", "pageview");
+    window.gtag("set", "page", "/" + page);
+    window.gtag("send", "pageview");
   }
 
   pixelate(v: number = 0) {
@@ -143,7 +143,7 @@ class ProjectInner extends React.Component<
         const now: number = Date.now();
         const elapsed: number = now - this.prev.getTime();
         if (elapsed > this.fpsInterval) {
-          this.prev.setTime(now - elapsed % this.fpsInterval);
+          this.prev.setTime(now - (elapsed % this.fpsInterval));
           this.nervousPlay();
           // this.counter += 1;
           if (this.props.frameRate >= 100) this.delta = -1;
@@ -178,7 +178,7 @@ class ProjectInner extends React.Component<
       this.play = true;
       this.animate();
     }
-    window.ga("send", "event", "nervous", this.props.projectId);
+    window.gtag("send", "event", "nervous", this.props.projectId);
   };
 
   handleMouseOut = () => {

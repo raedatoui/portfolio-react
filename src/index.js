@@ -88,41 +88,11 @@ const renderApp = () => {
   if (container !== null) ReactDOM.render(elem, container);
 };
 
-const loadScript = (i, s, o, g, r, a, m) => {
-  // $FlowFixMe
-  i["GoogleAnalyticsObject"] = r;
-  (i[r] =
-    i[r] ||
-    function() {
-      (i[r].q = i[r].q || []).push(arguments);
-    }),
-    (i[r].l = 1 * new Date());
-  (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-  // $FlowFixMe
-  a.async = 1;
-  a.src = g;
-  // $FlowFixMe
-  m.parentNode.insertBefore(a, m);
-};
-
-const loadAnalytics = () => {
-  loadScript(
-    window,
-    document,
-    "script",
-    "https://www.google-analytics.com/analytics.js",
-    "ga"
-  );
-  window.ga("create", "UA-6988053-9", "auto");
-  window.ga("send", "pageview");
-};
-
 window.onYouTubeIframeAPIReady = () => {
   renderApp();
 };
 
 loadYT();
-loadAnalytics();
 
 // $FlowFixMe
 if (module.hot) {

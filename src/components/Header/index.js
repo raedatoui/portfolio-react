@@ -50,14 +50,14 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
 
   mute() {
     const toggled = !this.state.muted;
-    window.ga("send", "event", "muteBtn", toggled ? "mute" : "unmute");
+    window.gtag("send", "event", "muteBtn", toggled ? "mute" : "unmute");
     this.setState({
       muted: toggled
     });
   }
 
   onViewSource() {
-    window.ga("send", "event", "github", "click");
+    window.gtag("send", "event", "github", "click");
   }
 
   render() {
@@ -93,6 +93,7 @@ class HeaderInner extends React.Component<WithDispatch<OwnProps>, State> {
               <a
                 target="_blank"
                 href={viewsource}
+                rel="noreferrer"
                 onClick={() => this.onViewSource()}
               >
                 ( source )

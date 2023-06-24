@@ -75,7 +75,7 @@ class Nervous {
           w = x1 * x1 + x2 * x2;
         } while (w >= 1.0);
 
-        w = Math.sqrt(-2.0 * Math.log(w) / w);
+        w = Math.sqrt((-2.0 * Math.log(w)) / w);
         z = x1 * w;
       } else {
         z = x2 * w;
@@ -94,7 +94,7 @@ class Nervous {
     outMax: number
   ): number {
     return Math.floor(
-      (v - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
+      ((v - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin
     );
   }
 

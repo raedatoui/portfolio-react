@@ -59,7 +59,6 @@ body {
   color: ${colors.grey};   
   line-height: 1.5rem;
   font-family: 'Work Sans', sans-serif;
-  margin:
 }
 
 
@@ -156,9 +155,7 @@ a {
 
 }
 
-::selection { background: ${colors.red}; color:${
-  colors.white
-}; text-shadow: none; }
+::selection { background: ${colors.red}; color:${colors.white}; text-shadow: none; }
 
 /* Image Grid
 ---------------------------------------------- */
@@ -408,13 +405,10 @@ http://flickity.metafizzy.co
 }
 
 .flickity-enabled.is-draggable .flickity-viewport {
-  cursor: move;
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 

@@ -3,6 +3,27 @@
     "name": "Linux"
   },
   {
+    "name": "AWS"
+  },
+  {
+    "name": "Serverless"
+  },
+  {
+    "name": "React"
+  },
+  {
+    "name": "Next.js"
+  },
+  {
+    "name": "Apollo Graphql"
+  },
+  {
+    "name": "Apache Kafka"
+  },
+  {
+    "name": "Neo4j"
+  },
+  {
     "name": "Google Cloud"
   },
   {
@@ -22,9 +43,6 @@
   },
   {
     "name": "Angular.js"
-  },
-  {
-    "name": "React"
   },
   {
     "name": "OpenGL"

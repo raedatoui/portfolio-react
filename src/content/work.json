@@ -3,10 +3,17 @@
     "label": "Typedef",
     "description": "Freelance projects and collaborations.",
     "work": {
+      "minair": {
+        "title": "The Minair Report",
+        "thumb": "/assets/images/thumbs/minair.jpg",
+        "description": "Website for air quality sensor. 2023 Webby Honoree in the Weird category. <a target=\"_blank\" href=\"https://github.com/minair-affair/minair-report\">( source )</a><br /><a target=\"_blank\" href=\"https://minair.me\">view site</a>",
+        "year": "2021 - present",
+        "tech": "React, Material UI, HighCharts, Three.js, GLSL, Flask, Raspberry Pi, Purple Air API"
+      },
       "sal" : {
         "title": "Better Call Sal",
         "thumb": "/assets/images/thumbs/sal.png",
-        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a target=\"_blank\" href=\"https://github.com/raedatoui/bettercallsal.biz\">( source )</a><br /><a target=\"_blank\" href=\"http://bettercallsal.biz\">view site</a>",
+        "description": "Website for sound mixer Sal Barra. First foray into ES6 and WebGL fun. <a target=\"_blank\" href=\"https://github.com/raedatoui/bettercallsal-multiverse\">( source )</a><br /><a target=\"_blank\" href=\"https://bettercallsal.biz\">view site</a>",
         "year": 2016,
         "tech": "ES6, Web Audio, WebGL, GLSL"
       },
@@ -75,12 +82,19 @@
     "label": "Product",
     "description": "my work history at product companies",
     "work": {
+      "sonymusic" : {
+        "title": "Sony Music",
+        "thumb": "/assets/images/thumbs/sony.jpg",
+        "description": "Principal Software Engineer, Product, Design & Engineering, Sony Music",
+        "year": "July 2022 - present",
+        "tech": "Python, Flask, Graphql, Node, Typescript, React, AWS, Snowflake, Kafka, Neo4j"
+      },
       "orchard" : {
         "title": "The Orchard",
         "thumb": "/assets/images/thumbs/orchard.png",
         "description": "Contributing to The Orchard as a full stack engineer.",
-        "year": "sept 2017 - present",
-        "tech": "Flask microservices, React, AWS, Snowflake"
+        "year": "sept 2017 - July 2022",
+        "tech": "Python, Flask, Graphql, Node, Typescript, React, AWS, Snowflake, Kafka, Neo4j"
       }
     }
   },
@@ -103,7 +117,7 @@
         "agency": "Huge",
         "role": "Lead full stack engineer",
         "description": "Google Live Case is a personalized case for Nexus and Pixel phones available from the Google Store. The case is fully customizable and comes with a live wallpaper to match your design. Additionally, the case packs an NFC chip, which activates the companion app. Huge was tasked with designing and building the product selection, customizer and checkout flow.<br />We created three different \"generators\" for Google. For the Places generator, users choose their device, locate and position a place on Google Maps, and choose an optional style and color scheme. Photos allowed you deck your case out with your favorite photos. Artist Collections lets you browse and select from a curated list of graphic artist.<br />I contributed to all areas of the product development. From setting up the CI pipeline, developing a load testing and profiling rig, 3rd party API integrations for content moderation and companion app, 3d rendering optimizations, custom shaders.<br /><a href='https://livecase.withgoogle.com/' target='_blank'>view product",
-        "year": "Yuly 2015 - Oct 2016",
+        "year": "July 2015 - Oct 2016",
         "tech": "Backend: Python, Golang, Google Cloud(AppEngine, Services, Task Queues, Storage, BigQuery, Datastore)<br />Frontend: Angular.js, Three.js, GLSL"
       },
       "twg" : {
@@ -146,7 +160,7 @@
           {
             "image": "ftg3.jpg",
             "type": "image"
-          }          
+          }
         ]
       },
       "rangerover" : {
@@ -223,12 +237,12 @@
         "title": "Nature Valley Trail View",
         "thumb": "/assets/images/thumbs/nvtv.png",
         "agency": "Your Majesty",
-        "description": "The Trail View project was born out of Nature Valley’s commitment to nature and their mission to preserve it.<br>It was the first-of-its-kind hiking experience and glimpse into America’s National Parks using Street View technology, and to pull it off we hiked, climbed, and captured over 400 miles of 360° photo-views across the country.<br>Choosing from Grand Canyon, Yellowstone, Great Smoky Mountains and Sequoia, hikers can pick one of the parks and explore its trails in depth via a topographic map.  In addition we shot and developed high-quality full 360 point-of-interest panorama photography as key call outs on the site, mixed with ambient natural sound from the respective environments. Trail View 2.0 also highlights Nature Valley’s preservation efforts, flora and fauna and mobile-optimized experience.<br><blockquote><i>They ported the Street View 360 technology into creating the original,<br>unprecedented Trail View platform</i> &mdash; Google</blockquote><h4>Milestones</h4><ul> <li>38.4 million media impressions.</li><li>Brand fanbase up 16,000+.</li><li>$1.3 mil raised and donated for conservation.</li><li>10x growth in visitors.</li><li>Average 3:41 min spent on site following broadcast spot.</li><li>Featured in IDEO’s lecture series.</li><li>34 awards including 2x Cannes Cyber Lions, 2x Clios, and 2x Webby wins.</li></ul><h4>Press</h4><ul> <li> <a href='https://www.fastcompany.com/1790419/street-view-style-tour-national-parks-hiking-trails-courtesy-nature-valley' target='_blank'> <span>A Street View-Style Tour Of National Parks Hiking Trails, Courtesy Of Nature Valley</span> </a> <span><i> &mdash; Fast Company</i></span> </li><li> <a href='http://www.nytimes.com/2012/03/08/business/media/virtual-hikes-promote-nature-valley-granola-bars.html' target='_blank'> <span>Marketers Promoting a Granola Bar Hit the Trails in National Parks</span> </a> <span><i> &mdash; The New York Times</i></span> </li><li> <a href='http://www.cntraveler.com/stories/2012-03-07/nature-valley-granola-national-parks-view-hiking' target='_blank'> <span>Hike Yellowstone From Home: Nature Valley Releases Virtual Park Tours</span> </a> <span><i> &mdash; Condé Nast Traveler</i></span> </li><li> <a href='https://www.theverge.com/2012/3/8/2854332/nature-valley-trail-view-national-park-virtual-tour' target='_blank'> <span>Trail View captures 300 miles of US national park trails in 360 degrees</span> </a> <span><i> &mdash; The Verge</i></span> </li><li> <a href='http://www.adweek.com/creativity/nature-valley-trail-view-celebrated-digital-campaign-national-parks-gets-update-148895/' target='_blank'> <span>Nature Valley Trail View, Celebrated Digital Campaign for the National Parks, Gets an Update</span> </a> <span><i> &mdash; Adweek</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/intl/en-gb/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View 2.0</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='http://www.pcmag.com/article2/0,2817,2402065,00.asp' target='_blank'> <span>Nature Valley Offering ‘Street View’ for Hiking U.S. Parks</span> <span><i> &mdash; PCMag</i></span> </a> </li><li> <a href='http://www.popularmechanics.com/culture/web/a7547/sxsw-virtually-hike-national-parks-with-nature-valleys-trail-view-7358691/' target='_blank'> <span>SXSW: Virtually Hike National Parks With Nature Valley’s Trail View</span> </a> <span><i> &mdash; Popular Mechanics</i></span> </li></ul>", 
+        "description": "The Trail View project was born out of Nature Valley’s commitment to nature and their mission to preserve it.<br>It was the first-of-its-kind hiking experience and glimpse into America’s National Parks using Street View technology, and to pull it off we hiked, climbed, and captured over 400 miles of 360° photo-views across the country.<br>Choosing from Grand Canyon, Yellowstone, Great Smoky Mountains and Sequoia, hikers can pick one of the parks and explore its trails in depth via a topographic map.  In addition we shot and developed high-quality full 360 point-of-interest panorama photography as key call outs on the site, mixed with ambient natural sound from the respective environments. Trail View 2.0 also highlights Nature Valley’s preservation efforts, flora and fauna and mobile-optimized experience.<br><blockquote><i>They ported the Street View 360 technology into creating the original,<br>unprecedented Trail View platform</i> &mdash; Google</blockquote><h4>Milestones</h4><ul> <li>38.4 million media impressions.</li><li>Brand fanbase up 16,000+.</li><li>$1.3 mil raised and donated for conservation.</li><li>10x growth in visitors.</li><li>Average 3:41 min spent on site following broadcast spot.</li><li>Featured in IDEO’s lecture series.</li><li>34 awards including 2x Cannes Cyber Lions, 2x Clios, and 2x Webby wins.</li></ul><h4>Press</h4><ul> <li> <a href='https://www.fastcompany.com/1790419/street-view-style-tour-national-parks-hiking-trails-courtesy-nature-valley' target='_blank'> <span>A Street View-Style Tour Of National Parks Hiking Trails, Courtesy Of Nature Valley</span> </a> <span><i> &mdash; Fast Company</i></span> </li><li> <a href='http://www.nytimes.com/2012/03/08/business/media/virtual-hikes-promote-nature-valley-granola-bars.html' target='_blank'> <span>Marketers Promoting a Granola Bar Hit the Trails in National Parks</span> </a> <span><i> &mdash; The New York Times</i></span> </li><li> <a href='http://www.cntraveler.com/stories/2012-03-07/nature-valley-granola-national-parks-view-hiking' target='_blank'> <span>Hike Yellowstone From Home: Nature Valley Releases Virtual Park Tours</span> </a> <span><i> &mdash; Condé Nast Traveler</i></span> </li><li> <a href='https://www.theverge.com/2012/3/8/2854332/nature-valley-trail-view-national-park-virtual-tour' target='_blank'> <span>Trail View captures 300 miles of US national park trails in 360 degrees</span> </a> <span><i> &mdash; The Verge</i></span> </li><li> <a href='http://www.adweek.com/creativity/nature-valley-trail-view-celebrated-digital-campaign-national-parks-gets-update-148895/' target='_blank'> <span>Nature Valley Trail View, Celebrated Digital Campaign for the National Parks, Gets an Update</span> </a> <span><i> &mdash; Adweek</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/intl/en-gb/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='https://www.thinkwithgoogle.com/campaigns/general-mills-nature-valley-trail-view.html' target='_blank'> <span>Nature Valley Trail View 2.0</span> </a> <span><i> &mdash; Think with Google</i></span> </li><li> <a href='http://www.pcmag.com/article2/0,2817,2402065,00.asp' target='_blank'> <span>Nature Valley Offering ‘Street View’ for Hiking U.S. Parks</span> <span><i> &mdash; PCMag</i></span> </a> </li><li> <a href='http://www.popularmechanics.com/culture/web/a7547/sxsw-virtually-hike-national-parks-with-nature-valleys-trail-view-7358691/' target='_blank'> <span>SXSW: Virtually Hike National Parks With Nature Valley’s Trail View</span> </a> <span><i> &mdash; Popular Mechanics</i></span> </li></ul>",
         "year": "2012-13",
         "role": "Tech Lead",
         "tech": "Ruby on Rails, Spine.js, FFMPEG, Google Maps API, Krpano, Rackspace",
         "gallery": [
-          { 
+          {
             "image": "video1.png",
             "type": "vimeo",
             "asset": "42582327"
@@ -236,7 +250,7 @@
           {
             "image": "nvtv0.jpg",
             "type": "image"
-          }, 
+          },
           {
             "image": "nvtv1.jpg",
             "type": "image"
@@ -248,7 +262,7 @@
           {
             "image": "nvtv3.jpg",
             "type": "image"
-          }, 
+          },
           {
             "image": "nvtv4.jpg",
             "type": "image"
@@ -256,11 +270,11 @@
           {
             "image": "nvtv5.jpg",
             "type": "image"
-          }, 
+          },
           {
             "image": "nvtv6.jpg",
             "type": "image"
-          }, 
+          },
           {
             "image": "nvtv7.jpg",
             "type": "image"
@@ -268,7 +282,7 @@
           {
             "image": "nvtv8.jpg",
             "type": "image"
-          }, 
+          },
           {
             "image": "nvtv9.jpg",
             "type": "image"
@@ -276,7 +290,7 @@
           {
             "image": "nvtv10.jpg",
             "type": "image"
-          },           
+          },
           {
             "image": "video2.png",
             "type": "vimeo",
@@ -322,7 +336,7 @@
           {
             "image":"bs4.jpg",
             "type":"image"
-          }          
+          }
         ]
       },
       "view" : {
@@ -443,7 +457,7 @@
           {"image": "aro_06.jpg", "type": "image"},
           {"image": "aro_07.jpg", "type": "image"},
           {"image": "aro_08.jpg", "type": "image"}
-        ] 
+        ]
       },
       "kitchen" : {
         "title": "The Kitchen",

@@ -53,14 +53,8 @@ export class RangeSliderInner extends React.Component<
   constructor(props: WithDispatch<SliderOwnProps>) {
     super(props);
     this.state = {
-      value: 25
-    };
-  }
-
-  componentWillReceiveProps(props: WithDispatch<SliderOwnProps>): void {
-    this.setState({
       value: props.frameRate
-    });
+    };
   }
 
   handleChange(event: Event) {
@@ -70,7 +64,7 @@ export class RangeSliderInner extends React.Component<
         value: value
       });
       this.props.dispatch(SharedActions.setFrameRate(value));
-      window.ga("send", "event", "slider", value);
+      window.gtag("send", "event", "slider", value);
     }
   }
 

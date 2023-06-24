@@ -1,14 +1,19 @@
 [
   {
+    "name": "Sony Music",
+    "link": "http://www.theorchard.com/",
+    "dates": "July 2022 - Present"
+  },
+  {
     "name": "The Orchard",
     "link": "http://www.theorchard.com/",
-    "dates": "Sept 2017 - Present"
+    "dates": "Sept 2017 - July 2022"
   },
   {
     "name": "Typedef",
     "link": "http://raedatoui.com",
     "dates": "Mar 2014 - Present"
-  },  
+  },
   {
     "name": "Huge",
     "link": "http://www.hugeinc.com/",

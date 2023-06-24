@@ -16,13 +16,13 @@ class HeaderListItem extends React.Component<OwnProps> {
 
   playFx() {
     if (this.fx) {
-      window.ga("send", "event", "fart", this.props.name);
+      window.gtag("send", "event", "fart", this.props.name);
       // $FlowFixMe
       this.fx.play();
     }
   }
   onClick() {
-    window.ga("send", "event", "net", this.props.name);
+    window.gtag("send", "event", "net", this.props.name);
   }
 
   render() {
@@ -46,7 +46,7 @@ class HeaderListItem extends React.Component<OwnProps> {
             Your browser does not support the <code>audio</code> element.
           </p>
         </audio>
-        <a href={this.props.link} target="_blank">
+        <a href={this.props.link} target="_blank" rel="noreferrer">
           <img
             alt={this.props.name}
             src={`/assets/images/header/${this.props.name}.png`}
